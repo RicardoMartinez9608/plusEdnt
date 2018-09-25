@@ -15,15 +15,19 @@ public class InsertarDatosBD {
     ConexionDB con = new ConexionDB();
     Connection cn = con.getConneccion();
     
-    //este metodo ingresa los datos recopilados del formulario de servicios basicos en la BD
-    public void insertServicioBasic(String servicio,String proveedor,String correo,String telefono){
+    //metodo para insertar pacientes generales a la tabla pacienten se utiliza en el formulario ExpedienteGeneral
+     public void insertarPaciente(String nombre, String apellido ,String direccion, String telefono,String edad,String tipo,String fecha){
         try {
-            PreparedStatement pps = cn.prepareStatement("INSERT INTO tiposervicio(`nombre_servicio`,"
-                    + "`proveedor_servicio`,`correo_provS`,`tel_provS`) VALUES(?,?,?,?);");
-            pps.setString(1, servicio);
-            pps.setString(2, proveedor);
-            pps.setString(3, correo);
+            PreparedStatement pps = cn.prepareStatement("INSERT INTO paciente(`nombre`,`apellido`,"
+                    + "`direccion`,`telefono`,`edad`,`fecha_registro`,`(id_tipop`)"
+                    + "VALUES(?,?,?,?,?,?,?);");
+            pps.setString(1, nombre);
+            pps.setString(2, apellido);
+            pps.setString(3, direccion);
             pps.setString(4, telefono);
+            pps.setString(5, tipo);
+            pps.setString(6, edad);
+            pps.setString(7, fecha);
             pps.executeUpdate();
             JOptionPane.showMessageDialog(null, "Datos Guardados");
             con.closeBD();
