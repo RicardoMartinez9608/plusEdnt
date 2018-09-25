@@ -26,11 +26,11 @@ public class InsertarDatosBD {
             pps.setString(4, telefono);
             pps.executeUpdate();
             JOptionPane.showMessageDialog(null, "Datos Guardados");
-           
+            con.closeBD();
         } catch (SQLException ex) {
             Logger.getLogger(frmExpedienteGeneral.class.getName()).log(Level.SEVERE, null, ex);
             JOptionPane.showMessageDialog(null, "Problemas al Ingresar datos "+ex);
-       
+            con.closeBD();
         }
     }
 }

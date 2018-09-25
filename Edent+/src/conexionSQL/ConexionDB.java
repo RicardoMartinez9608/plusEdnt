@@ -10,21 +10,24 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 
 /**
  *
  * @author ricar
  */
 public class ConexionDB {
-    public static Connection getConneccion(){
+  boolean BanderaConeccion = false;
+  Connection link = null; 
+    public Connection getConneccion(){
      try {
           
             Class.forName("oracle.jdbc.driver.OracleDriver");  //DRIVER DE SQL DEVELOPER
             String myDB = "jdbc:oracle:thin:@localhost:1521:xe ";//URL DE SQL DEVELOPER
             String usuario="system";
             String password="ricardo9608";
-            Connection cnx = DriverManager.getConnection(myDB,usuario,password);
-            return cnx;
+            link = DriverManager.getConnection(myDB,usuario,password);
+            return link;
             
         } catch (SQLException ex) {
             System.out.println(ex.getMessage());
@@ -33,5 +36,21 @@ public class ConexionDB {
         }
         return null;
     }  
+    
+    public void closeBD()
+    {
+        if (BanderaConeccion)
+        {
+            try
+            {
+                link.close();
+                BanderaConeccion = false;
+            }
+            catch (Exception ex)
+            {
+                 JOptionPane.showMessageDialog(null,"Error al cerrar la conexion." + ex);
+            }
+        }
+    }
    
     }
