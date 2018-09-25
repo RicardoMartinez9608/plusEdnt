@@ -6,18 +6,22 @@
 package formularios;
 
 import Administracion.frmCrearUsuarios;
+import conexionSQL.ImagenFondo;
 
 /**
  *
  * @author ricar
  */
 public class frmPrincipal extends javax.swing.JFrame {
-
+   
     /**
      * Creates new form frmPrincipal
      */
     public frmPrincipal() {
         initComponents();
+        jDesktopPane1.setBorder(new ImagenFondo());
+        this.setExtendedState(frmPrincipal.MAXIMIZED_BOTH);
+        
     }
 
     /**
