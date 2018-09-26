@@ -18,8 +18,8 @@ public class InsertarDatosBD {
     //metodo para insertar pacientes generales a la tabla pacienten se utiliza en el formulario ExpedienteGeneral
      public void insertarPaciente(String nombre, String apellido ,String direccion, String telefono,String edad,String tipo,String fecha){
         try {
-            PreparedStatement pps = cn.prepareStatement("INSERT INTO paciente(`nombre`,`apellido`,"
-                    + "`direccion`,`telefono`,`edad`,`fecha_registro`,`id_tipop`)"
+            PreparedStatement pps = cn.prepareStatement("INSERT INTO paciente(`NOMBRE`,`APELLIDO`,"
+                    + "`DIRECCION`,`TELEFONO`,`EDAD`,`FECHA_REGISTRO`,`IDTIPOP`)"
                     + "VALUES(?,?,?,?,?,?,?);");
             pps.setString(1, nombre);
             pps.setString(2, apellido);
