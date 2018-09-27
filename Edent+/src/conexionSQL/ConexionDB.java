@@ -17,40 +17,22 @@ import javax.swing.JOptionPane;
  * @author ricar
  */
 public class ConexionDB {
-  boolean BanderaConeccion = false;
-  Connection link = null; 
-    public Connection getConneccion(){
-     try {
-          
-            Class.forName("oracle.jdbc.driver.OracleDriver");  //DRIVER DE SQL DEVELOPER
-            String myDB = "jdbc:oracle:thin:@localhost:1521:xe ";//URL DE SQL DEVELOPER
-            String usuario="tps";
-            String password="tps1234";
-            link = DriverManager.getConnection(myDB,usuario,password);
-            return link;
-            
-        } catch (SQLException ex) {
-            System.out.println(ex.getMessage());
-        } catch (ClassNotFoundException ex) {
-            Logger.getLogger(ConexionDB.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        return null;
-    }  
-    
-    public void closeBD()
-    {
-        if (BanderaConeccion)
-        {
-            try
-            {
-                link.close();
-                BanderaConeccion = false;
-            }
-            catch (Exception ex)
-            {
-                 JOptionPane.showMessageDialog(null,"Error al cerrar la conexion." + ex);
-            }
-        }
+ private String login = "tps";
+  private String password = "tps1234";
+  private String url = "jdbc:oracle:thin:@localhost:1521:XE";
+  private Connection conn = null;
+//___________________________________________________________________________________ Soy una barra separadora ??
+  //Constructor de la clase que se conecta a la base de datos una vez que se crea la instancia
+  public ConexionDB(){
+      try{         
+         Class.forName("oracle.jdbc.driver.OracleDriver");         
+         conn = DriverManager.getConnection(url,login,password);         
+      }catch(SQLException e){
+         System.out.println(e);
+      }catch(ClassNotFoundException e){
+         System.out.println(e);
+      }
     }
    
+  
     }
