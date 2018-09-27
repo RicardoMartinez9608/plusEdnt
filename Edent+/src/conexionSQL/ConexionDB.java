@@ -9,6 +9,7 @@ import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
@@ -34,21 +35,21 @@ public class ConexionDB {
          System.out.println(e);
       }
     }
-   public String procedurePaciente(String nombre, String apellido, String direccion, String tel, String es,
-           String edad, String fecha, String tipo)
+   public String procedurePaciente(String nombre, String apellido, String direccion, String tel,Short es, 
+           Integer edad, String fecha, Integer tipo)
    {
        String resultado=null;
        try {            
-            
-            CallableStatement proc = conn.prepareCall("{CALL INPACIENTE(?,?,?,?,?,?,?,?)}");
+            Integer val =0;
+            CallableStatement proc = conn.prepareCall("{CALL INPASIENTE(?,?,?,?,?,?,?,?,?)}");
             proc.setString("pNombre",nombre );
             proc.setString("pApellido",apellido );
             proc.setString("pDireccion",direccion );
             proc.setString("pTelefono",tel );
-            proc.setString("pEstado","0" );
-            proc.setString("pEdad",edad );
-            proc.setString("pFechaRegistro",fecha );
-            proc.setString("pIdTipoP",tipo );
+            proc.setShort("pEstado",es);
+            proc.setInt("pEdad",edad );
+            proc.setString("pFechaRegistro",fecha);
+            proc.setInt("pIdTipoP",tipo );
             proc.registerOutParameter("mjs", java.sql.Types.VARCHAR);
             proc.executeQuery();            
             
