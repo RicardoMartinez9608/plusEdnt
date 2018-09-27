@@ -7,6 +7,7 @@ package formularios;
 
 import Administracion.frmCrearUsuarios;
 import conexionSQL.ImagenFondo;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
@@ -19,10 +20,12 @@ public class frmPrincipal extends javax.swing.JFrame implements  Runnable {
     String hora, minutos, segundos, ampm;
     Calendar calendario;
     Thread h1;
+    Date fecha = new Date();
     /**
      * Creates new form frmPrincipal
      */
     public frmPrincipal() {
+       
         initComponents();
         jButton1.setBorder(null);
         jButton2.setBorder(null);
@@ -31,8 +34,12 @@ public class frmPrincipal extends javax.swing.JFrame implements  Runnable {
         h1.start();
         Dpanel.setBorder(new ImagenFondo());
         this.setExtendedState(frmPrincipal.MAXIMIZED_BOTH);
+        SimpleDateFormat formateador = new SimpleDateFormat(" ~ "+"dd-mm-yyyy");
+        lbfecha.setText(formateador.format(fecha));
+        
         
     }
+    
  public void run() {
         Thread ct = Thread.currentThread();
         while (ct == h1) {
@@ -88,6 +95,7 @@ public class frmPrincipal extends javax.swing.JFrame implements  Runnable {
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
+        lbfecha = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu3 = new javax.swing.JMenu();
         jMenuItem3 = new javax.swing.JMenuItem();
@@ -212,15 +220,19 @@ public class frmPrincipal extends javax.swing.JFrame implements  Runnable {
         jLabel2.setForeground(new java.awt.Color(0, 0, 153));
         jLabel2.setText("Acceso");
 
-        lbhora.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+        lbhora.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         lbhora.setForeground(new java.awt.Color(0, 0, 153));
-        lbhora.setText("Hora");
+        lbhora.setText("/");
 
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
 
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/conexionSQL/logo.jpeg"))); // NOI18N
+
+        lbfecha.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        lbfecha.setForeground(new java.awt.Color(0, 0, 153));
+        lbfecha.setText("Hora");
 
         Dpanel.setLayer(jButton1, javax.swing.JLayeredPane.DEFAULT_LAYER);
         Dpanel.setLayer(jButton2, javax.swing.JLayeredPane.DEFAULT_LAYER);
@@ -241,6 +253,7 @@ public class frmPrincipal extends javax.swing.JFrame implements  Runnable {
         Dpanel.setLayer(jLabel3, javax.swing.JLayeredPane.DEFAULT_LAYER);
         Dpanel.setLayer(jLabel4, javax.swing.JLayeredPane.DEFAULT_LAYER);
         Dpanel.setLayer(jLabel5, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        Dpanel.setLayer(lbfecha, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         javax.swing.GroupLayout DpanelLayout = new javax.swing.GroupLayout(Dpanel);
         Dpanel.setLayout(DpanelLayout);
@@ -258,8 +271,6 @@ public class frmPrincipal extends javax.swing.JFrame implements  Runnable {
                             .addComponent(jLabel4)
                             .addComponent(jLabel3)))
                     .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton13, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton12, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton11, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -271,11 +282,17 @@ public class frmPrincipal extends javax.swing.JFrame implements  Runnable {
                 .addGap(53, 53, 53)
                 .addComponent(jLabel2)
                 .addGap(2, 2, 2)
+                .addComponent(jLabel5)
+                .addGap(10, 10, Short.MAX_VALUE))
+            .addGroup(DpanelLayout.createSequentialGroup()
                 .addGroup(DpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel5)
-                    .addGroup(DpanelLayout.createSequentialGroup()
-                        .addGap(678, 678, 678)
-                        .addComponent(lbhora))))
+                    .addComponent(jButton13, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton12, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(lbhora)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(lbfecha)
+                .addGap(49, 49, 49))
         );
         DpanelLayout.setVerticalGroup(
             DpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -302,8 +319,11 @@ public class frmPrincipal extends javax.swing.JFrame implements  Runnable {
                         .addGap(150, 150, 150)
                         .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(DpanelLayout.createSequentialGroup()
-                        .addGap(310, 310, 310)
-                        .addComponent(jButton13, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(308, 308, 308)
+                        .addGroup(DpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jButton13, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lbhora)
+                            .addComponent(lbfecha)))
                     .addGroup(DpanelLayout.createSequentialGroup()
                         .addGap(260, 260, 260)
                         .addComponent(jButton12, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -327,10 +347,7 @@ public class frmPrincipal extends javax.swing.JFrame implements  Runnable {
             .addGroup(DpanelLayout.createSequentialGroup()
                 .addGap(656, 656, 656)
                 .addComponent(jLabel2))
-            .addGroup(DpanelLayout.createSequentialGroup()
-                .addComponent(jLabel5)
-                .addGap(486, 486, 486)
-                .addComponent(lbhora))
+            .addComponent(jLabel5)
         );
 
         jMenu3.setForeground(new java.awt.Color(0, 102, 153));
@@ -471,8 +488,9 @@ public class frmPrincipal extends javax.swing.JFrame implements  Runnable {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
                 .addComponent(Dpanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addContainerGap(72, Short.MAX_VALUE))
         );
 
         pack();
@@ -645,6 +663,7 @@ public class frmPrincipal extends javax.swing.JFrame implements  Runnable {
     private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem5;
     private javax.swing.JMenuItem jMenuItem8;
+    private javax.swing.JLabel lbfecha;
     private javax.swing.JLabel lbhora;
     // End of variables declaration//GEN-END:variables
 }
