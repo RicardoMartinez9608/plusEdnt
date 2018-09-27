@@ -515,7 +515,9 @@ public class frmPrincipal extends javax.swing.JFrame implements  Runnable {
     }//GEN-LAST:event_jMenuItem23ActionPerformed
 
     private void jMenuItem24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem24ActionPerformed
-
+         frmTratamientoOrtodoncia formProd = new frmTratamientoOrtodoncia();
+       Dpanel.add(formProd);
+       formProd.show();
     }//GEN-LAST:event_jMenuItem24ActionPerformed
 
     private void jMenuItem10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem10ActionPerformed
