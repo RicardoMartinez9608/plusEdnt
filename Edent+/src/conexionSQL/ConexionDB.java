@@ -35,25 +35,25 @@ public class ConexionDB {
          System.out.println(e);
       }
     }
-   public String procedurePaciente(String nombre, String apellido, String direccion, String tel,Short es, 
+   public String procedurePaciente(String nombre, String apellido, String direccion, String tel, 
            Integer edad, String fecha, Integer tipo)
    {
        String resultado=null;
        try {            
-            Integer val =0;
-            CallableStatement proc = conn.prepareCall("{CALL INPASIENTE(?,?,?,?,?,?,?,?,?)}");
+           
+            CallableStatement proc = conn.prepareCall("{CALL INGRESARPAC(?,?,?,?,?,?,?,?)}");
             proc.setString("pNombre",nombre );
             proc.setString("pApellido",apellido );
             proc.setString("pDireccion",direccion );
             proc.setString("pTelefono",tel );
-            proc.setShort("pEstado",es);
+          
             proc.setInt("pEdad",edad );
             proc.setString("pFechaRegistro",fecha);
             proc.setInt("pIdTipoP",tipo );
-            proc.registerOutParameter("mjs", java.sql.Types.VARCHAR);
+            proc.registerOutParameter("pMjs", java.sql.Types.VARCHAR);
             proc.executeQuery();            
             
-            resultado = proc.getString("mjs");
+            resultado = proc.getString("pMjs");
         } 
        catch (Exception e) {                  
             JOptionPane.showMessageDialog(null, e);

@@ -418,12 +418,12 @@ public class frmExpedienteGeneral extends javax.swing.JInternalFrame {
       String dia = Integer.toString(fecha.getCalendar().get(Calendar.DAY_OF_MONTH));
       String mes = Integer.toString(fecha.getCalendar().get(Calendar.MONTH) + 1);
       String year = Integer.toString(fecha.getCalendar().get(Calendar.YEAR));
-      String fechaA = (year + "-" + mes+ "-" + dia);
+      String fechaA = (dia + "-" + mes+ "-" + year);
       String date = fechaA; 
      prueba.procedurePaciente(txtnombre.getText(),txtapellido.getText(),txtdireccion.getText(),txttelefono.getText(),
-             Short.parseShort("1"), Integer.parseInt(txtedad.getText()),date,1);
+              Integer.parseInt(txtedad.getText()),date,1);
         
-        
+        JOptionPane.showMessageDialog(null, "Paciente Almacenado");
     }//GEN-LAST:event_btnGuardarActionPerformed
 
     private void btnsalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnsalirActionPerformed
