@@ -24,8 +24,8 @@ public class ConexionDB {
           
             Class.forName("oracle.jdbc.driver.OracleDriver");  //DRIVER DE SQL DEVELOPER
             String myDB = "jdbc:oracle:thin:@localhost:1521:xe ";//URL DE SQL DEVELOPER
-            String usuario="system";
-            String password="ricardo9608";
+            String usuario="tps";
+            String password="tps1234";
             link = DriverManager.getConnection(myDB,usuario,password);
             return link;
             
