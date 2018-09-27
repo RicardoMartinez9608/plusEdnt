@@ -414,8 +414,14 @@ public class frmExpedienteGeneral extends javax.swing.JInternalFrame {
 
     private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
      ConexionDB prueba = new ConexionDB();
+    
+      String dia = Integer.toString(fecha.getCalendar().get(Calendar.DAY_OF_MONTH));
+      String mes = Integer.toString(fecha.getCalendar().get(Calendar.MONTH) + 1);
+      String year = Integer.toString(fecha.getCalendar().get(Calendar.YEAR));
+      String fechaA = (year + "-" + mes+ "-" + dia);
+      String date = fechaA; 
      prueba.procedurePaciente(txtnombre.getText(),txtapellido.getText(),txtdireccion.getText(),txttelefono.getText(),
-             "0", txtedad.getText(),fecha.getDateFormatString(),"1");
+             Short.parseShort("1"), Integer.parseInt(txtedad.getText()),date,1);
         
         
     }//GEN-LAST:event_btnGuardarActionPerformed
