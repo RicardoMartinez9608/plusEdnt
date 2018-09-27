@@ -24,6 +24,8 @@ public class frmPrincipal extends javax.swing.JFrame implements  Runnable {
      */
     public frmPrincipal() {
         initComponents();
+        jButton1.setBorder(null);
+        jButton2.setBorder(null);
         h1 = new Thread(this);
         this.setTitle("E-DENT");
         h1.start();
