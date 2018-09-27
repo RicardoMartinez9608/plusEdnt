@@ -5,6 +5,7 @@
  */
 
 package ConexionSql;
+import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -33,6 +34,30 @@ public class ConexionDB {
          System.out.println(e);
       }
     }
-   
+   public String procedurePaciente(String nombre, String apellido, String direccion, String tel, String es,
+           String edad, String fecha, String tipo)
+   {
+       String resultado=null;
+       try {            
+            
+            CallableStatement proc = conn.prepareCall("{CALL INPACIENTE(?,?,?,?,?,?,?,?)}");
+            proc.setString("pNombre",nombre );
+            proc.setString("pApellido",apellido );
+            proc.setString("pDireccion",direccion );
+            proc.setString("pTelefono",tel );
+            proc.setString("pEstado","0" );
+            proc.setString("pEdad",edad );
+            proc.setString("pFechaRegistro",fecha );
+            proc.setString("pIdTipoP",tipo );
+            proc.registerOutParameter("mjs", java.sql.Types.VARCHAR);
+            proc.executeQuery();            
+            
+            resultado = proc.getString("mjs");
+        } 
+       catch (Exception e) {                  
+            JOptionPane.showMessageDialog(null, e);
+       }
+       return resultado;
+   }
   
     }

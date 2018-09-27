@@ -6,6 +6,7 @@
 package formularios;
 
 
+import ConexionSql.ConexionDB;
 import java.util.Calendar;
 import javax.swing.JOptionPane;
 
@@ -412,7 +413,11 @@ public class frmExpedienteGeneral extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_btneditarActionPerformed
 
     private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
-      
+     ConexionDB prueba = new ConexionDB();
+     prueba.procedurePaciente(txtnombre.getText(),txtapellido.getText(),txtdireccion.getText(),txttelefono.getText(),
+             "0", txtedad.getText(),fecha.getDateFormatString(),"1");
+        
+        
     }//GEN-LAST:event_btnGuardarActionPerformed
 
     private void btnsalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnsalirActionPerformed
