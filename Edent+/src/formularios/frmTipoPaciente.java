@@ -5,6 +5,11 @@
  */
 package formularios;
 
+import Entidad.Tipop;
+import Entidad.TipopJpaController;
+import Entidad.entityTipop;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author ricar
@@ -65,6 +70,11 @@ public class frmTipoPaciente extends javax.swing.JInternalFrame {
         jScrollPane1.setViewportView(jtpacientes);
 
         btnGuardar.setText("Guardar");
+        btnGuardar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnGuardarActionPerformed(evt);
+            }
+        });
 
         btnCancelar.setText("Cancelar");
 
@@ -129,6 +139,21 @@ public class frmTipoPaciente extends javax.swing.JInternalFrame {
     
 
     }//GEN-LAST:event_jtpacientesMousePressed
+
+    private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
+        String tip=this.txtpaciente.getText();
+        
+        TipopJpaController t = new TipopJpaController(entityTipop.getInstance());
+        Tipop tp=new Tipop();
+        tp.setNombret(tip);
+        
+        try{
+            t.create(tp);
+            JOptionPane.showConfirmDialog(null, "Tipo de Paciente Registrado");
+        }catch(Exception e){
+            JOptionPane.showConfirmDialog(null, "Error al Ingresar los datos "+e.toString());
+        }
+    }//GEN-LAST:event_btnGuardarActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

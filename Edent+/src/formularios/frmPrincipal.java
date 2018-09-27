@@ -27,7 +27,7 @@ public class frmPrincipal extends javax.swing.JFrame implements  Runnable {
         h1 = new Thread(this);
         this.setTitle("E-DENT");
         h1.start();
-        jDesktopPane1.setBorder(new ImagenFondo());
+        Dpanel.setBorder(new ImagenFondo());
         this.setExtendedState(frmPrincipal.MAXIMIZED_BOTH);
         
     }
@@ -67,7 +67,7 @@ public class frmPrincipal extends javax.swing.JFrame implements  Runnable {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jDesktopPane1 = new javax.swing.JDesktopPane();
+        Dpanel = new javax.swing.JDesktopPane();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
@@ -119,6 +119,11 @@ public class frmPrincipal extends javax.swing.JFrame implements  Runnable {
         jButton3.setBackground(new java.awt.Color(0, 204, 204));
         jButton3.setForeground(new java.awt.Color(0, 0, 204));
         jButton3.setText("Insertar Tipo de Paciente");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
         jButton4.setBackground(new java.awt.Color(0, 204, 204));
         jButton4.setForeground(new java.awt.Color(0, 0, 153));
@@ -206,31 +211,31 @@ public class frmPrincipal extends javax.swing.JFrame implements  Runnable {
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/conexionSQL/logo.jpeg"))); // NOI18N
 
-        jDesktopPane1.setLayer(jButton1, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jDesktopPane1.setLayer(jButton2, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jDesktopPane1.setLayer(jButton3, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jDesktopPane1.setLayer(jButton4, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jDesktopPane1.setLayer(jButton5, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jDesktopPane1.setLayer(jButton6, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jDesktopPane1.setLayer(jButton7, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jDesktopPane1.setLayer(jButton8, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jDesktopPane1.setLayer(jButton9, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jDesktopPane1.setLayer(jButton10, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jDesktopPane1.setLayer(jButton11, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jDesktopPane1.setLayer(jButton12, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jDesktopPane1.setLayer(jButton13, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jDesktopPane1.setLayer(jLabel1, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jDesktopPane1.setLayer(jLabel2, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jDesktopPane1.setLayer(lbhora, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jDesktopPane1.setLayer(jLabel3, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jDesktopPane1.setLayer(jLabel4, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jDesktopPane1.setLayer(jLabel5, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        Dpanel.setLayer(jButton1, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        Dpanel.setLayer(jButton2, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        Dpanel.setLayer(jButton3, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        Dpanel.setLayer(jButton4, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        Dpanel.setLayer(jButton5, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        Dpanel.setLayer(jButton6, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        Dpanel.setLayer(jButton7, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        Dpanel.setLayer(jButton8, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        Dpanel.setLayer(jButton9, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        Dpanel.setLayer(jButton10, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        Dpanel.setLayer(jButton11, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        Dpanel.setLayer(jButton12, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        Dpanel.setLayer(jButton13, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        Dpanel.setLayer(jLabel1, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        Dpanel.setLayer(jLabel2, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        Dpanel.setLayer(lbhora, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        Dpanel.setLayer(jLabel3, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        Dpanel.setLayer(jLabel4, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        Dpanel.setLayer(jLabel5, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
-        javax.swing.GroupLayout jDesktopPane1Layout = new javax.swing.GroupLayout(jDesktopPane1);
-        jDesktopPane1.setLayout(jDesktopPane1Layout);
-        jDesktopPane1Layout.setHorizontalGroup(
-            jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jDesktopPane1Layout.createSequentialGroup()
+        javax.swing.GroupLayout DpanelLayout = new javax.swing.GroupLayout(Dpanel);
+        Dpanel.setLayout(DpanelLayout);
+        DpanelLayout.setHorizontalGroup(
+            DpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(DpanelLayout.createSequentialGroup()
                 .addComponent(jButton13, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(44, 44, 44)
                 .addComponent(jLabel1)
@@ -239,11 +244,11 @@ public class frmPrincipal extends javax.swing.JFrame implements  Runnable {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(lbhora)
                 .addGap(44, 44, 44))
-            .addGroup(jDesktopPane1Layout.createSequentialGroup()
-                .addGroup(jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(DpanelLayout.createSequentialGroup()
+                .addGroup(DpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jButton5)
-                    .addGroup(jDesktopPane1Layout.createSequentialGroup()
-                        .addGroup(jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addGroup(DpanelLayout.createSequentialGroup()
+                        .addGroup(DpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addComponent(jButton1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jButton12, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jButton11, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -253,83 +258,85 @@ public class frmPrincipal extends javax.swing.JFrame implements  Runnable {
                             .addComponent(jButton7, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jButton6, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jButton4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jButton3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jButton2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 220, Short.MAX_VALUE))
                         .addGap(170, 170, 170)
-                        .addComponent(jLabel5)))
+                        .addComponent(jLabel5))
+                    .addGroup(DpanelLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jDesktopPane1Layout.createSequentialGroup()
+            .addGroup(DpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(DpanelLayout.createSequentialGroup()
                     .addGap(54, 54, 54)
                     .addComponent(jLabel3)
                     .addContainerGap(55, Short.MAX_VALUE)))
-            .addGroup(jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jDesktopPane1Layout.createSequentialGroup()
+            .addGroup(DpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(DpanelLayout.createSequentialGroup()
                     .addGap(54, 54, 54)
                     .addComponent(jLabel4)
                     .addContainerGap(843, Short.MAX_VALUE)))
         );
-        jDesktopPane1Layout.setVerticalGroup(
-            jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jDesktopPane1Layout.createSequentialGroup()
-                .addGroup(jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jDesktopPane1Layout.createSequentialGroup()
-                        .addGroup(jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+        DpanelLayout.setVerticalGroup(
+            DpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(DpanelLayout.createSequentialGroup()
+                .addGroup(DpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(DpanelLayout.createSequentialGroup()
+                        .addGroup(DpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(DpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(jLabel5))
-                            .addGroup(jDesktopPane1Layout.createSequentialGroup()
+                            .addGroup(DpanelLayout.createSequentialGroup()
                                 .addGap(50, 50, 50)
-                                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jDesktopPane1Layout.createSequentialGroup()
-                                .addGap(100, 100, 100)
-                                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jDesktopPane1Layout.createSequentialGroup()
-                                .addGap(160, 160, 160)
+                                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(DpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(DpanelLayout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jDesktopPane1Layout.createSequentialGroup()
-                                .addGap(260, 260, 260)
+                            .addGroup(DpanelLayout.createSequentialGroup()
+                                .addGap(92, 92, 92)
                                 .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jDesktopPane1Layout.createSequentialGroup()
-                                .addGap(310, 310, 310)
+                            .addGroup(DpanelLayout.createSequentialGroup()
+                                .addGap(142, 142, 142)
                                 .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jDesktopPane1Layout.createSequentialGroup()
-                                .addGap(360, 360, 360)
+                            .addGroup(DpanelLayout.createSequentialGroup()
+                                .addGap(192, 192, 192)
                                 .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jDesktopPane1Layout.createSequentialGroup()
-                                .addGap(210, 210, 210)
+                            .addGroup(DpanelLayout.createSequentialGroup()
+                                .addGap(42, 42, 42)
                                 .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGroup(jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jDesktopPane1Layout.createSequentialGroup()
+                        .addGroup(DpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(DpanelLayout.createSequentialGroup()
                                 .addGap(40, 40, 40)
                                 .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jDesktopPane1Layout.createSequentialGroup()
+                            .addGroup(DpanelLayout.createSequentialGroup()
                                 .addGap(100, 100, 100)
                                 .addComponent(jButton11, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jDesktopPane1Layout.createSequentialGroup()
+                            .addGroup(DpanelLayout.createSequentialGroup()
                                 .addGap(160, 160, 160)
                                 .addComponent(jButton12, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jDesktopPane1Layout.createSequentialGroup()
+                            .addGroup(DpanelLayout.createSequentialGroup()
                                 .addGap(210, 210, 210)
                                 .addComponent(jButton13, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGroup(jDesktopPane1Layout.createSequentialGroup()
+                    .addGroup(DpanelLayout.createSequentialGroup()
                         .addGap(410, 410, 410)
                         .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jDesktopPane1Layout.createSequentialGroup()
+                    .addGroup(DpanelLayout.createSequentialGroup()
                         .addGap(626, 626, 626)
-                        .addGroup(jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(DpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(DpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(jLabel1)
                                 .addComponent(jLabel2))
                             .addComponent(lbhora))))
                 .addGap(15, 15, 15))
-            .addGroup(jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jDesktopPane1Layout.createSequentialGroup()
+            .addGroup(DpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(DpanelLayout.createSequentialGroup()
                     .addGap(280, 280, 280)
                     .addComponent(jLabel3)
                     .addContainerGap(469, Short.MAX_VALUE)))
-            .addGroup(jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jDesktopPane1Layout.createSequentialGroup()
+            .addGroup(DpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(DpanelLayout.createSequentialGroup()
                     .addGap(280, 280, 280)
                     .addComponent(jLabel4)
                     .addContainerGap(469, Short.MAX_VALUE)))
@@ -468,12 +475,12 @@ public class frmPrincipal extends javax.swing.JFrame implements  Runnable {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jDesktopPane1)
+            .addComponent(Dpanel)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jDesktopPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(Dpanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
@@ -482,7 +489,7 @@ public class frmPrincipal extends javax.swing.JFrame implements  Runnable {
 
     private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
        frmExpedienteGeneral formProd = new frmExpedienteGeneral();
-       jDesktopPane1.add(formProd);
+       Dpanel.add(formProd);
        formProd.show();
     }//GEN-LAST:event_jMenuItem3ActionPerformed
 
@@ -558,6 +565,12 @@ public class frmPrincipal extends javax.swing.JFrame implements  Runnable {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton7ActionPerformed
 
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        frmTipoPaciente tipop = new frmTipoPaciente();
+       Dpanel.add(tipop);
+        tipop.show();
+    }//GEN-LAST:event_jButton3ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -595,6 +608,7 @@ public class frmPrincipal extends javax.swing.JFrame implements  Runnable {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public static final javax.swing.JMenu Admin = new javax.swing.JMenu();
+    private javax.swing.JDesktopPane Dpanel;
     private javax.swing.JMenuItem back;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
@@ -609,7 +623,6 @@ public class frmPrincipal extends javax.swing.JFrame implements  Runnable {
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
-    private javax.swing.JDesktopPane jDesktopPane1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
