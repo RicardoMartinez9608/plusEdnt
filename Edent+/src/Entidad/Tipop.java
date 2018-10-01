@@ -59,6 +59,8 @@ public class Tipop implements Serializable {
         return nombret;
     }
 
+    
+    
     public void setNombret(String nombret) {
         this.nombret = nombret;
     }
