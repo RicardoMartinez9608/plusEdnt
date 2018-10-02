@@ -128,7 +128,7 @@ public class ConexionDB {
        String resultado=null;
        try {            
            
-            CallableStatement proc = conn.prepareCall("{CALL INGRESARPAC(?,?,?,?,?)}");
+            CallableStatement proc = conn.prepareCall("{CALL TrataSpee(?,?,?,?,?)}");
             proc.setInt("pNombre",leve );
             proc.setInt("pApellido",moderada );
             proc.setInt("pDireccion",severa );

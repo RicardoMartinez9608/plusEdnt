@@ -1058,12 +1058,12 @@ public class frmTratamientoOrtodoncia extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_btnGuardarPTActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-       ConexionDB cefalometria = new ConexionDB();
-       cefalometria.procedureIngresarCefalom(txtanguloA1.getText(), txtanguloG1.getText(), txtIMPA1.getText(), txtJa1.getText(), 
-               txtEJE.getText(), txtIS.getText(), txtII.getText(), txtFHIS.getText(), txtANB82.getText(), txtANB80.getText(),
-               txtANB2.getText(), txtPALS.getText(), txtPALI.getText(), txtPTB.getText(), txtDSD.getText(), 
-               txtmaxilares.getText(), txtEntornoD.getText(),2);
-       JOptionPane.showMessageDialog(null, "Tratamiento Almacenado");
+//       ConexionDB cefalometria = new ConexionDB();
+//       cefalometria.procedureIngresarCefalom(txtanguloA1.getText(), txtanguloG1.getText(), txtIMPA1.getText(), txtJa1.getText(), 
+//               txtEJE.getText(), txtIS.getText(), txtII.getText(), txtFHIS.getText(), txtANB82.getText(), txtANB80.getText(),
+//               txtANB2.getText(), txtPALS.getText(), txtPALI.getText(), txtPTB.getText(), txtDSD.getText(), 
+//               txtmaxilares.getText(), txtEntornoD.getText(),2);
+//       JOptionPane.showMessageDialog(null, "Tratamiento Almacenado");
        
        int seleccion = 0;
         if(this.chcurvaleve1.isSelected()== true ) {
@@ -1089,7 +1089,7 @@ public class frmTratamientoOrtodoncia extends javax.swing.JInternalFrame {
        
        ConexionDB spee = new ConexionDB();
        
-       spee.procedureTrataSpee(speeleve, speemoderada, speesvera,2);
+       spee.procedureTrataSpee(speeleve, speemoderada, speesvera,1);
       
        
        
