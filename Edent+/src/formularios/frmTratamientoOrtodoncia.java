@@ -839,6 +839,11 @@ public class frmTratamientoOrtodoncia extends javax.swing.JInternalFrame {
         getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1300, 90, -1, -1));
 
         jButton3.setText("Guardar");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1170, 140, -1, -1));
 
         jButton4.setText("Cancelar");
@@ -1051,6 +1056,14 @@ public class frmTratamientoOrtodoncia extends javax.swing.JInternalFrame {
        
         JOptionPane.showMessageDialog(null, "Paciente Almacenado");
     }//GEN-LAST:event_btnGuardarPTActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+       ConexionDB cefalometria = new ConexionDB();
+       cefalometria.procedureIngresarCefalom(txtanguloA1.getText(), txtanguloG1.getText(), txtIMPA1.getText(), txtJa1.getText(), 
+               txtEJE.getText(), txtIS.getText(), txtII.getText(), txtFHIS.getText(), txtANB82.getText(), txtANB80.getText(),
+               txtANB2.getText(), txtPALS.getText(), txtPALI.getText(), txtPTB.getText(), txtDSD.getText(), 
+               txtmaxilares.getText(), txtEntornoD.getText(),2);
+    }//GEN-LAST:event_jButton3ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
