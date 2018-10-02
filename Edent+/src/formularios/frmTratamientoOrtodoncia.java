@@ -6,6 +6,7 @@
 package formularios;
 
 import ConexionSql.ConexionDB;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -1047,6 +1048,8 @@ public class frmTratamientoOrtodoncia extends javax.swing.JInternalFrame {
        ConexionDB trata = new ConexionDB();
        trata.procedureIngresarTrataOr(txtbandas.getText(), txttubos.getText(), txtotros.getText(), txtAparato.getText(), 
                txtexodoncia.getText(), txtBrakets.getText(), txtRetenciones.getText(), txtMD.getText(),1);
+       
+        JOptionPane.showMessageDialog(null, "Paciente Almacenado");
     }//GEN-LAST:event_btnGuardarPTActionPerformed
 
 
