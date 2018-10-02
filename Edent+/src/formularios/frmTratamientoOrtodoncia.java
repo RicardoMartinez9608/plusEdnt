@@ -1065,6 +1065,34 @@ public class frmTratamientoOrtodoncia extends javax.swing.JInternalFrame {
                txtmaxilares.getText(), txtEntornoD.getText(),2);
        JOptionPane.showMessageDialog(null, "Tratamiento Almacenado");
        
+       int seleccion = 0;
+        if(this.chcurvaleve1.isSelected()== true ) {
+             seleccion = 1;
+            }else{
+            seleccion = 0;
+        }
+        int speeleve= seleccion;
+         int seleccion1 = 0;
+        if(this.chcurvamoderada1.isSelected()== true ) {
+             seleccion1 = 1;
+            }else{
+            seleccion1 = 0;
+        }
+        int speemoderada= seleccion1;
+          int seleccion2 = 0;
+        if(this.chcurvasevera.isSelected()== true ) {
+             seleccion2 = 1;
+            }else{
+            seleccion2 = 0;
+        }
+        int speesvera= seleccion2;
+       
+       ConexionDB spee = new ConexionDB();
+       
+       spee.procedureTrataSpee(speeleve, speemoderada, speesvera,2);
+      
+       
+       
     }//GEN-LAST:event_jButton3ActionPerformed
 
 
