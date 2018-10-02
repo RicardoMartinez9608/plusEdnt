@@ -1063,6 +1063,7 @@ public class frmTratamientoOrtodoncia extends javax.swing.JInternalFrame {
                txtEJE.getText(), txtIS.getText(), txtII.getText(), txtFHIS.getText(), txtANB82.getText(), txtANB80.getText(),
                txtANB2.getText(), txtPALS.getText(), txtPALI.getText(), txtPTB.getText(), txtDSD.getText(), 
                txtmaxilares.getText(), txtEntornoD.getText(),2);
+       JOptionPane.showMessageDialog(null, "Tratamiento Almacenado");
     }//GEN-LAST:event_jButton3ActionPerformed
 
 
