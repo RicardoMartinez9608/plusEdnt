@@ -569,7 +569,9 @@ public class frmPrincipal extends javax.swing.JFrame implements  Runnable {
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
-        // TODO add your handling code here:
+        frmTratamientoOrtodoncia formProd = new frmTratamientoOrtodoncia();
+       Dpanel.add(formProd);
+       formProd.show();
     }//GEN-LAST:event_jButton7ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed

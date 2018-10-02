@@ -5,6 +5,8 @@
  */
 package formularios;
 
+import ConexionSql.ConexionDB;
+
 /**
  *
  * @author ricar
@@ -155,7 +157,7 @@ public class frmTratamientoOrtodoncia extends javax.swing.JInternalFrame {
         jButton4 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
+        btnGuardarPT = new javax.swing.JButton();
         jButton8 = new javax.swing.JButton();
 
         setClosable(true);
@@ -847,8 +849,13 @@ public class frmTratamientoOrtodoncia extends javax.swing.JInternalFrame {
         jButton6.setText("Editar");
         getContentPane().add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 560, -1, -1));
 
-        jButton7.setText("Guardar");
-        getContentPane().add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 610, -1, -1));
+        btnGuardarPT.setText("Guardar");
+        btnGuardarPT.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnGuardarPTActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnGuardarPT, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 610, -1, -1));
 
         jButton8.setText("Cancelar");
         getContentPane().add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 610, -1, -1));
@@ -1036,8 +1043,15 @@ public class frmTratamientoOrtodoncia extends javax.swing.JInternalFrame {
 
     }//GEN-LAST:event_txtrocabadoKeyPressed
 
+    private void btnGuardarPTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarPTActionPerformed
+       ConexionDB trata = new ConexionDB();
+       trata.procedureIngresarTrataOr(txtbandas.getText(), txttubos.getText(), txtotros.getText(), txtAparato.getText(), 
+               txtexodoncia.getText(), txtBrakets.getText(), txtRetenciones.getText(), txtMD.getText(),1);
+    }//GEN-LAST:event_btnGuardarPTActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnGuardarPT;
     private javax.swing.JCheckBox chcefalometrica;
     private javax.swing.JCheckBox chcurvaleve1;
     private javax.swing.JCheckBox chcurvamoderada1;
@@ -1054,7 +1068,6 @@ public class frmTratamientoOrtodoncia extends javax.swing.JInternalFrame {
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel18;
