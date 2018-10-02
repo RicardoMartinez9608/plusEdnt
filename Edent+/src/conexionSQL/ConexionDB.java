@@ -60,5 +60,32 @@ public class ConexionDB {
        }
        return resultado;
    }
+   public String procedureIngresarTrataOr(String bandas, String tubos, String otros, String aparato, 
+           String exodoncia, String brackets, String retenciones, String md, Integer id_consulta)
+   {
+       String resultado=null;
+       try {            
+           
+            CallableStatement proc = conn.prepareCall("{CALL IngresarTrataOr(?,?,?,?,?,?,?,?,?,?)}");
+            proc.setString("Bandas",bandas );
+            proc.setString("Tubos",tubos );
+            proc.setString("Otros",otros );
+            proc.setString("Aparato",aparato );
+            proc.setString("Exodoncia",exodoncia );
+            proc.setString("Brackets",brackets);
+            proc.setString("Retenciones",retenciones );
+            proc.setString("Md",md);
+            proc.setInt("IdConsulta",id_consulta );
+            proc.registerOutParameter("pMjs", java.sql.Types.VARCHAR);
+            proc.executeQuery();            
+            
+            resultado = proc.getString("pMjs");
+        } 
+       catch (Exception e) {                  
+            JOptionPane.showMessageDialog(null, e);
+       }
+       return resultado;
+   }
+   
   
     }
