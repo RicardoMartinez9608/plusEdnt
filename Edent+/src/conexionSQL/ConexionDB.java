@@ -86,6 +86,42 @@ public class ConexionDB {
        }
        return resultado;
    }
+   public String procedureIngresarCefalom(String articular, String goniaco, String impa, String jarabak, 
+           String facial, String is, String ii, String fhis, String anb82,String anb80, String anb2,
+           String pals, String pali, String ptb, String dsd, String clasim, String entornod, Integer id_Consulta)
+   {
+       String resultado=null;
+       try {            
+           
+            CallableStatement proc = conn.prepareCall("{CALL IngresarCefalom(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)}");
+            proc.setString("Articular",articular );
+            proc.setString("Goniaco",goniaco );
+            proc.setString("Impa",impa );
+            proc.setString("Jarabak",jarabak );
+            proc.setString("Facial",facial );
+            proc.setString("I_s",is);
+            proc.setString("Ii",ii );
+            proc.setString("Fhis",fhis);
+            proc.setString("Anb82",anb82 );
+            proc.setString("Anb80",anb80 );
+            proc.setString("Anb2",anb2 );
+            proc.setString("Pals",pals );
+            proc.setString("Pali",pali );
+            proc.setString("Ptb",ptb);
+            proc.setString("Dsd",dsd );
+            proc.setString("Clasim",clasim);
+            proc.setString("Entornod",entornod);
+            proc.setInt("Id_consulta",id_Consulta );
+            proc.registerOutParameter("pMjs", java.sql.Types.VARCHAR);
+            proc.executeQuery();            
+            
+            resultado = proc.getString("pMjs");
+        } 
+       catch (Exception e) {                  
+            JOptionPane.showMessageDialog(null, e);
+       }
+       return resultado;
+   }
    
   
     }
