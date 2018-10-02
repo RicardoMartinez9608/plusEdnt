@@ -123,5 +123,26 @@ public class ConexionDB {
        return resultado;
    }
    
+   public String procedureTrataSpee(Integer leve, Integer moderada, Integer severa, Integer Idconsulta)
+   {
+       String resultado=null;
+       try {            
+           
+            CallableStatement proc = conn.prepareCall("{CALL INGRESARPAC(?,?,?,?,?)}");
+            proc.setInt("pNombre",leve );
+            proc.setInt("pApellido",moderada );
+            proc.setInt("pDireccion",severa );
+            proc.setInt("pTelefono",Idconsulta );
+            proc.registerOutParameter("pMjs", java.sql.Types.VARCHAR);
+            proc.executeQuery();            
+            
+            resultado = proc.getString("pMjs");
+        } 
+       catch (Exception e) {                  
+            JOptionPane.showMessageDialog(null, e);
+       }
+       return resultado;
+   }
+   
   
     }
