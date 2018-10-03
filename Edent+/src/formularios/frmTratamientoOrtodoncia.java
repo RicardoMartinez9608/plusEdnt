@@ -1050,11 +1050,75 @@ public class frmTratamientoOrtodoncia extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_txtrocabadoKeyPressed
 
     private void btnGuardarPTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarPTActionPerformed
-       ConexionDB trata = new ConexionDB();
-       trata.procedureIngresarTrataOr(txtbandas.getText(), txttubos.getText(), txtotros.getText(), txtAparato.getText(), 
-               txtexodoncia.getText(), txtBrakets.getText(), txtRetenciones.getText(), txtMD.getText(),1);
-       
-        JOptionPane.showMessageDialog(null, "Paciente Almacenado");
+//       ConexionDB trata = new ConexionDB();
+//       trata.procedureIngresarTrataOr(txtbandas.getText(), txttubos.getText(), txtotros.getText(), txtAparato.getText(), 
+//               txtexodoncia.getText(), txtBrakets.getText(), txtRetenciones.getText(), txtMD.getText(),1);
+//       
+//        JOptionPane.showMessageDialog(null, "Paciente Almacenado");
+
+ int seleccion3 = 0;
+        if(this.chfaciales.isSelected()== true ) {
+             seleccion3 = 1;
+            }else{
+            seleccion3 = 0;
+        }
+        int f_faciales= seleccion3;
+        // validaciones chintraorales
+        int seleccion4 = 0;
+        if(this.chintraorales.isSelected()== true ) {
+             seleccion4 = 1;
+            }else{
+            seleccion4 = 0;
+        }
+        int f_intraorales = seleccion4;
+        //validacion chmodelo
+        int seleccion5 = 0;
+        if(this.chmodelo.isSelected()== true ) {
+             seleccion5 = 1;
+            }else{
+            seleccion5 = 0;
+        }
+        int modelo_mx = seleccion5;
+        //validacion chmodeloMD
+        int seleccion6 = 0;
+        if(this.chmodeloMD.isSelected()== true ) {
+             seleccion6 = 1;
+            }else{
+            seleccion6 = 0;
+        }
+        int modelo_md = seleccion6;
+        //validacion chpanoramica
+        int seleccion7 = 0;
+        if(this.chpanoramica.isSelected()== true ) {
+             seleccion7 = 1;
+            }else{
+            seleccion7 = 0;
+        }
+        int rx_panoramica = seleccion7;
+        //validacion chcefalometrica
+        int seleccion8 = 0;
+        if(this.chcefalometrica.isSelected()== true ) {
+             seleccion8 = 1;
+            }else{
+            seleccion8 = 0;
+        }
+        int rx_cefalometria = seleccion8;
+        //validacion chincicivos
+         int seleccion9 = 0;
+        if(this.chincicivos.isSelected()== true ) {
+             seleccion9 = 1;
+            }else{
+            seleccion9 = 0;
+        }
+        int rx_incicivos = seleccion9;
+        String rx_rocabado = this.txtrocabado.getText();
+        
+        ConexionDB indicaciones = new ConexionDB();
+        
+        indicaciones.procedureIndicacionEspecial(f_faciales, f_intraorales, modelo_mx, modelo_md, rx_panoramica, 
+                rx_cefalometria, rx_incicivos, rx_rocabado, 1);
+        
+        
     }//GEN-LAST:event_btnGuardarPTActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed

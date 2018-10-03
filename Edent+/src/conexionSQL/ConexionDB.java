@@ -150,16 +150,16 @@ public class ConexionDB {
        String resultado=null;
        try {            
            
-            CallableStatement proc = conn.prepareCall("{CALL TrataSpee(?,?,?,?,?)}");
-            proc.setInt("pNombre",faciales );
-            proc.setInt("pApellido",intraorales );
-            proc.setInt("pDireccion",modelomx );
-            proc.setInt("pNombre",modelomd );
-            proc.setInt("pApellido",panoramica );
-            proc.setInt("pDireccion",cefalometria );
-            proc.setInt("pNombre",incicivos );
-            proc.setString("pApellido",rocabado ); 
-            proc.setInt("pTelefono",Idconsulta );
+            CallableStatement proc = conn.prepareCall("{CALL IngresarIndicacionEspecial(?,?,?,?,?,?,?,?,?,?)}");
+            proc.setInt("Ffaciales",faciales );
+            proc.setInt("Fintraorales",intraorales );
+            proc.setInt("Modelomx",modelomx );
+            proc.setInt("Modelomd",modelomd );
+            proc.setInt("Rxpanoramica",panoramica );
+            proc.setInt("Rxcefalometrica",cefalometria );
+            proc.setInt("Rxincicivos",incicivos );
+            proc.setString("Rxrocabado",rocabado ); 
+            proc.setInt("IdConsulta",Idconsulta );
             proc.registerOutParameter("pMjs", java.sql.Types.VARCHAR);
             proc.executeQuery();            
             
