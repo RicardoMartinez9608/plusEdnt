@@ -144,5 +144,32 @@ public class ConexionDB {
        return resultado;
    }
    
+    public String procedureIndicacionEspecial(Integer faciales, Integer intraorales, Integer modelomx, Integer modelomd,
+                                               Integer panoramica, Integer cefalometria, Integer incicivos, String rocabado, Integer Idconsulta)
+   {
+       String resultado=null;
+       try {            
+           
+            CallableStatement proc = conn.prepareCall("{CALL TrataSpee(?,?,?,?,?)}");
+            proc.setInt("pNombre",faciales );
+            proc.setInt("pApellido",intraorales );
+            proc.setInt("pDireccion",modelomx );
+            proc.setInt("pNombre",modelomd );
+            proc.setInt("pApellido",panoramica );
+            proc.setInt("pDireccion",cefalometria );
+            proc.setInt("pNombre",incicivos );
+            proc.setString("pApellido",rocabado ); 
+            proc.setInt("pTelefono",Idconsulta );
+            proc.registerOutParameter("pMjs", java.sql.Types.VARCHAR);
+            proc.executeQuery();            
+            
+            resultado = proc.getString("pMjs");
+        } 
+       catch (Exception e) {                  
+            JOptionPane.showMessageDialog(null, e);
+       }
+       return resultado;
+   }
+   
   
     }
