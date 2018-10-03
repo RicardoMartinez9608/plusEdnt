@@ -156,6 +156,11 @@ public class frmPrincipal extends javax.swing.JFrame implements  Runnable {
         jButton5.setBackground(new java.awt.Color(0, 204, 204));
         jButton5.setForeground(new java.awt.Color(0, 0, 204));
         jButton5.setText("Agregar Consulta Paciente General");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
 
         jButton6.setBackground(new java.awt.Color(0, 204, 204));
         jButton6.setForeground(new java.awt.Color(0, 0, 204));
@@ -593,6 +598,12 @@ public class frmPrincipal extends javax.swing.JFrame implements  Runnable {
        Dpanel.add(tipop);
        tipop.show();
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+       frmTratamientoGeneral tipop = new frmTratamientoGeneral();
+       Dpanel.add(tipop);
+       tipop.show();
+    }//GEN-LAST:event_jButton5ActionPerformed
 
     /**
      * @param args the command line arguments
