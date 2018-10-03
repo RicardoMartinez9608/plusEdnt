@@ -171,7 +171,7 @@ public class ConexionDB {
        return resultado;
    }
    
-    public String procedureConsultaG(String motivo, String fecha, String total, String historiaM,
+    public String procedureConsultaG(String motivo, String fecha, Double total, String historiaM,
                     String historiaO, String examenC, String Dxodon,Integer Idpaciente)
    {
        String resultado=null;
@@ -180,7 +180,7 @@ public class ConexionDB {
             CallableStatement proc = conn.prepareCall("{CALL ConsultaGeneral(?,?,?,?,?,?,?,?,?)}");
             proc.setString("Motivo",motivo );
             proc.setString("Fecha",fecha );
-            proc.setString("Total",total );
+            proc.setDouble("Total",total );
             proc.setString("HistoriaM",historiaM );
             proc.setString("HistoriaO",historiaO );
             proc.setString("ExamenC",examenC );

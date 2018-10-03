@@ -5,6 +5,9 @@
  */
 package formularios;
 
+import ConexionSql.ConexionDB;
+import java.util.Calendar;
+
 /**
  *
  * @author ricar
@@ -365,7 +368,25 @@ public class frmTratamientoGeneral extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_btneditarActionPerformed
 
     private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
-
+//        String motivo = this.txtMotivoC.getText();
+//        Double total = Double.parseDouble( this.txtpresupuesto.getText());
+//        String historiam = this.txtHistoriaM.getText();
+//        String historiao = this.txtHistoriaO.getText();
+//        String examen = this.txtExamenC.getText();
+//        String dx = this.txtDX.getText();
+        
+       
+      String dia = Integer.toString(jfecha.getCalendar().get(Calendar.DAY_OF_MONTH));
+      String mes = Integer.toString(jfecha.getCalendar().get(Calendar.MONTH) + 1);
+      String year = Integer.toString(jfecha.getCalendar().get(Calendar.YEAR));
+      String fechaA = (dia + "-" + mes+ "-" + year);
+      String date = fechaA; 
+      
+      ConexionDB consultaG = new ConexionDB();
+      
+      consultaG.procedureConsultaG(txtMotivoC.getText(), date, Double.parseDouble(txtpresupuesto.getText())
+              , txtHistoriaM.getText(), txtHistoriaO.getText(), txtExamenC.getText(), txtDX.getText(), 2);
+      
     }//GEN-LAST:event_btnGuardarActionPerformed
 
     private void btnsalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnsalirActionPerformed
