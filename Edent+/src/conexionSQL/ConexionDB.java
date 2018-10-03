@@ -171,5 +171,29 @@ public class ConexionDB {
        return resultado;
    }
    
-  
+    public String procedureConsultaG(String motivo, String fecha, String total, String historiaM,
+                    String historiaO, String examenC, String Dxodon,Integer Idpaciente)
+   {
+       String resultado=null;
+       try {            
+           
+            CallableStatement proc = conn.prepareCall("{CALL ConsultaGeneral(?,?,?,?,?,?,?,?,?)}");
+            proc.setString("Motivo",motivo );
+            proc.setString("Fecha",fecha );
+            proc.setString("Total",total );
+            proc.setString("HistoriaM",historiaM );
+            proc.setString("HistoriaO",historiaO );
+            proc.setString("ExamenC",examenC );
+            proc.setString("DXodon",Dxodon );
+            proc.setInt("IdPaciente",Idpaciente );
+            proc.registerOutParameter("pMjs", java.sql.Types.VARCHAR);
+            proc.executeQuery();            
+            
+            resultado = proc.getString("pMjs");
+        } 
+       catch (Exception e) {                  
+            JOptionPane.showMessageDialog(null, e);
+       }
+       return resultado;
+   }
     }
