@@ -405,7 +405,17 @@ public class frmExpedienteGeneral extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_btnbuscaredicionActionPerformed
 
     private void btneditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btneditarActionPerformed
-
+      String dia = Integer.toString(fecha.getCalendar().get(Calendar.DAY_OF_MONTH));
+      String mes = Integer.toString(fecha.getCalendar().get(Calendar.MONTH) + 1);
+      String year = Integer.toString(fecha.getCalendar().get(Calendar.YEAR));
+      String fechaA = (dia + "-" + mes+ "-" + year);
+      String date = fechaA; 
+        ConexionDB updateP = new ConexionDB();
+        updateP.procedureUpdatePaciente(txtnombre.getText(),txtapellido.getText(),txtdireccion.getText(),txttelefono.getText(),
+              Integer.parseInt(txtedad.getText()),date,3);
+        
+                JOptionPane.showMessageDialog(null, "Datos Actualizados Correctamente");
+                
     }//GEN-LAST:event_btneditarActionPerformed
 
     private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed

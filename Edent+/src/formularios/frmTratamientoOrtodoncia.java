@@ -178,40 +178,40 @@ public class frmTratamientoOrtodoncia extends javax.swing.JInternalFrame {
         jSeparator1.setBackground(new java.awt.Color(0, 0, 0));
         jSeparator1.setForeground(new java.awt.Color(0, 0, 0));
         jSeparator1.setOrientation(javax.swing.SwingConstants.VERTICAL);
-        getContentPane().add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1180, 200, 10, 110));
+        getContentPane().add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1150, 170, 10, 110));
 
         jSeparator2.setBackground(new java.awt.Color(0, 0, 0));
         jSeparator2.setForeground(new java.awt.Color(0, 0, 0));
-        getContentPane().add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 200, 1140, -1));
+        getContentPane().add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 170, 1140, -1));
 
         jSeparator6.setBackground(new java.awt.Color(0, 0, 0));
         jSeparator6.setForeground(new java.awt.Color(0, 0, 0));
-        getContentPane().add(jSeparator6, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 310, 1140, 10));
+        getContentPane().add(jSeparator6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 280, 1140, 10));
 
         jSeparator11.setBackground(new java.awt.Color(0, 0, 0));
         jSeparator11.setForeground(new java.awt.Color(0, 0, 0));
-        getContentPane().add(jSeparator11, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 230, 1140, 10));
+        getContentPane().add(jSeparator11, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 200, 1140, 10));
         getContentPane().add(lbid, new org.netbeans.lib.awtextra.AbsoluteConstraints(1140, 80, 57, 18));
 
         jSeparator12.setBackground(new java.awt.Color(0, 0, 0));
         jSeparator12.setForeground(new java.awt.Color(0, 0, 0));
         jSeparator12.setOrientation(javax.swing.SwingConstants.VERTICAL);
-        getContentPane().add(jSeparator12, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 200, -1, 110));
+        getContentPane().add(jSeparator12, new org.netbeans.lib.awtextra.AbsoluteConstraints(970, 170, -1, 110));
 
         lbidplan.setFont(new java.awt.Font("Baskerville Old Face", 1, 11)); // NOI18N
         getContentPane().add(lbidplan, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 70, 57, 18));
 
         jLabel3.setFont(new java.awt.Font("Baskerville Old Face", 0, 11)); // NOI18N
         jLabel3.setText("IS-LS");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 210, 40, -1));
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 180, 40, -1));
 
         jSeparator13.setBackground(new java.awt.Color(0, 0, 0));
         jSeparator13.setForeground(new java.awt.Color(0, 0, 0));
-        getContentPane().add(jSeparator13, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 260, 1140, 20));
+        getContentPane().add(jSeparator13, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 230, 1140, 20));
 
         jLabel4.setFont(new java.awt.Font("Baskerville Old Face", 1, 11)); // NOI18N
         jLabel4.setText("4");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 240, 40, -1));
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 210, 40, -1));
 
         txtEJE.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -223,20 +223,20 @@ public class frmTratamientoOrtodoncia extends javax.swing.JInternalFrame {
                 txtEJEKeyPressed(evt);
             }
         });
-        getContentPane().add(txtEJE, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 280, 59, -1));
+        getContentPane().add(txtEJE, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 250, 59, -1));
 
         jSeparator14.setBackground(new java.awt.Color(0, 0, 0));
         jSeparator14.setForeground(new java.awt.Color(0, 0, 0));
         jSeparator14.setOrientation(javax.swing.SwingConstants.VERTICAL);
-        getContentPane().add(jSeparator14, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 200, 20, 110));
+        getContentPane().add(jSeparator14, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 170, 20, 110));
 
         jLabel5.setFont(new java.awt.Font("Baskerville Old Face", 0, 11)); // NOI18N
         jLabel5.setText("Ángulo Articular");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 210, 90, -1));
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 180, 90, -1));
 
         jLabel6.setFont(new java.awt.Font("Baskerville Old Face", 1, 11)); // NOI18N
         jLabel6.setText("150°");
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 240, 40, -1));
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 210, 40, -1));
 
         txtanguloA1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -248,20 +248,20 @@ public class frmTratamientoOrtodoncia extends javax.swing.JInternalFrame {
                 txtanguloA1KeyPressed(evt);
             }
         });
-        getContentPane().add(txtanguloA1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 280, 59, -1));
+        getContentPane().add(txtanguloA1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 250, 59, -1));
 
         jSeparator15.setBackground(new java.awt.Color(0, 0, 0));
         jSeparator15.setForeground(new java.awt.Color(0, 0, 0));
         jSeparator15.setOrientation(javax.swing.SwingConstants.VERTICAL);
-        getContentPane().add(jSeparator15, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 200, 30, 110));
+        getContentPane().add(jSeparator15, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 170, 30, 110));
 
         jLabel7.setFont(new java.awt.Font("Baskerville Old Face", 0, 11)); // NOI18N
         jLabel7.setText("Ángulo Goniaco Inferior");
-        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 210, 130, -1));
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 180, 130, -1));
 
         jLabel9.setFont(new java.awt.Font("Baskerville Old Face", 1, 11)); // NOI18N
         jLabel9.setText("75°");
-        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 240, 30, -1));
+        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 210, 30, -1));
 
         txtanguloG1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -273,20 +273,20 @@ public class frmTratamientoOrtodoncia extends javax.swing.JInternalFrame {
                 txtanguloG1KeyPressed(evt);
             }
         });
-        getContentPane().add(txtanguloG1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 280, 59, -1));
+        getContentPane().add(txtanguloG1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 250, 59, -1));
 
         jSeparator16.setBackground(new java.awt.Color(0, 0, 0));
         jSeparator16.setForeground(new java.awt.Color(0, 0, 0));
         jSeparator16.setOrientation(javax.swing.SwingConstants.VERTICAL);
-        getContentPane().add(jSeparator16, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 200, 30, 110));
+        getContentPane().add(jSeparator16, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 170, 30, 110));
 
         jLabel18.setFont(new java.awt.Font("Baskerville Old Face", 0, 11)); // NOI18N
         jLabel18.setText("IMPA");
-        getContentPane().add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 210, 40, -1));
+        getContentPane().add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 180, 40, -1));
 
         jLabel19.setFont(new java.awt.Font("Baskerville Old Face", 1, 11)); // NOI18N
         jLabel19.setText("85-93-97°");
-        getContentPane().add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 240, 60, -1));
+        getContentPane().add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 210, 60, -1));
 
         txtIMPA1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -298,23 +298,23 @@ public class frmTratamientoOrtodoncia extends javax.swing.JInternalFrame {
                 txtIMPA1KeyPressed(evt);
             }
         });
-        getContentPane().add(txtIMPA1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 280, 59, -1));
+        getContentPane().add(txtIMPA1, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 250, 59, -1));
 
         jLabel20.setFont(new java.awt.Font("Baskerville Old Face", 0, 11)); // NOI18N
         jLabel20.setText("Porcentaje JARABAK");
-        getContentPane().add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 210, 130, -1));
+        getContentPane().add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 180, 130, -1));
 
         jLabel21.setFont(new java.awt.Font("Baskerville Old Face", 0, 11)); // NOI18N
         jLabel21.setText("EJE FACIAL");
-        getContentPane().add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 210, 70, -1));
+        getContentPane().add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 180, 70, -1));
 
         jLabel22.setFont(new java.awt.Font("Baskerville Old Face", 1, 11)); // NOI18N
         jLabel22.setText("56%");
-        getContentPane().add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 240, 40, -1));
+        getContentPane().add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 210, 40, -1));
 
         jLabel23.setFont(new java.awt.Font("Baskerville Old Face", 1, 11)); // NOI18N
         jLabel23.setText("90");
-        getContentPane().add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 240, 30, -1));
+        getContentPane().add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 210, 30, -1));
 
         txtJa1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -326,7 +326,7 @@ public class frmTratamientoOrtodoncia extends javax.swing.JInternalFrame {
                 txtJa1KeyPressed(evt);
             }
         });
-        getContentPane().add(txtJa1, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 280, 59, -1));
+        getContentPane().add(txtJa1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 250, 59, -1));
 
         txtIS.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -338,20 +338,20 @@ public class frmTratamientoOrtodoncia extends javax.swing.JInternalFrame {
                 txtISKeyPressed(evt);
             }
         });
-        getContentPane().add(txtIS, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 280, 59, -1));
+        getContentPane().add(txtIS, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 250, 59, -1));
 
         jLabel24.setFont(new java.awt.Font("Baskerville Old Face", 0, 11)); // NOI18N
         jLabel24.setText("II-LS");
-        getContentPane().add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 210, 40, -1));
+        getContentPane().add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 180, 40, -1));
 
         jSeparator17.setBackground(new java.awt.Color(0, 0, 0));
         jSeparator17.setForeground(new java.awt.Color(0, 0, 0));
         jSeparator17.setOrientation(javax.swing.SwingConstants.VERTICAL);
-        getContentPane().add(jSeparator17, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 200, 10, 110));
+        getContentPane().add(jSeparator17, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 170, 10, 110));
 
         jLabel25.setFont(new java.awt.Font("Baskerville Old Face", 1, 11)); // NOI18N
         jLabel25.setText("0");
-        getContentPane().add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 240, 20, -1));
+        getContentPane().add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 210, 20, -1));
 
         txtII.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -363,20 +363,20 @@ public class frmTratamientoOrtodoncia extends javax.swing.JInternalFrame {
                 txtIIKeyPressed(evt);
             }
         });
-        getContentPane().add(txtII, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 280, 59, -1));
+        getContentPane().add(txtII, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 250, 59, -1));
 
         jSeparator18.setBackground(new java.awt.Color(0, 0, 0));
         jSeparator18.setForeground(new java.awt.Color(0, 0, 0));
         jSeparator18.setOrientation(javax.swing.SwingConstants.VERTICAL);
-        getContentPane().add(jSeparator18, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 200, 10, 110));
+        getContentPane().add(jSeparator18, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 170, 10, 110));
 
         jLabel26.setFont(new java.awt.Font("Baskerville Old Face", 0, 11)); // NOI18N
         jLabel26.setText("FHIS");
-        getContentPane().add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 210, 40, -1));
+        getContentPane().add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 180, 40, -1));
 
         jLabel27.setFont(new java.awt.Font("Baskerville Old Face", 1, 11)); // NOI18N
         jLabel27.setText("110°-115°");
-        getContentPane().add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 240, 60, -1));
+        getContentPane().add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 210, 60, -1));
 
         txtFHIS.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -388,25 +388,25 @@ public class frmTratamientoOrtodoncia extends javax.swing.JInternalFrame {
                 txtFHISKeyPressed(evt);
             }
         });
-        getContentPane().add(txtFHIS, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 280, 59, -1));
+        getContentPane().add(txtFHIS, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 250, 59, -1));
 
         jSeparator19.setBackground(new java.awt.Color(0, 0, 0));
         jSeparator19.setForeground(new java.awt.Color(0, 0, 0));
         jSeparator19.setOrientation(javax.swing.SwingConstants.VERTICAL);
-        getContentPane().add(jSeparator19, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 200, 10, 110));
+        getContentPane().add(jSeparator19, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 170, 10, 110));
 
         jSeparator20.setBackground(new java.awt.Color(0, 0, 0));
         jSeparator20.setForeground(new java.awt.Color(0, 0, 0));
         jSeparator20.setOrientation(javax.swing.SwingConstants.VERTICAL);
-        getContentPane().add(jSeparator20, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 200, 90, 110));
+        getContentPane().add(jSeparator20, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 170, 90, 110));
 
         jLabel28.setFont(new java.awt.Font("Baskerville Old Face", 0, 11)); // NOI18N
         jLabel28.setText("ANB");
-        getContentPane().add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 210, 40, -1));
+        getContentPane().add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 180, 40, -1));
 
         jLabel29.setFont(new java.awt.Font("Baskerville Old Face", 1, 11)); // NOI18N
         jLabel29.setText("2°");
-        getContentPane().add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 240, 30, -1));
+        getContentPane().add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 210, 30, -1));
 
         txtANB82.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -418,43 +418,43 @@ public class frmTratamientoOrtodoncia extends javax.swing.JInternalFrame {
                 txtANB82KeyPressed(evt);
             }
         });
-        getContentPane().add(txtANB82, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 280, 20, -1));
+        getContentPane().add(txtANB82, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 250, 20, -1));
 
         jSeparator21.setBackground(new java.awt.Color(0, 0, 0));
         jSeparator21.setForeground(new java.awt.Color(0, 0, 0));
         jSeparator21.setOrientation(javax.swing.SwingConstants.VERTICAL);
-        getContentPane().add(jSeparator21, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 200, 10, 110));
+        getContentPane().add(jSeparator21, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 170, 10, 110));
 
         jSeparator22.setBackground(new java.awt.Color(0, 0, 0));
         jSeparator22.setForeground(new java.awt.Color(0, 0, 0));
         jSeparator22.setOrientation(javax.swing.SwingConstants.VERTICAL);
-        getContentPane().add(jSeparator22, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 200, 10, 110));
+        getContentPane().add(jSeparator22, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 170, 10, 110));
 
         jLabel30.setFont(new java.awt.Font("Baskerville Old Face", 1, 11)); // NOI18N
         jLabel30.setText("82°");
-        getContentPane().add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 240, 30, -1));
+        getContentPane().add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 210, 30, -1));
 
         jLabel31.setFont(new java.awt.Font("Baskerville Old Face", 1, 11)); // NOI18N
         jLabel31.setText("80°");
-        getContentPane().add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 240, 30, -1));
+        getContentPane().add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 210, 30, -1));
 
         jLabel32.setFont(new java.awt.Font("Baskerville Old Face", 0, 11)); // NOI18N
         jLabel32.setText("PALS");
-        getContentPane().add(jLabel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 210, 40, -1));
+        getContentPane().add(jLabel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 180, 40, -1));
 
         jLabel33.setFont(new java.awt.Font("Baskerville Old Face", 1, 11)); // NOI18N
         jLabel33.setText("4 mm");
-        getContentPane().add(jLabel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 240, 40, -1));
+        getContentPane().add(jLabel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 210, 40, -1));
 
         jSeparator24.setBackground(new java.awt.Color(0, 0, 0));
         jSeparator24.setForeground(new java.awt.Color(0, 0, 0));
         jSeparator24.setOrientation(javax.swing.SwingConstants.VERTICAL);
-        getContentPane().add(jSeparator24, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 230, 10, 80));
+        getContentPane().add(jSeparator24, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 200, 10, 80));
 
         jSeparator25.setBackground(new java.awt.Color(0, 0, 0));
         jSeparator25.setForeground(new java.awt.Color(0, 0, 0));
         jSeparator25.setOrientation(javax.swing.SwingConstants.VERTICAL);
-        getContentPane().add(jSeparator25, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 230, 10, 80));
+        getContentPane().add(jSeparator25, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 200, 10, 80));
 
         txtPALS.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -466,7 +466,7 @@ public class frmTratamientoOrtodoncia extends javax.swing.JInternalFrame {
                 txtPALSKeyPressed(evt);
             }
         });
-        getContentPane().add(txtPALS, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 280, 59, -1));
+        getContentPane().add(txtPALS, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 250, 59, -1));
 
         txtANB80.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -478,7 +478,7 @@ public class frmTratamientoOrtodoncia extends javax.swing.JInternalFrame {
                 txtANB80KeyPressed(evt);
             }
         });
-        getContentPane().add(txtANB80, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 280, 20, -1));
+        getContentPane().add(txtANB80, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 250, 20, -1));
 
         txtANB2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -490,15 +490,15 @@ public class frmTratamientoOrtodoncia extends javax.swing.JInternalFrame {
                 txtANB2KeyPressed(evt);
             }
         });
-        getContentPane().add(txtANB2, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 280, 20, -1));
+        getContentPane().add(txtANB2, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 250, 20, -1));
 
         jLabel78.setFont(new java.awt.Font("Baskerville Old Face", 0, 11)); // NOI18N
         jLabel78.setText("PALI");
-        getContentPane().add(jLabel78, new org.netbeans.lib.awtextra.AbsoluteConstraints(1020, 210, 50, -1));
+        getContentPane().add(jLabel78, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 180, 50, -1));
 
         jLabel79.setFont(new java.awt.Font("Baskerville Old Face", 1, 11)); // NOI18N
         jLabel79.setText("2 mm");
-        getContentPane().add(jLabel79, new org.netbeans.lib.awtextra.AbsoluteConstraints(1020, 240, 40, 20));
+        getContentPane().add(jLabel79, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 210, 40, 20));
 
         txtPALI.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -510,20 +510,20 @@ public class frmTratamientoOrtodoncia extends javax.swing.JInternalFrame {
                 txtPALIKeyPressed(evt);
             }
         });
-        getContentPane().add(txtPALI, new org.netbeans.lib.awtextra.AbsoluteConstraints(1020, 280, 59, -1));
+        getContentPane().add(txtPALI, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 250, 59, -1));
 
         jSeparator23.setBackground(new java.awt.Color(0, 0, 0));
         jSeparator23.setForeground(new java.awt.Color(0, 0, 0));
         jSeparator23.setOrientation(javax.swing.SwingConstants.VERTICAL);
-        getContentPane().add(jSeparator23, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 200, 10, 110));
+        getContentPane().add(jSeparator23, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 170, 10, 110));
 
         jLabel80.setFont(new java.awt.Font("Baskerville Old Face", 0, 11)); // NOI18N
         jLabel80.setText("PTB");
-        getContentPane().add(jLabel80, new org.netbeans.lib.awtextra.AbsoluteConstraints(1110, 210, 40, -1));
+        getContentPane().add(jLabel80, new org.netbeans.lib.awtextra.AbsoluteConstraints(1080, 180, 40, -1));
 
         jLabel81.setFont(new java.awt.Font("Baskerville Old Face", 1, 11)); // NOI18N
         jLabel81.setText("-3 mm");
-        getContentPane().add(jLabel81, new org.netbeans.lib.awtextra.AbsoluteConstraints(1100, 240, 40, -1));
+        getContentPane().add(jLabel81, new org.netbeans.lib.awtextra.AbsoluteConstraints(1070, 210, 40, -1));
 
         txtPTB.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -535,21 +535,21 @@ public class frmTratamientoOrtodoncia extends javax.swing.JInternalFrame {
                 txtPTBKeyPressed(evt);
             }
         });
-        getContentPane().add(txtPTB, new org.netbeans.lib.awtextra.AbsoluteConstraints(1110, 280, 59, -1));
+        getContentPane().add(txtPTB, new org.netbeans.lib.awtextra.AbsoluteConstraints(1080, 250, 59, -1));
 
         jSeparator26.setBackground(new java.awt.Color(0, 0, 0));
         jSeparator26.setForeground(new java.awt.Color(0, 0, 0));
         jSeparator26.setOrientation(javax.swing.SwingConstants.VERTICAL);
-        getContentPane().add(jSeparator26, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 200, 10, 110));
+        getContentPane().add(jSeparator26, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 170, 10, 110));
 
         jSeparator27.setBackground(new java.awt.Color(0, 0, 0));
         jSeparator27.setForeground(new java.awt.Color(0, 0, 0));
         jSeparator27.setOrientation(javax.swing.SwingConstants.VERTICAL);
-        getContentPane().add(jSeparator27, new org.netbeans.lib.awtextra.AbsoluteConstraints(1090, 200, 10, 110));
+        getContentPane().add(jSeparator27, new org.netbeans.lib.awtextra.AbsoluteConstraints(1060, 170, 10, 110));
 
         jSeparator28.setBackground(new java.awt.Color(0, 0, 0));
         jSeparator28.setForeground(new java.awt.Color(0, 0, 0));
-        getContentPane().add(jSeparator28, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 230, 1140, 10));
+        getContentPane().add(jSeparator28, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 200, 1140, 10));
 
         lbnombre.setFont(new java.awt.Font("Baskerville Old Face", 1, 11)); // NOI18N
         getContentPane().add(lbnombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 70, 130, 18));
@@ -559,79 +559,79 @@ public class frmTratamientoOrtodoncia extends javax.swing.JInternalFrame {
 
         lblnombre10.setFont(new java.awt.Font("Baskerville Old Face", 1, 14)); // NOI18N
         lblnombre10.setText("Curva de Spee: ");
-        getContentPane().add(lblnombre10, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 330, 120, -1));
+        getContentPane().add(lblnombre10, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 300, 120, -1));
 
         chcurvaleve1.setText("Leve");
-        getContentPane().add(chcurvaleve1, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 330, 60, -1));
+        getContentPane().add(chcurvaleve1, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 300, 60, -1));
 
         chcurvamoderada1.setText("Moderada");
-        getContentPane().add(chcurvamoderada1, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 330, 80, -1));
+        getContentPane().add(chcurvamoderada1, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 300, 80, -1));
 
         chcurvasevera.setText("Severa");
-        getContentPane().add(chcurvasevera, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 330, 70, -1));
+        getContentPane().add(chcurvasevera, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 300, 70, -1));
 
         lblnombre6.setFont(new java.awt.Font("Baskerville Old Face", 1, 14)); // NOI18N
         lblnombre6.setText("DSD:");
-        getContentPane().add(lblnombre6, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 330, 40, -1));
+        getContentPane().add(lblnombre6, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 300, 40, -1));
 
         txtDSD.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 txtDSDKeyPressed(evt);
             }
         });
-        getContentPane().add(txtDSD, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 330, 60, -1));
+        getContentPane().add(txtDSD, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 300, 60, -1));
 
         lblnombre9.setFont(new java.awt.Font("Baskerville Old Face", 1, 14)); // NOI18N
         lblnombre9.setText("mm.");
-        getContentPane().add(lblnombre9, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 330, 30, -1));
+        getContentPane().add(lblnombre9, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 300, 30, -1));
 
         lblnombre8.setFont(new java.awt.Font("Baskerville Old Face", 1, 14)); // NOI18N
         lblnombre8.setText("Clasificación Maxilares:");
-        getContentPane().add(lblnombre8, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 360, -1, -1));
+        getContentPane().add(lblnombre8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 330, -1, -1));
 
         txtmaxilares.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 txtmaxilaresKeyPressed(evt);
             }
         });
-        getContentPane().add(txtmaxilares, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 360, 380, -1));
+        getContentPane().add(txtmaxilares, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 330, 380, -1));
 
         lblnombre7.setFont(new java.awt.Font("Baskerville Old Face", 1, 14)); // NOI18N
         lblnombre7.setText("Entorno Dental:");
-        getContentPane().add(lblnombre7, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 360, -1, -1));
+        getContentPane().add(lblnombre7, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 330, -1, -1));
 
         txtEntornoD.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 txtEntornoDKeyPressed(evt);
             }
         });
-        getContentPane().add(txtEntornoD, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 360, 380, -1));
+        getContentPane().add(txtEntornoD, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 330, 380, -1));
 
         lblnombre11.setFont(new java.awt.Font("Baskerville Old Face", 1, 11)); // NOI18N
         lblnombre11.setText("Bandas en:");
-        getContentPane().add(lblnombre11, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 460, 70, 20));
+        getContentPane().add(lblnombre11, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 390, 70, 20));
 
         txtbandas.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 txtbandasKeyPressed(evt);
             }
         });
-        getContentPane().add(txtbandas, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 460, 380, -1));
+        getContentPane().add(txtbandas, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 390, 380, -1));
 
         lblnombre12.setFont(new java.awt.Font("Baskerville Old Face", 1, 11)); // NOI18N
         lblnombre12.setText("tubos:");
-        getContentPane().add(lblnombre12, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 490, 50, 10));
+        getContentPane().add(lblnombre12, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 420, 50, 10));
 
         txttubos.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 txttubosKeyPressed(evt);
             }
         });
-        getContentPane().add(txttubos, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 490, 380, -1));
+        getContentPane().add(txttubos, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 420, 380, -1));
 
         lblnombre13.setFont(new java.awt.Font("Baskerville Old Face", 1, 11)); // NOI18N
         lblnombre13.setText("Otros:");
-        getContentPane().add(lblnombre13, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 520, 50, 20));
+        getContentPane().add(lblnombre13, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 450, 50, 20));
 
         txtotros.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -643,33 +643,33 @@ public class frmTratamientoOrtodoncia extends javax.swing.JInternalFrame {
                 txtotrosKeyPressed(evt);
             }
         });
-        getContentPane().add(txtotros, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 520, 380, -1));
+        getContentPane().add(txtotros, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 450, 380, -1));
 
         lblnombre14.setFont(new java.awt.Font("Baskerville Old Face", 1, 11)); // NOI18N
         lblnombre14.setText("Aparato tipo:");
-        getContentPane().add(lblnombre14, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 550, 80, 20));
+        getContentPane().add(lblnombre14, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 480, 80, 20));
 
         txtAparato.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 txtAparatoKeyPressed(evt);
             }
         });
-        getContentPane().add(txtAparato, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 550, 380, -1));
+        getContentPane().add(txtAparato, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 480, 380, -1));
 
         lblnombre15.setFont(new java.awt.Font("Baskerville Old Face", 1, 11)); // NOI18N
         lblnombre15.setText("Exodoncia:");
-        getContentPane().add(lblnombre15, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 580, 70, 20));
+        getContentPane().add(lblnombre15, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 510, 70, 20));
 
         txtexodoncia.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 txtexodonciaKeyPressed(evt);
             }
         });
-        getContentPane().add(txtexodoncia, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 580, 380, -1));
+        getContentPane().add(txtexodoncia, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 510, 380, -1));
 
         lblnombre17.setFont(new java.awt.Font("Baskerville Old Face", 1, 11)); // NOI18N
         lblnombre17.setText("Brackets:");
-        getContentPane().add(lblnombre17, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 610, 60, 20));
+        getContentPane().add(lblnombre17, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 540, 60, 20));
 
         txtBrakets.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -681,11 +681,11 @@ public class frmTratamientoOrtodoncia extends javax.swing.JInternalFrame {
                 txtBraketsKeyPressed(evt);
             }
         });
-        getContentPane().add(txtBrakets, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 610, 380, -1));
+        getContentPane().add(txtBrakets, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 540, 380, -1));
 
         lblnombre19.setFont(new java.awt.Font("Baskerville Old Face", 1, 11)); // NOI18N
         lblnombre19.setText("RETENCIONES MX:");
-        getContentPane().add(lblnombre19, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 640, 110, 20));
+        getContentPane().add(lblnombre19, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 570, 110, 20));
 
         txtRetenciones.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -697,120 +697,120 @@ public class frmTratamientoOrtodoncia extends javax.swing.JInternalFrame {
                 txtRetencionesKeyPressed(evt);
             }
         });
-        getContentPane().add(txtRetenciones, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 640, 380, -1));
+        getContentPane().add(txtRetenciones, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 570, 380, -1));
 
         lblnombre18.setFont(new java.awt.Font("Baskerville Old Face", 1, 11)); // NOI18N
         lblnombre18.setText("Secuencia de Arcos:");
-        getContentPane().add(lblnombre18, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 670, -1, 20));
+        getContentPane().add(lblnombre18, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 600, -1, 20));
 
         txtsecuencia.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 txtsecuenciaKeyPressed(evt);
             }
         });
-        getContentPane().add(txtsecuencia, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 670, 380, -1));
+        getContentPane().add(txtsecuencia, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 600, 380, -1));
 
         lblnombre20.setFont(new java.awt.Font("Baskerville Old Face", 1, 11)); // NOI18N
         lblnombre20.setText("MD:");
-        getContentPane().add(lblnombre20, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 700, 40, 20));
+        getContentPane().add(lblnombre20, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 630, 40, 20));
 
         txtMD.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 txtMDKeyPressed(evt);
             }
         });
-        getContentPane().add(txtMD, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 700, 380, -1));
+        getContentPane().add(txtMD, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 630, 380, -1));
 
         jLabel1.setFont(new java.awt.Font("Baskerville Old Face", 1, 14)); // NOI18N
         jLabel1.setText("Indicación especial antes de colocar Brackets");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 470, 300, -1));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 390, 300, -1));
 
         jLabel83.setFont(new java.awt.Font("Baskerville Old Face", 1, 15)); // NOI18N
         jLabel83.setText("Plan de Tratamiento");
-        getContentPane().add(jLabel83, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 420, -1, 20));
+        getContentPane().add(jLabel83, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 380, -1, 20));
 
         jSeparator3.setForeground(new java.awt.Color(0, 0, 0));
-        getContentPane().add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 620, 400, 10));
+        getContentPane().add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 540, 400, 10));
 
         jLabel84.setBackground(new java.awt.Color(0, 0, 0));
         jLabel84.setFont(new java.awt.Font("Baskerville Old Face", 0, 10)); // NOI18N
         jLabel84.setText("Tomar imp.");
-        getContentPane().add(jLabel84, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 530, 60, -1));
+        getContentPane().add(jLabel84, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 450, 60, -1));
 
         jLabel85.setBackground(new java.awt.Color(0, 0, 0));
         jLabel85.setFont(new java.awt.Font("Baskerville Old Face", 0, 10)); // NOI18N
         jLabel85.setText("Repetir Fotos");
-        getContentPane().add(jLabel85, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 500, 80, -1));
+        getContentPane().add(jLabel85, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 420, 80, -1));
 
         jLabel86.setBackground(new java.awt.Color(0, 0, 0));
         jLabel86.setFont(new java.awt.Font("Baskerville Old Face", 0, 10)); // NOI18N
         jLabel86.setText("Tomar Rx");
-        getContentPane().add(jLabel86, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 560, 50, -1));
+        getContentPane().add(jLabel86, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 480, 50, -1));
 
         jSeparator29.setForeground(new java.awt.Color(0, 0, 0));
-        getContentPane().add(jSeparator29, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 490, 400, -1));
+        getContentPane().add(jSeparator29, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 410, 400, -1));
 
         jSeparator30.setForeground(new java.awt.Color(0, 0, 0));
-        getContentPane().add(jSeparator30, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 520, 400, 10));
+        getContentPane().add(jSeparator30, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 440, 400, 10));
 
         jLabel87.setFont(new java.awt.Font("Baskerville Old Face", 0, 10)); // NOI18N
         jLabel87.setText("RX Rocabado");
-        getContentPane().add(jLabel87, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 590, 80, -1));
+        getContentPane().add(jLabel87, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 510, 80, -1));
 
         jSeparator31.setForeground(new java.awt.Color(0, 0, 0));
-        getContentPane().add(jSeparator31, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 550, 400, 10));
+        getContentPane().add(jSeparator31, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 470, 400, 10));
 
         jSeparator32.setForeground(new java.awt.Color(0, 0, 0));
         jSeparator32.setOrientation(javax.swing.SwingConstants.VERTICAL);
         jSeparator32.setToolTipText("");
-        getContentPane().add(jSeparator32, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 490, 10, 130));
+        getContentPane().add(jSeparator32, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 410, 10, 130));
 
         jSeparator33.setForeground(new java.awt.Color(0, 0, 0));
         jSeparator33.setOrientation(javax.swing.SwingConstants.VERTICAL);
-        getContentPane().add(jSeparator33, new org.netbeans.lib.awtextra.AbsoluteConstraints(960, 490, -1, 90));
+        getContentPane().add(jSeparator33, new org.netbeans.lib.awtextra.AbsoluteConstraints(1040, 410, -1, 90));
 
         jSeparator67.setForeground(new java.awt.Color(0, 0, 0));
         jSeparator67.setOrientation(javax.swing.SwingConstants.VERTICAL);
-        getContentPane().add(jSeparator67, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 490, -1, 90));
+        getContentPane().add(jSeparator67, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 410, -1, 90));
 
         chmodelo.setBackground(new java.awt.Color(255, 255, 255));
         chmodelo.setText("Modelo mx ");
-        getContentPane().add(chmodelo, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 520, 93, -1));
+        getContentPane().add(chmodelo, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 440, 93, -1));
 
         chfaciales.setBackground(new java.awt.Color(255, 255, 255));
         chfaciales.setText("Faciales");
-        getContentPane().add(chfaciales, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 490, -1, -1));
+        getContentPane().add(chfaciales, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 410, -1, -1));
 
         chpanoramica.setBackground(new java.awt.Color(255, 255, 255));
         chpanoramica.setText("Panorámica");
-        getContentPane().add(chpanoramica, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 550, 93, -1));
+        getContentPane().add(chpanoramica, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 470, 93, -1));
 
         chintraorales.setBackground(new java.awt.Color(255, 255, 255));
         chintraorales.setText("Intraorales");
-        getContentPane().add(chintraorales, new org.netbeans.lib.awtextra.AbsoluteConstraints(970, 490, 93, -1));
+        getContentPane().add(chintraorales, new org.netbeans.lib.awtextra.AbsoluteConstraints(1050, 410, 93, -1));
 
         jSeparator68.setForeground(new java.awt.Color(0, 0, 0));
         jSeparator68.setOrientation(javax.swing.SwingConstants.VERTICAL);
-        getContentPane().add(jSeparator68, new org.netbeans.lib.awtextra.AbsoluteConstraints(1070, 490, -1, 90));
+        getContentPane().add(jSeparator68, new org.netbeans.lib.awtextra.AbsoluteConstraints(1150, 410, -1, 90));
 
         chmodeloMD.setBackground(new java.awt.Color(255, 255, 255));
         chmodeloMD.setText("Modelo md");
-        getContentPane().add(chmodeloMD, new org.netbeans.lib.awtextra.AbsoluteConstraints(970, 520, 93, -1));
+        getContentPane().add(chmodeloMD, new org.netbeans.lib.awtextra.AbsoluteConstraints(1050, 440, 93, -1));
 
         chcefalometrica.setBackground(new java.awt.Color(255, 255, 255));
         chcefalometrica.setText("Cefalométrica");
-        getContentPane().add(chcefalometrica, new org.netbeans.lib.awtextra.AbsoluteConstraints(970, 550, 93, -1));
+        getContentPane().add(chcefalometrica, new org.netbeans.lib.awtextra.AbsoluteConstraints(1050, 470, 93, -1));
 
         chincicivos.setBackground(new java.awt.Color(255, 255, 255));
         chincicivos.setText("Incicivos");
-        getContentPane().add(chincicivos, new org.netbeans.lib.awtextra.AbsoluteConstraints(1080, 550, 70, -1));
+        getContentPane().add(chincicivos, new org.netbeans.lib.awtextra.AbsoluteConstraints(1160, 470, 70, -1));
 
         jSeparator69.setForeground(new java.awt.Color(0, 0, 0));
         jSeparator69.setOrientation(javax.swing.SwingConstants.VERTICAL);
-        getContentPane().add(jSeparator69, new org.netbeans.lib.awtextra.AbsoluteConstraints(1160, 490, -1, 130));
+        getContentPane().add(jSeparator69, new org.netbeans.lib.awtextra.AbsoluteConstraints(1240, 410, -1, 130));
 
         jSeparator70.setForeground(new java.awt.Color(0, 0, 0));
-        getContentPane().add(jSeparator70, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 580, 400, -1));
+        getContentPane().add(jSeparator70, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 500, 400, -1));
 
         txtrocabado.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -822,28 +822,33 @@ public class frmTratamientoOrtodoncia extends javax.swing.JInternalFrame {
                 txtrocabadoKeyPressed(evt);
             }
         });
-        getContentPane().add(txtrocabado, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 590, 280, -1));
+        getContentPane().add(txtrocabado, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 510, 280, -1));
 
         jSeparator7.setForeground(new java.awt.Color(0, 0, 0));
         jSeparator7.setOrientation(javax.swing.SwingConstants.VERTICAL);
         jSeparator7.setToolTipText("");
-        getContentPane().add(jSeparator7, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 450, 12, 320));
+        getContentPane().add(jSeparator7, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 410, 12, 250));
 
         jSeparator8.setForeground(new java.awt.Color(0, 0, 0));
         jSeparator8.setToolTipText("");
-        getContentPane().add(jSeparator8, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 410, 1350, 10));
+        getContentPane().add(jSeparator8, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 370, 1350, 10));
 
         btnBuscarEditar1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/buscar edicion.png"))); // NOI18N
         btnBuscarEditar1.setText("Buscar para Editar");
         btnBuscarEditar1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnBuscarEditar1.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        getContentPane().add(btnBuscarEditar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1190, 200, 120, -1));
+        getContentPane().add(btnBuscarEditar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1160, 170, 120, -1));
 
         btnEditar1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/editar.png"))); // NOI18N
         btnEditar1.setText("Editar");
         btnEditar1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnEditar1.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        getContentPane().add(btnEditar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1320, 200, 120, -1));
+        btnEditar1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEditar1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnEditar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1280, 170, 90, -1));
 
         btnGuardar1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/guardar.png"))); // NOI18N
         btnGuardar1.setText("Guardar");
@@ -854,25 +859,30 @@ public class frmTratamientoOrtodoncia extends javax.swing.JInternalFrame {
                 btnGuardar1ActionPerformed(evt);
             }
         });
-        getContentPane().add(btnGuardar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1190, 310, 120, -1));
+        getContentPane().add(btnGuardar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1160, 270, 120, 90));
 
         btnCancelar1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/cancelar.png"))); // NOI18N
         btnCancelar1.setText("Cancelar");
         btnCancelar1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnCancelar1.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        getContentPane().add(btnCancelar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1320, 310, 120, 90));
+        getContentPane().add(btnCancelar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1280, 270, 90, 90));
 
         btnBuscarEditar2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/buscar edicion.png"))); // NOI18N
         btnBuscarEditar2.setText("Buscar para Editar");
         btnBuscarEditar2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnBuscarEditar2.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        getContentPane().add(btnBuscarEditar2, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 670, -1, -1));
+        getContentPane().add(btnBuscarEditar2, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 550, -1, -1));
 
         btnEditar2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/editar.png"))); // NOI18N
         btnEditar2.setText("Editar");
         btnEditar2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnEditar2.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        getContentPane().add(btnEditar2, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 670, -1, -1));
+        btnEditar2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEditar2ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnEditar2, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 550, -1, -1));
 
         btnGuardarPT2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/guardar.png"))); // NOI18N
         btnGuardarPT2.setText("Guardar");
@@ -883,19 +893,19 @@ public class frmTratamientoOrtodoncia extends javax.swing.JInternalFrame {
                 btnGuardarPT2ActionPerformed(evt);
             }
         });
-        getContentPane().add(btnGuardarPT2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1030, 670, -1, -1));
+        getContentPane().add(btnGuardarPT2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1060, 550, -1, -1));
 
         btnCancelar2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/cancelar.png"))); // NOI18N
         btnCancelar2.setText("Cancelar");
         btnCancelar2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnCancelar2.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        getContentPane().add(btnCancelar2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1150, 670, -1, 90));
+        getContentPane().add(btnCancelar2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1180, 550, -1, 90));
 
         btnElegirTP.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/elegir tp.png"))); // NOI18N
         btnElegirTP.setText("Elegir tipo de paciente");
         btnElegirTP.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnElegirTP.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        getContentPane().add(btnElegirTP, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 100, 180, 90));
+        getContentPane().add(btnElegirTP, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 50, 180, 90));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -1081,11 +1091,11 @@ public class frmTratamientoOrtodoncia extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_txtrocabadoKeyPressed
 
     private void btnGuardarPT2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarPT2ActionPerformed
-//       ConexionDB trata = new ConexionDB();
-//       trata.procedureIngresarTrataOr(txtbandas.getText(), txttubos.getText(), txtotros.getText(), txtAparato.getText(), 
-//               txtexodoncia.getText(), txtBrakets.getText(), txtRetenciones.getText(), txtMD.getText(),1);
-//       
-//        JOptionPane.showMessageDialog(null, "Paciente Almacenado");
+       ConexionDB trata = new ConexionDB();
+       trata.procedureIngresarTrataOr(txtbandas.getText(), txttubos.getText(), txtotros.getText(), txtAparato.getText(), 
+               txtexodoncia.getText(), txtBrakets.getText(), txtRetenciones.getText(), txtMD.getText(),1);
+       
+       
 
  int seleccion3 = 0;
         if(this.chfaciales.isSelected()== true ) {
@@ -1149,16 +1159,18 @@ public class frmTratamientoOrtodoncia extends javax.swing.JInternalFrame {
         indicaciones.procedureIndicacionEspecial(f_faciales, f_intraorales, modelo_mx, modelo_md, rx_panoramica, 
                 rx_cefalometria, rx_incicivos, rx_rocabado, 1);
         
+        JOptionPane.showMessageDialog(null, "Paciente Almacenado");
+        
         
     }//GEN-LAST:event_btnGuardarPT2ActionPerformed
 
     private void btnGuardar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardar1ActionPerformed
-//       ConexionDB cefalometria = new ConexionDB();
-//       cefalometria.procedureIngresarCefalom(txtanguloA1.getText(), txtanguloG1.getText(), txtIMPA1.getText(), txtJa1.getText(), 
-//               txtEJE.getText(), txtIS.getText(), txtII.getText(), txtFHIS.getText(), txtANB82.getText(), txtANB80.getText(),
-//               txtANB2.getText(), txtPALS.getText(), txtPALI.getText(), txtPTB.getText(), txtDSD.getText(), 
-//               txtmaxilares.getText(), txtEntornoD.getText(),2);
-//       JOptionPane.showMessageDialog(null, "Tratamiento Almacenado");
+       ConexionDB cefalometria = new ConexionDB();
+       cefalometria.procedureIngresarCefalom(txtanguloA1.getText(), txtanguloG1.getText(), txtIMPA1.getText(), txtJa1.getText(), 
+               txtEJE.getText(), txtIS.getText(), txtII.getText(), txtFHIS.getText(), txtANB82.getText(), txtANB80.getText(),
+               txtANB2.getText(), txtPALS.getText(), txtPALI.getText(), txtPTB.getText(), txtDSD.getText(), 
+               txtmaxilares.getText(), txtEntornoD.getText(),2);
+       JOptionPane.showMessageDialog(null, "Tratamiento Almacenado");
        
        int seleccion = 0;
         if(this.chcurvaleve1.isSelected()== true ) {
@@ -1186,9 +1198,24 @@ public class frmTratamientoOrtodoncia extends javax.swing.JInternalFrame {
        
        spee.procedureTrataSpee(speeleve, speemoderada, speesvera,1);
       
-       
+       JOptionPane.showMessageDialog(null, "Tratamiento Almacenado");
        
     }//GEN-LAST:event_btnGuardar1ActionPerformed
+
+    private void btnEditar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditar1ActionPerformed
+        ConexionDB Updatecefalometria = new ConexionDB();
+        Updatecefalometria.procedureUpdateIngresarCefalom(txtanguloA1.getText(), txtanguloG1.getText(), txtIMPA1.getText(), txtJa1.getText(), 
+               txtEJE.getText(), txtIS.getText(), txtII.getText(), txtFHIS.getText(), txtANB82.getText(), txtANB80.getText(),
+               txtANB2.getText(), txtPALS.getText(), txtPALI.getText(), txtPTB.getText(), txtDSD.getText(), 
+               txtmaxilares.getText(), txtEntornoD.getText(),2);
+    }//GEN-LAST:event_btnEditar1ActionPerformed
+
+    private void btnEditar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditar2ActionPerformed
+        ConexionDB UpdateTrata = new ConexionDB();
+        UpdateTrata.procedureUpdateIngresarTrataOr(txtbandas.getText(), txttubos.getText(), txtotros.getText(), txtAparato.getText(), 
+               txtexodoncia.getText(), txtBrakets.getText(), txtRetenciones.getText(), txtMD.getText(),1);
+        
+    }//GEN-LAST:event_btnEditar2ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

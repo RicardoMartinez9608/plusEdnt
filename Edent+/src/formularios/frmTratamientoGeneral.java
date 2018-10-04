@@ -8,6 +8,7 @@ package formularios;
 import ConexionSql.ConexionDB;
 import static formularios.frmPrincipal.Dpanel;
 import java.util.Calendar;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -275,7 +276,15 @@ public class frmTratamientoGeneral extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_btnselecionaredicionActionPerformed
 
     private void btneditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btneditarActionPerformed
-
+       String dia = Integer.toString(jfecha.getCalendar().get(Calendar.DAY_OF_MONTH));
+      String mes = Integer.toString(jfecha.getCalendar().get(Calendar.MONTH) + 1);
+      String year = Integer.toString(jfecha.getCalendar().get(Calendar.YEAR));
+      String fechaA = (dia + "-" + mes+ "-" + year);
+      String date = fechaA; 
+      ConexionDB UpdateConsulta = new ConexionDB();
+      UpdateConsulta.procedureUpdateConsultaG(txtMotivoC.getText(), date, Double.parseDouble(txtpresupuesto.getText())
+              , txtHistoriaM.getText(), txtHistoriaO.getText(), txtExamenC.getText(), txtDX.getText(),1);
+      JOptionPane.showMessageDialog(null, "Datos de Tratamiento Actualizados correctamente");
     }//GEN-LAST:event_btneditarActionPerformed
 
     private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
@@ -289,7 +298,8 @@ public class frmTratamientoGeneral extends javax.swing.JInternalFrame {
       ConexionDB consultaG = new ConexionDB();
       
       consultaG.procedureConsultaG(txtMotivoC.getText(), date, Double.parseDouble(txtpresupuesto.getText())
-              , txtHistoriaM.getText(), txtHistoriaO.getText(), txtExamenC.getText(), txtDX.getText(), 2);
+              , txtHistoriaM.getText(), txtHistoriaO.getText(), txtExamenC.getText(), txtDX.getText(),Integer.parseInt(lblid.getText()));
+      JOptionPane.showMessageDialog(null, "Tratamiento ingresado correctamente");
       
     }//GEN-LAST:event_btnGuardarActionPerformed
 
