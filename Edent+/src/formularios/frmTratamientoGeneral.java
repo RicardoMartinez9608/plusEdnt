@@ -8,6 +8,7 @@ package formularios;
 import ConexionSql.ConexionDB;
 import static formularios.frmPrincipal.Dpanel;
 import java.util.Calendar;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -290,6 +291,7 @@ public class frmTratamientoGeneral extends javax.swing.JInternalFrame {
       
       consultaG.procedureConsultaG(txtMotivoC.getText(), date, Double.parseDouble(txtpresupuesto.getText())
               , txtHistoriaM.getText(), txtHistoriaO.getText(), txtExamenC.getText(), txtDX.getText(), 2);
+      JOptionPane.showMessageDialog(null, "Tratamiento ingresado correctamente");
       
     }//GEN-LAST:event_btnGuardarActionPerformed
 
