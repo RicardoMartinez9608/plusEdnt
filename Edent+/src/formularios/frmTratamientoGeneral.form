@@ -110,7 +110,7 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
               <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="486" max="32767" attributes="0"/>
+              <EmptySpace pref="545" max="32767" attributes="0"/>
           </Group>
           <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
@@ -172,7 +172,7 @@
                       <Component id="txtpresupuesto" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
                       <Component id="lblnombre6" alignment="3" min="-2" pref="20" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="15" max="32767" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="btnselecionaredicion" alignment="0" min="-2" max="-2" attributes="0"/>
                       <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
@@ -193,7 +193,7 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Baskerville Old Face" size="24" style="1"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Consulta Pacientes Odontologia General"/>
+        <Property name="text" type="java.lang.String" value="Consulta Pacientes Odontolog&#xed;a General"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="btnagregarpc">
@@ -290,7 +290,7 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Baskerville Old Face" size="14" style="1"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Historia Medica:"/>
+        <Property name="text" type="java.lang.String" value="Historia M&#xe9;dica:"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="txtHistoriaM">
@@ -306,7 +306,7 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Baskerville Old Face" size="14" style="1"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Historia Odontologica:"/>
+        <Property name="text" type="java.lang.String" value="Historia Odontol&#xf3;gica:"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="txtHistoriaO">
@@ -322,7 +322,7 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Baskerville Old Face" size="14" style="1"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Examen Clinico:"/>
+        <Property name="text" type="java.lang.String" value="Examen Cl&#xed;nico:"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="txtExamenC">
@@ -338,7 +338,7 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Baskerville Old Face" size="14" style="1"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="DX Odontologico:"/>
+        <Property name="text" type="java.lang.String" value="DX Odontol&#xf3;gico:"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="txtDX">
@@ -368,6 +368,9 @@
     </Component>
     <Component class="javax.swing.JButton" name="btnselecionaredicion">
       <Properties>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/iconos/buscar edicion.png"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Seleccionar paciente a editar"/>
         <Property name="horizontalTextPosition" type="int" value="0"/>
         <Property name="verticalTextPosition" type="int" value="3"/>
@@ -381,6 +384,9 @@
     </Component>
     <Component class="javax.swing.JButton" name="btneditar">
       <Properties>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/iconos/editar.png"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Editar Paciente"/>
         <Property name="horizontalTextPosition" type="int" value="0"/>
         <Property name="verticalTextPosition" type="int" value="3"/>
@@ -394,6 +400,9 @@
     </Component>
     <Component class="javax.swing.JButton" name="btnGuardar">
       <Properties>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/iconos/guardar.png"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Guardar"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
         <Property name="horizontalTextPosition" type="int" value="0"/>
@@ -408,6 +417,9 @@
     </Component>
     <Component class="javax.swing.JButton" name="btnsalir">
       <Properties>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/iconos/cancelar.png"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Salir"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
         <Property name="horizontalTextPosition" type="int" value="0"/>
