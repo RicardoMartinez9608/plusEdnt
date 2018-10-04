@@ -28,14 +28,14 @@ public class frmPrincipal extends javax.swing.JFrame implements  Runnable {
        
         initComponents();
         jButton1.setBorder(null);
-        jButton2.setBorder(null);
+       
         h1 = new Thread(this);
         this.setTitle("E-DENT");
         h1.start();
         Dpanel.setBorder(new ImagenFondo());
         this.setExtendedState(frmPrincipal.MAXIMIZED_BOTH);
         SimpleDateFormat formateador = new SimpleDateFormat(" ~ "+"dd-mm-yyyy");
-        lbfecha.setText(formateador.format(fecha));
+      
         
         
     }
@@ -77,25 +77,15 @@ public class frmPrincipal extends javax.swing.JFrame implements  Runnable {
 
         Dpanel = new javax.swing.JDesktopPane();
         jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
         jButton7 = new javax.swing.JButton();
-        jButton8 = new javax.swing.JButton();
-        jButton9 = new javax.swing.JButton();
-        jButton10 = new javax.swing.JButton();
-        jButton11 = new javax.swing.JButton();
-        jButton12 = new javax.swing.JButton();
-        jButton13 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         lbhora = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        lbfecha = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu3 = new javax.swing.JMenu();
         jMenuItem3 = new javax.swing.JMenuItem();
@@ -125,31 +115,12 @@ public class frmPrincipal extends javax.swing.JFrame implements  Runnable {
             }
         });
 
-        jButton2.setBackground(new java.awt.Color(0, 204, 204));
-        jButton2.setForeground(new java.awt.Color(0, 0, 153));
-        jButton2.setText("Agregar Expediente Ortodoncia");
-        jButton2.setBorder(null);
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
-        });
-
         jButton3.setBackground(new java.awt.Color(0, 204, 204));
         jButton3.setForeground(new java.awt.Color(0, 0, 204));
         jButton3.setText("Insertar Tipo de Paciente");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
-            }
-        });
-
-        jButton4.setBackground(new java.awt.Color(0, 204, 204));
-        jButton4.setForeground(new java.awt.Color(0, 0, 153));
-        jButton4.setText("Vista de Paciente Ortodoncia");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
             }
         });
 
@@ -162,10 +133,6 @@ public class frmPrincipal extends javax.swing.JFrame implements  Runnable {
             }
         });
 
-        jButton6.setBackground(new java.awt.Color(0, 204, 204));
-        jButton6.setForeground(new java.awt.Color(0, 0, 204));
-        jButton6.setText("Vista paciente Odontologia");
-
         jButton7.setBackground(new java.awt.Color(0, 204, 204));
         jButton7.setForeground(new java.awt.Color(0, 0, 153));
         jButton7.setText("Tratamiento Ortodoncia");
@@ -175,57 +142,13 @@ public class frmPrincipal extends javax.swing.JFrame implements  Runnable {
             }
         });
 
-        jButton8.setBackground(new java.awt.Color(0, 204, 204));
-        jButton8.setForeground(new java.awt.Color(0, 0, 204));
-        jButton8.setText("Nuevo Usuario");
-        jButton8.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton8ActionPerformed(evt);
-            }
-        });
-
-        jButton9.setBackground(new java.awt.Color(0, 204, 204));
-        jButton9.setForeground(new java.awt.Color(0, 0, 153));
-        jButton9.setText("Vista Empleados");
-        jButton9.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton9ActionPerformed(evt);
-            }
-        });
-
-        jButton10.setBackground(new java.awt.Color(0, 204, 204));
-        jButton10.setForeground(new java.awt.Color(0, 0, 153));
-        jButton10.setText("Vista Pagos");
-        jButton10.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton10ActionPerformed(evt);
-            }
-        });
-
-        jButton11.setBackground(new java.awt.Color(0, 204, 204));
-        jButton11.setForeground(new java.awt.Color(0, 0, 204));
-        jButton11.setText("Backup");
-
-        jButton12.setBackground(new java.awt.Color(0, 204, 204));
-        jButton12.setForeground(new java.awt.Color(0, 0, 153));
-        jButton12.setText("Reporte expediente general");
-
-        jButton13.setBackground(new java.awt.Color(0, 204, 204));
-        jButton13.setForeground(new java.awt.Color(0, 0, 204));
-        jButton13.setText("Reporte expediente ortodoncia");
-        jButton13.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton13ActionPerformed(evt);
-            }
-        });
-
         jLabel1.setForeground(new java.awt.Color(0, 0, 153));
         jLabel1.setText("Nombre");
 
         jLabel2.setForeground(new java.awt.Color(0, 0, 153));
         jLabel2.setText("Acceso");
 
-        lbhora.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        lbhora.setFont(new java.awt.Font("Tahoma", 0, 30)); // NOI18N
         lbhora.setForeground(new java.awt.Color(0, 0, 153));
         lbhora.setText("/");
 
@@ -235,30 +158,16 @@ public class frmPrincipal extends javax.swing.JFrame implements  Runnable {
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/conexionSQL/logo.jpeg"))); // NOI18N
 
-        lbfecha.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        lbfecha.setForeground(new java.awt.Color(0, 0, 153));
-        lbfecha.setText("Hora");
-
         Dpanel.setLayer(jButton1, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        Dpanel.setLayer(jButton2, javax.swing.JLayeredPane.DEFAULT_LAYER);
         Dpanel.setLayer(jButton3, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        Dpanel.setLayer(jButton4, javax.swing.JLayeredPane.DEFAULT_LAYER);
         Dpanel.setLayer(jButton5, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        Dpanel.setLayer(jButton6, javax.swing.JLayeredPane.DEFAULT_LAYER);
         Dpanel.setLayer(jButton7, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        Dpanel.setLayer(jButton8, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        Dpanel.setLayer(jButton9, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        Dpanel.setLayer(jButton10, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        Dpanel.setLayer(jButton11, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        Dpanel.setLayer(jButton12, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        Dpanel.setLayer(jButton13, javax.swing.JLayeredPane.DEFAULT_LAYER);
         Dpanel.setLayer(jLabel1, javax.swing.JLayeredPane.DEFAULT_LAYER);
         Dpanel.setLayer(jLabel2, javax.swing.JLayeredPane.DEFAULT_LAYER);
         Dpanel.setLayer(lbhora, javax.swing.JLayeredPane.DEFAULT_LAYER);
         Dpanel.setLayer(jLabel3, javax.swing.JLayeredPane.DEFAULT_LAYER);
         Dpanel.setLayer(jLabel4, javax.swing.JLayeredPane.DEFAULT_LAYER);
         Dpanel.setLayer(jLabel5, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        Dpanel.setLayer(lbfecha, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         javax.swing.GroupLayout DpanelLayout = new javax.swing.GroupLayout(Dpanel);
         Dpanel.setLayout(DpanelLayout);
@@ -266,93 +175,52 @@ public class frmPrincipal extends javax.swing.JFrame implements  Runnable {
             DpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(DpanelLayout.createSequentialGroup()
                 .addGroup(DpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton5)
-                    .addGroup(DpanelLayout.createSequentialGroup()
-                        .addGap(54, 54, 54)
-                        .addGroup(DpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel4)
-                            .addComponent(jLabel3)))
-                    .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton11, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(44, 44, 44)
+                    .addComponent(jButton5)
+                    .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(170, 170, 170)
+                .addComponent(jLabel5))
+            .addGroup(DpanelLayout.createSequentialGroup()
+                .addGap(54, 54, 54)
+                .addGroup(DpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel4)
+                    .addComponent(jLabel3)))
+            .addGroup(DpanelLayout.createSequentialGroup()
+                .addGap(264, 264, 264)
                 .addComponent(jLabel1)
                 .addGap(53, 53, 53)
                 .addComponent(jLabel2)
-                .addGap(2, 2, 2)
-                .addComponent(jLabel5)
-                .addGap(10, 10, Short.MAX_VALUE))
-            .addGroup(DpanelLayout.createSequentialGroup()
-                .addGroup(DpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton13, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton12, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(lbhora)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(lbfecha)
-                .addGap(49, 49, 49))
+                .addGap(679, 679, 679)
+                .addComponent(lbhora))
         );
         DpanelLayout.setVerticalGroup(
             DpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(DpanelLayout.createSequentialGroup()
-                .addGap(50, 50, 50)
                 .addGroup(DpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(DpanelLayout.createSequentialGroup()
-                        .addGap(100, 100, 100)
-                        .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(40, 40, 40)
+                        .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(DpanelLayout.createSequentialGroup()
+                        .addGap(150, 150, 150)
+                        .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(DpanelLayout.createSequentialGroup()
                         .addGap(50, 50, 50)
                         .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(DpanelLayout.createSequentialGroup()
-                        .addGap(150, 150, 150)
-                        .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(20, 20, 20)
+                    .addComponent(jLabel5))
+                .addGap(90, 90, 90)
                 .addGroup(DpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel4)
                     .addComponent(jLabel3))
-                .addGap(20, 20, 20)
+                .addGap(321, 321, 321)
                 .addGroup(DpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lbhora)
                     .addGroup(DpanelLayout.createSequentialGroup()
-                        .addGap(150, 150, 150)
-                        .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(DpanelLayout.createSequentialGroup()
-                        .addGap(353, 353, 353)
-                        .addGroup(DpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jButton13, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lbhora)
-                            .addComponent(lbfecha)))
-                    .addGroup(DpanelLayout.createSequentialGroup()
-                        .addGap(260, 260, 260)
-                        .addComponent(jButton12, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(DpanelLayout.createSequentialGroup()
-                        .addGap(100, 100, 100)
-                        .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(DpanelLayout.createSequentialGroup()
-                        .addGap(200, 200, 200)
-                        .addComponent(jButton11, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(DpanelLayout.createSequentialGroup()
-                        .addGap(50, 50, 50)
-                        .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))))
-            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addGroup(DpanelLayout.createSequentialGroup()
-                .addGap(250, 250, 250)
-                .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(DpanelLayout.createSequentialGroup()
-                .addGap(656, 656, 656)
-                .addComponent(jLabel1))
-            .addGroup(DpanelLayout.createSequentialGroup()
-                .addGap(656, 656, 656)
-                .addComponent(jLabel2))
-            .addComponent(jLabel5)
+                        .addGap(35, 35, 35)
+                        .addGroup(DpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel1)
+                            .addComponent(jLabel2)))))
         );
 
         jMenu3.setForeground(new java.awt.Color(0, 102, 153));
@@ -488,14 +356,17 @@ public class frmPrincipal extends javax.swing.JFrame implements  Runnable {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(Dpanel)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(Dpanel)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(Dpanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(72, Short.MAX_VALUE))
+                .addContainerGap(115, Short.MAX_VALUE))
         );
 
         pack();
@@ -557,22 +428,6 @@ public class frmPrincipal extends javax.swing.JFrame implements  Runnable {
 
     }//GEN-LAST:event_jMenuItem26ActionPerformed
 
-    private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton13ActionPerformed
-
-    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton9ActionPerformed
-
-    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton8ActionPerformed
-
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton4ActionPerformed
-
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
         frmTratamientoOrtodoncia formProd = new frmTratamientoOrtodoncia();
        Dpanel.add(formProd);
@@ -584,14 +439,6 @@ public class frmPrincipal extends javax.swing.JFrame implements  Runnable {
        Dpanel.add(tipop);
         tipop.show();
     }//GEN-LAST:event_jButton3ActionPerformed
-
-    private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton10ActionPerformed
-
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
        frmExpedienteGeneral tipop = new frmExpedienteGeneral();
@@ -645,18 +492,9 @@ public class frmPrincipal extends javax.swing.JFrame implements  Runnable {
     public static javax.swing.JDesktopPane Dpanel;
     private javax.swing.JMenuItem back;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton10;
-    private javax.swing.JButton jButton11;
-    private javax.swing.JButton jButton12;
-    private javax.swing.JButton jButton13;
-    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton8;
-    private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -676,7 +514,6 @@ public class frmPrincipal extends javax.swing.JFrame implements  Runnable {
     private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem5;
     private javax.swing.JMenuItem jMenuItem8;
-    private javax.swing.JLabel lbfecha;
     private javax.swing.JLabel lbhora;
     // End of variables declaration//GEN-END:variables
 }

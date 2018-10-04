@@ -412,7 +412,9 @@ public class frmExpedienteGeneral extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_txtdireccionKeyPressed
 
     private void btconActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btconActionPerformed
-
+       frmTratamientoGeneral formProd = new frmTratamientoGeneral();
+       Dpanel.add(formProd);
+       formProd.show();
     }//GEN-LAST:event_btconActionPerformed
 
     private void btnbuscaredicionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnbuscaredicionActionPerformed
