@@ -324,7 +324,7 @@ public class frmPrincipal extends javax.swing.JFrame implements  Runnable {
                         .addGap(150, 150, 150)
                         .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(DpanelLayout.createSequentialGroup()
-                        .addGap(308, 308, 308)
+                        .addGap(353, 353, 353)
                         .addGroup(DpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jButton13, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(lbhora)
@@ -642,7 +642,7 @@ public class frmPrincipal extends javax.swing.JFrame implements  Runnable {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public static final javax.swing.JMenu Admin = new javax.swing.JMenu();
-    private javax.swing.JDesktopPane Dpanel;
+    public static javax.swing.JDesktopPane Dpanel;
     private javax.swing.JMenuItem back;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;

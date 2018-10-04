@@ -7,12 +7,15 @@ package Entidad;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
+import java.util.List;
 import javax.persistence.Basic;
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 /**
@@ -24,6 +27,9 @@ import javax.persistence.Table;
 @NamedQueries({
     @NamedQuery(name = "Tipop.findAll", query = "SELECT t FROM Tipop t")})
 public class Tipop implements Serializable {
+
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "idTipop")
+    private List<Paciente> pacienteList;
 
     private static final long serialVersionUID = 1L;
     // @Max(value=?)  @Min(value=?)//if you know range of your decimal fields consider using these annotations to enforce field validation
@@ -88,6 +94,14 @@ public class Tipop implements Serializable {
     @Override
     public String toString() {
         return "Entidad.Tipop[ idTipop=" + idTipop + " ]";
+    }
+
+    public List<Paciente> getPacienteList() {
+        return pacienteList;
+    }
+
+    public void setPacienteList(List<Paciente> pacienteList) {
+        this.pacienteList = pacienteList;
     }
     
 }

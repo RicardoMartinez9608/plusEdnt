@@ -6,6 +6,7 @@
 package formularios;
 
 import ConexionSql.ConexionDB;
+import static formularios.frmPrincipal.Dpanel;
 import java.util.Calendar;
 
 /**
@@ -324,7 +325,9 @@ public class frmTratamientoGeneral extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnagregarpcActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnagregarpcActionPerformed
-
+        vistaPClinica vpc=new vistaPClinica();
+        Dpanel.add(vpc);
+        vpc.show();
     }//GEN-LAST:event_btnagregarpcActionPerformed
 
     private void jfechaKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jfechaKeyPressed
