@@ -129,10 +129,10 @@ public class ConexionDB {
        try {            
            
             CallableStatement proc = conn.prepareCall("{CALL TrataSpee(?,?,?,?,?)}");
-            proc.setInt("pNombre",leve );
-            proc.setInt("pApellido",moderada );
-            proc.setInt("pDireccion",severa );
-            proc.setInt("pTelefono",Idconsulta );
+            proc.setInt("Leve",leve );
+            proc.setInt("Moderada",moderada );
+            proc.setInt("Severa",severa );
+            proc.setInt("IdConsulta",Idconsulta );
             proc.registerOutParameter("pMjs", java.sql.Types.VARCHAR);
             proc.executeQuery();            
             
@@ -236,6 +236,69 @@ public class ConexionDB {
             proc.setString("EC",examenC );
             proc.setString("DX",Dxodon );
             proc.setInt("IdConsulta",Idconsulta );
+            proc.registerOutParameter("pMjs", java.sql.Types.VARCHAR);
+            proc.executeQuery();            
+            
+            resultado = proc.getString("pMjs");
+        } 
+       catch (Exception e) {                  
+            JOptionPane.showMessageDialog(null, e);
+       }
+       return resultado;
+   }
+     
+     public String procedureUpdateIngresarCefalom(String articular, String goniaco, String impa, String jarabak, 
+           String facial, String is, String ii, String fhis, String anb82,String anb80, String anb2,
+           String pals, String pali, String ptb, String dsd, String clasim, String entornod, Integer id_Cefalom)
+   {
+       String resultado=null;
+       try {            
+           
+            CallableStatement proc = conn.prepareCall("{CALL UpdateIngresarCefalom(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)}");
+            proc.setString("Arti",articular );
+            proc.setString("Goni",goniaco );
+            proc.setString("Imp",impa );
+            proc.setString("Jarab",jarabak );
+            proc.setString("Fac",facial );
+            proc.setString("I_s",is);
+            proc.setString("I_i",ii );
+            proc.setString("Fhi",fhis);
+            proc.setString("An82",anb82 );
+            proc.setString("An80",anb80 );
+            proc.setString("An2",anb2 );
+            proc.setString("Pal",pals );
+            proc.setString("Pli",pali );
+            proc.setString("Pb",ptb);
+            proc.setString("Ds",dsd );
+            proc.setString("Clas",clasim);
+            proc.setString("Entorno",entornod);
+            proc.setInt("Id_cefalom",id_Cefalom );
+            proc.registerOutParameter("pMjs", java.sql.Types.VARCHAR);
+            proc.executeQuery();            
+            
+            resultado = proc.getString("pMjs");
+        } 
+       catch (Exception e) {                  
+            JOptionPane.showMessageDialog(null, e);
+       }
+       return resultado;
+   }
+   public String procedureUpdateIngresarTrataOr(String bandas, String tubos, String otros, String aparato, 
+           String exodoncia, String brackets, String retenciones, String md, Integer id_t)
+   {
+       String resultado=null;
+       try {            
+           
+            CallableStatement proc = conn.prepareCall("{CALL UpdateIngresarTrataOr(?,?,?,?,?,?,?,?,?,?)}");
+            proc.setString("Band",bandas );
+            proc.setString("Tubo",tubos );
+            proc.setString("Otro",otros );
+            proc.setString("Apara",aparato );
+            proc.setString("Exo",exodoncia );
+            proc.setString("Bracket",brackets);
+            proc.setString("Reten",retenciones );
+            proc.setString("M_d",md);
+            proc.setInt("Idtrata",id_t );
             proc.registerOutParameter("pMjs", java.sql.Types.VARCHAR);
             proc.executeQuery();            
             
