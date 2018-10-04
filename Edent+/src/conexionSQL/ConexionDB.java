@@ -196,4 +196,30 @@ public class ConexionDB {
        }
        return resultado;
    }
+    
+     public String procedureUpdatePaciente(String nombre, String apellido, String direccion, String tel, 
+           int edad, String fecha, int IdPaciente)
+   {
+       String resultado=null;
+       try {            
+           
+            CallableStatement proc = conn.prepareCall("{CALL UpdateInPaciente(?,?,?,?,?,?,?,?)}");
+            proc.setString("pNombre",nombre );
+            proc.setString("pApellido",apellido );
+            proc.setString("pDireccion",direccion );
+            proc.setString("pTelefono",tel );
+            proc.setInt("pEdad",edad );
+            proc.setString("pFechaRegis",fecha);
+            proc.setInt("pIdPaciente",IdPaciente );
+            proc.registerOutParameter("pMjs", java.sql.Types.VARCHAR);
+            proc.executeQuery();            
+            
+            resultado = proc.getString("pMjs");
+        } 
+       catch (Exception e) {                  
+            JOptionPane.showMessageDialog(null, e);
+       }
+       return resultado;
+   }
+    
     }

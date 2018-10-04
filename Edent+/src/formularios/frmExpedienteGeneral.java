@@ -415,6 +415,7 @@ public class frmExpedienteGeneral extends javax.swing.JInternalFrame {
               Integer.parseInt(txtedad.getText()),date,3);
         
                 JOptionPane.showMessageDialog(null, "Datos Actualizados Correctamente");
+                
     }//GEN-LAST:event_btneditarActionPerformed
 
     private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed

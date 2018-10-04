@@ -290,7 +290,7 @@ public class frmTratamientoGeneral extends javax.swing.JInternalFrame {
       ConexionDB consultaG = new ConexionDB();
       
       consultaG.procedureConsultaG(txtMotivoC.getText(), date, Double.parseDouble(txtpresupuesto.getText())
-              , txtHistoriaM.getText(), txtHistoriaO.getText(), txtExamenC.getText(), txtDX.getText(), 2);
+              , txtHistoriaM.getText(), txtHistoriaO.getText(), txtExamenC.getText(), txtDX.getText(),Integer.parseInt(lblid.getText()));
       JOptionPane.showMessageDialog(null, "Tratamiento ingresado correctamente");
       
     }//GEN-LAST:event_btnGuardarActionPerformed
