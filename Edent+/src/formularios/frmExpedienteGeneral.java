@@ -202,6 +202,12 @@ public class frmExpedienteGeneral extends javax.swing.JInternalFrame {
             }
         });
 
+        txttip.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txttipActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -276,7 +282,7 @@ public class frmExpedienteGeneral extends javax.swing.JInternalFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
                     .addComponent(txttip, javax.swing.GroupLayout.PREFERRED_SIZE, 0, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(473, Short.MAX_VALUE))
+                .addContainerGap(477, Short.MAX_VALUE))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(85, 85, 85)
@@ -408,7 +414,7 @@ public class frmExpedienteGeneral extends javax.swing.JInternalFrame {
       String fechaA = (dia + "-" + mes+ "-" + year);
       String date = fechaA; 
      prueba.procedurePaciente(txtnombre.getText(),txtapellido.getText(),txtdireccion.getText(),txttelefono.getText(),
-              Integer.parseInt(txtedad.getText()),date,1);
+              Integer.parseInt(txtedad.getText()),date,Integer.parseInt(txttip.getText()));
         
         JOptionPane.showMessageDialog(null, "Paciente Almacenado");
     }//GEN-LAST:event_btnGuardarActionPerformed
@@ -416,6 +422,10 @@ public class frmExpedienteGeneral extends javax.swing.JInternalFrame {
     private void btnsalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnsalirActionPerformed
         
     }//GEN-LAST:event_btnsalirActionPerformed
+
+    private void txttipActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txttipActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txttipActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -441,6 +451,6 @@ public class frmExpedienteGeneral extends javax.swing.JInternalFrame {
     public static javax.swing.JTextField txtedad;
     public static final javax.swing.JTextField txtnombre = new javax.swing.JTextField();
     public static javax.swing.JTextField txttelefono;
-    private javax.swing.JTextField txttip;
+    public static javax.swing.JTextField txttip;
     // End of variables declaration//GEN-END:variables
 }

@@ -133,7 +133,16 @@ TipopJpaController te = new TipopJpaController(entityTipop.getInstance());
     }// </editor-fold>//GEN-END:initComponents
 
     private void jtpacientesMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jtpacientesMousePressed
-    
+         if(evt.getClickCount()==2){
+            int fila =jtpacientes.getSelectedRow();
+            String cod;
+            String nombre;
+            cod=jtpacientes.getValueAt(fila, 0).toString(); 
+            nombre=jtpacientes.getValueAt(fila, 1).toString();
+            frmExpedienteGeneral.txttip.setText(cod);
+           
+            this.dispose();
+         }
 
     }//GEN-LAST:event_jtpacientesMousePressed
 
