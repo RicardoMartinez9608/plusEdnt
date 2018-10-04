@@ -221,5 +221,29 @@ public class ConexionDB {
        }
        return resultado;
    }
-    
+     public String procedureUpdateConsultaG(String motivo, String fecha, Double total, String historiaM,
+                    String historiaO, String examenC, String Dxodon,Integer Idconsulta)
+   {
+       String resultado=null;
+       try {            
+           
+            CallableStatement proc = conn.prepareCall("{CALL UpdateConsultaGeneral(?,?,?,?,?,?,?,?,?)}");
+            proc.setString("Motivo",motivo );
+            proc.setString("Fecha",fecha );
+            proc.setDouble("Total",total );
+            proc.setString("HM",historiaM );
+            proc.setString("HO",historiaO );
+            proc.setString("EC",examenC );
+            proc.setString("DX",Dxodon );
+            proc.setInt("IdConsulta",Idconsulta );
+            proc.registerOutParameter("pMjs", java.sql.Types.VARCHAR);
+            proc.executeQuery();            
+            
+            resultado = proc.getString("pMjs");
+        } 
+       catch (Exception e) {                  
+            JOptionPane.showMessageDialog(null, e);
+       }
+       return resultado;
+   }
     }
