@@ -3,6 +3,7 @@ package formularios;
 
 
 import ConexionSql.ConexionDB;
+import static formularios.frmPrincipal.Dpanel;
 import java.util.Calendar;
 import javax.swing.JOptionPane;
 
@@ -342,7 +343,9 @@ public class frmExpedienteGeneral extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-
+       frmTipoPaciente formProd = new frmTipoPaciente();
+       Dpanel.add(formProd);
+       formProd.show();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void fechaKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_fechaKeyPressed
