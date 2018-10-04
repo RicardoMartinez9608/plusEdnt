@@ -59,7 +59,7 @@ public class frmTratamientoGeneral extends javax.swing.JInternalFrame {
         setIconifiable(true);
 
         jLabel5.setFont(new java.awt.Font("Baskerville Old Face", 1, 24)); // NOI18N
-        jLabel5.setText("Consulta Pacientes Odontologia General");
+        jLabel5.setText("Consulta Pacientes Odontología General");
 
         btnagregarpc.setText("Agregar paciente para consulta");
         btnagregarpc.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -104,7 +104,7 @@ public class frmTratamientoGeneral extends javax.swing.JInternalFrame {
         });
 
         lblnombre2.setFont(new java.awt.Font("Baskerville Old Face", 1, 14)); // NOI18N
-        lblnombre2.setText("Historia Medica:");
+        lblnombre2.setText("Historia Médica:");
 
         txtHistoriaM.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
@@ -113,7 +113,7 @@ public class frmTratamientoGeneral extends javax.swing.JInternalFrame {
         });
 
         lblnombre3.setFont(new java.awt.Font("Baskerville Old Face", 1, 14)); // NOI18N
-        lblnombre3.setText("Historia Odontologica:");
+        lblnombre3.setText("Historia Odontológica:");
 
         txtHistoriaO.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
@@ -122,7 +122,7 @@ public class frmTratamientoGeneral extends javax.swing.JInternalFrame {
         });
 
         lblnombre4.setFont(new java.awt.Font("Baskerville Old Face", 1, 14)); // NOI18N
-        lblnombre4.setText("Examen Clinico:");
+        lblnombre4.setText("Examen Clínico:");
 
         txtExamenC.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
@@ -131,7 +131,7 @@ public class frmTratamientoGeneral extends javax.swing.JInternalFrame {
         });
 
         lblnombre5.setFont(new java.awt.Font("Baskerville Old Face", 1, 14)); // NOI18N
-        lblnombre5.setText("DX Odontologico:");
+        lblnombre5.setText("DX Odontológico:");
 
         txtDX.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
@@ -151,6 +151,7 @@ public class frmTratamientoGeneral extends javax.swing.JInternalFrame {
             }
         });
 
+        btnselecionaredicion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/buscar edicion.png"))); // NOI18N
         btnselecionaredicion.setText("Seleccionar paciente a editar");
         btnselecionaredicion.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnselecionaredicion.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
@@ -160,6 +161,7 @@ public class frmTratamientoGeneral extends javax.swing.JInternalFrame {
             }
         });
 
+        btneditar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/editar.png"))); // NOI18N
         btneditar.setText("Editar Paciente");
         btneditar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btneditar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
@@ -169,6 +171,7 @@ public class frmTratamientoGeneral extends javax.swing.JInternalFrame {
             }
         });
 
+        btnGuardar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/guardar.png"))); // NOI18N
         btnGuardar.setText("Guardar");
         btnGuardar.setToolTipText("");
         btnGuardar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -179,6 +182,7 @@ public class frmTratamientoGeneral extends javax.swing.JInternalFrame {
             }
         });
 
+        btnsalir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/cancelar.png"))); // NOI18N
         btnsalir.setText("Salir");
         btnsalir.setToolTipText("");
         btnsalir.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -263,7 +267,7 @@ public class frmTratamientoGeneral extends javax.swing.JInternalFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel5)
-                .addContainerGap(486, Short.MAX_VALUE))
+                .addContainerGap(545, Short.MAX_VALUE))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(39, 39, 39)
@@ -310,7 +314,7 @@ public class frmTratamientoGeneral extends javax.swing.JInternalFrame {
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(txtpresupuesto, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(lblnombre6, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 15, Short.MAX_VALUE)
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(btnselecionaredicion)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
