@@ -107,7 +107,7 @@
                   <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="txttip" alignment="3" min="-2" pref="0" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="416" max="32767" attributes="0"/>
+              <EmptySpace pref="473" max="32767" attributes="0"/>
           </Group>
           <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
@@ -179,7 +179,7 @@
                       <Component id="btnGuardar" alignment="0" max="32767" attributes="0"/>
                       <Component id="btnsalir" alignment="0" max="32767" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="26" max="32767" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
               </Group>
           </Group>
       </Group>
@@ -206,6 +206,9 @@
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Baskerville Old Face" size="14" style="1"/>
+        </Property>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/iconos/elegir tp.png"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Elegir tipo de paciente"/>
         <Property name="horizontalAlignment" type="int" value="11"/>

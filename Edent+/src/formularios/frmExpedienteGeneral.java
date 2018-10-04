@@ -49,6 +49,7 @@ public class frmExpedienteGeneral extends javax.swing.JInternalFrame {
         jLabel3.setText("Para realizar una consulta elija el tipo de paciente:");
 
         jButton1.setFont(new java.awt.Font("Baskerville Old Face", 1, 14)); // NOI18N
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/elegir tp.png"))); // NOI18N
         jButton1.setText("Elegir tipo de paciente");
         jButton1.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jButton1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -275,7 +276,7 @@ public class frmExpedienteGeneral extends javax.swing.JInternalFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
                     .addComponent(txttip, javax.swing.GroupLayout.PREFERRED_SIZE, 0, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(416, Short.MAX_VALUE))
+                .addContainerGap(473, Short.MAX_VALUE))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(85, 85, 85)
@@ -328,7 +329,7 @@ public class frmExpedienteGeneral extends javax.swing.JInternalFrame {
                         .addComponent(btneditar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(btnGuardar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(btnsalir, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addContainerGap(26, Short.MAX_VALUE)))
+                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
 
         pack();
