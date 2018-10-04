@@ -3,6 +3,7 @@ package formularios;
 
 
 import ConexionSql.ConexionDB;
+import conexionSQL.validaciones;
 import static formularios.frmPrincipal.Dpanel;
 import java.util.Calendar;
 import javax.swing.JOptionPane;
@@ -12,7 +13,16 @@ public class frmExpedienteGeneral extends javax.swing.JInternalFrame {
     public frmExpedienteGeneral() {
         initComponents();
     }
-    
+     public void limpiarTxt(){
+        txtnombre.setText("");
+        txtapellido.setText("");
+        txtdireccion.setText("");
+        txttelefono.setText("");
+        txtedad.setText("");
+        lblid.setText("");
+        
+       
+    }
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -357,11 +367,13 @@ public class frmExpedienteGeneral extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_txttelefonoKeyPressed
 
     private void txttelefonoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txttelefonoKeyTyped
-
+        validaciones val = new validaciones();
+        val.validarNum(evt);
     }//GEN-LAST:event_txttelefonoKeyTyped
 
     private void txtedadKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtedadKeyPressed
-
+        validaciones val = new validaciones();
+        val.validarNum(evt);
     }//GEN-LAST:event_txtedadKeyPressed
 
     private void txtedadKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtedadKeyTyped
@@ -373,7 +385,8 @@ public class frmExpedienteGeneral extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_txtnombreActionPerformed
 
     private void txtnombreKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtnombreKeyPressed
-
+        validaciones val = new validaciones();
+        val.validarCaracter(evt);
     }//GEN-LAST:event_txtnombreKeyPressed
 
     private void txtnombreKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtnombreKeyTyped
@@ -381,7 +394,8 @@ public class frmExpedienteGeneral extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_txtnombreKeyTyped
 
     private void txtapellidoKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtapellidoKeyPressed
-
+     validaciones val = new validaciones();
+        val.validarCaracter(evt);
     }//GEN-LAST:event_txtapellidoKeyPressed
 
     private void txtapellidoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtapellidoKeyTyped
@@ -419,7 +433,11 @@ public class frmExpedienteGeneral extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_btneditarActionPerformed
 
     private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
-     ConexionDB prueba = new ConexionDB();
+        if (this.txtnombre.getText().length() == 0 || this.txtapellido.getText().length() == 0|| this.txtedad.getText().length() == 0){
+            JOptionPane.showMessageDialog(null, "Debe complementar los campos requeridos");
+            }else{
+        
+        ConexionDB prueba = new ConexionDB();
     
       String dia = Integer.toString(fecha.getCalendar().get(Calendar.DAY_OF_MONTH));
       String mes = Integer.toString(fecha.getCalendar().get(Calendar.MONTH) + 1);
@@ -430,6 +448,9 @@ public class frmExpedienteGeneral extends javax.swing.JInternalFrame {
               Integer.parseInt(txtedad.getText()),date,Integer.parseInt(txttip.getText()));
         
         JOptionPane.showMessageDialog(null, "Paciente Almacenado");
+        
+        limpiarTxt();
+        }
     }//GEN-LAST:event_btnGuardarActionPerformed
 
     private void btnsalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnsalirActionPerformed
