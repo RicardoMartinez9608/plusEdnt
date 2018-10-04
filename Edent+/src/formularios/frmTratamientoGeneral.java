@@ -55,12 +55,17 @@ public class frmTratamientoGeneral extends javax.swing.JInternalFrame {
         btneditar = new javax.swing.JButton();
         btnGuardar = new javax.swing.JButton();
         btnsalir = new javax.swing.JButton();
+        lblnombre = new javax.swing.JLabel();
+        lblapellido = new javax.swing.JLabel();
+        lblid = new javax.swing.JLabel();
 
         setClosable(true);
         setIconifiable(true);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel5.setFont(new java.awt.Font("Baskerville Old Face", 1, 24)); // NOI18N
         jLabel5.setText("Consulta Pacientes Odontología General");
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(191, 11, -1, -1));
 
         btnagregarpc.setText("Agregar paciente para consulta");
         btnagregarpc.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -70,18 +75,22 @@ public class frmTratamientoGeneral extends javax.swing.JInternalFrame {
                 btnagregarpcActionPerformed(evt);
             }
         });
+        getContentPane().add(btnagregarpc, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 39, -1, -1));
 
         jLabel1.setBackground(new java.awt.Color(255, 255, 255));
         jLabel1.setFont(new java.awt.Font("Baskerville Old Face", 1, 14)); // NOI18N
         jLabel1.setText("Numero de expediente");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(28, 66, -1, -1));
 
         jLabel2.setBackground(new java.awt.Color(255, 255, 255));
         jLabel2.setFont(new java.awt.Font("Baskerville Old Face", 1, 14)); // NOI18N
         jLabel2.setText("Nombre");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(279, 66, -1, -1));
 
         jLabel3.setBackground(new java.awt.Color(255, 255, 255));
         jLabel3.setFont(new java.awt.Font("Baskerville Old Face", 1, 14)); // NOI18N
         jLabel3.setText("Fecha");
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(558, 72, -1, -1));
 
         jfecha.setDateFormatString("yyyy-MM-dd");
         jfecha.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -89,59 +98,73 @@ public class frmTratamientoGeneral extends javax.swing.JInternalFrame {
                 jfechaKeyPressed(evt);
             }
         });
+        getContentPane().add(jfecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(606, 67, 151, -1));
 
         jLabel4.setFont(new java.awt.Font("Baskerville Old Face", 1, 14)); // NOI18N
         jLabel4.setText("ID consulta");
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(569, 106, -1, -1));
 
         lblidc.setText("...");
+        getContentPane().add(lblidc, new org.netbeans.lib.awtextra.AbsoluteConstraints(663, 106, -1, -1));
 
         lblnombre1.setFont(new java.awt.Font("Baskerville Old Face", 1, 14)); // NOI18N
         lblnombre1.setText("Motivo de la Consulta: ");
+        getContentPane().add(lblnombre1, new org.netbeans.lib.awtextra.AbsoluteConstraints(41, 99, -1, -1));
 
         txtMotivoC.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 txtMotivoCKeyPressed(evt);
             }
         });
+        getContentPane().add(txtMotivoC, new org.netbeans.lib.awtextra.AbsoluteConstraints(201, 89, 350, 48));
 
         lblnombre2.setFont(new java.awt.Font("Baskerville Old Face", 1, 14)); // NOI18N
         lblnombre2.setText("Historia Médica:");
+        getContentPane().add(lblnombre2, new org.netbeans.lib.awtextra.AbsoluteConstraints(71, 162, 126, -1));
 
         txtHistoriaM.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 txtHistoriaMKeyPressed(evt);
             }
         });
+        getContentPane().add(txtHistoriaM, new org.netbeans.lib.awtextra.AbsoluteConstraints(201, 152, 350, 50));
 
         lblnombre3.setFont(new java.awt.Font("Baskerville Old Face", 1, 14)); // NOI18N
         lblnombre3.setText("Historia Odontológica:");
+        getContentPane().add(lblnombre3, new org.netbeans.lib.awtextra.AbsoluteConstraints(41, 213, -1, -1));
 
         txtHistoriaO.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 txtHistoriaOKeyPressed(evt);
             }
         });
+        getContentPane().add(txtHistoriaO, new org.netbeans.lib.awtextra.AbsoluteConstraints(201, 213, 350, 49));
 
         lblnombre4.setFont(new java.awt.Font("Baskerville Old Face", 1, 14)); // NOI18N
         lblnombre4.setText("Examen Clínico:");
+        getContentPane().add(lblnombre4, new org.netbeans.lib.awtextra.AbsoluteConstraints(71, 280, 120, -1));
 
         txtExamenC.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 txtExamenCKeyPressed(evt);
             }
         });
+        getContentPane().add(txtExamenC, new org.netbeans.lib.awtextra.AbsoluteConstraints(201, 280, 350, 49));
 
         lblnombre5.setFont(new java.awt.Font("Baskerville Old Face", 1, 14)); // NOI18N
         lblnombre5.setText("DX Odontológico:");
+        getContentPane().add(lblnombre5, new org.netbeans.lib.awtextra.AbsoluteConstraints(61, 345, 130, -1));
 
         txtDX.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 txtDXKeyPressed(evt);
             }
         });
+        getContentPane().add(txtDX, new org.netbeans.lib.awtextra.AbsoluteConstraints(201, 345, 350, 52));
 
         lblnombre6.setFont(new java.awt.Font("Baskerville Old Face", 1, 14)); // NOI18N
         lblnombre6.setText("Presupuesto:");
+        getContentPane().add(lblnombre6, new org.netbeans.lib.awtextra.AbsoluteConstraints(95, 419, 88, 20));
 
         txtpresupuesto.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
@@ -151,6 +174,7 @@ public class frmTratamientoGeneral extends javax.swing.JInternalFrame {
                 txtpresupuestoKeyTyped(evt);
             }
         });
+        getContentPane().add(txtpresupuesto, new org.netbeans.lib.awtextra.AbsoluteConstraints(201, 415, 90, 29));
 
         btnselecionaredicion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/buscar edicion.png"))); // NOI18N
         btnselecionaredicion.setText("Seleccionar paciente a editar");
@@ -161,6 +185,7 @@ public class frmTratamientoGeneral extends javax.swing.JInternalFrame {
                 btnselecionaredicionActionPerformed(evt);
             }
         });
+        getContentPane().add(btnselecionaredicion, new org.netbeans.lib.awtextra.AbsoluteConstraints(175, 454, -1, -1));
 
         btneditar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/editar.png"))); // NOI18N
         btneditar.setText("Editar Paciente");
@@ -171,6 +196,7 @@ public class frmTratamientoGeneral extends javax.swing.JInternalFrame {
                 btneditarActionPerformed(evt);
             }
         });
+        getContentPane().add(btneditar, new org.netbeans.lib.awtextra.AbsoluteConstraints(352, 454, -1, -1));
 
         btnGuardar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/guardar.png"))); // NOI18N
         btnGuardar.setText("Guardar");
@@ -182,6 +208,7 @@ public class frmTratamientoGeneral extends javax.swing.JInternalFrame {
                 btnGuardarActionPerformed(evt);
             }
         });
+        getContentPane().add(btnGuardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(463, 454, 85, -1));
 
         btnsalir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/cancelar.png"))); // NOI18N
         btnsalir.setText("Salir");
@@ -193,137 +220,14 @@ public class frmTratamientoGeneral extends javax.swing.JInternalFrame {
                 btnsalirActionPerformed(evt);
             }
         });
+        getContentPane().add(btnsalir, new org.netbeans.lib.awtextra.AbsoluteConstraints(554, 454, 83, 91));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(191, Short.MAX_VALUE)
-                .addComponent(jLabel5)
-                .addGap(152, 152, 152))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addContainerGap()
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnselecionaredicion)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(btneditar)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(btnGuardar, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(btnsalir, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(120, 120, 120))
-                        .addComponent(btnagregarpc)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(18, 18, 18)
-                            .addComponent(jLabel1)
-                            .addGap(105, 105, 105)
-                            .addComponent(jLabel2)
-                            .addGap(226, 226, 226)
-                            .addComponent(jLabel3)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addComponent(jfecha, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addGroup(layout.createSequentialGroup()
-                                            .addGap(47, 47, 47)
-                                            .addComponent(lblnombre5, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addGap(10, 10, 10)
-                                            .addComponent(txtDX, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGroup(layout.createSequentialGroup()
-                                            .addGap(57, 57, 57)
-                                            .addComponent(lblnombre4, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addGap(10, 10, 10)
-                                            .addComponent(txtExamenC, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addComponent(txtHistoriaO, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                            .addComponent(lblnombre6, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addGap(18, 18, 18)
-                                            .addComponent(txtpresupuesto, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addGap(260, 260, 260)))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGap(31, 31, 31)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(lblnombre1)
-                                            .addGroup(layout.createSequentialGroup()
-                                                .addGap(30, 30, 30)
-                                                .addComponent(lblnombre2, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addGap(4, 4, 4)
-                                                .addComponent(txtHistoriaM, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                            .addComponent(lblnombre3))))
-                                .addComponent(txtMotivoC, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGap(18, 18, 18)
-                            .addComponent(jLabel4)
-                            .addGap(18, 18, 18)
-                            .addComponent(lblidc)))
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel5)
-                .addContainerGap(545, Short.MAX_VALUE))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(39, 39, 39)
-                    .addComponent(btnagregarpc)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addGroup(layout.createSequentialGroup()
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(jfecha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(jLabel1)
-                                .addComponent(jLabel2))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(6, 6, 6)
-                                .addComponent(jLabel3))))
-                    .addGap(2, 2, 2)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(10, 10, 10)
-                            .addComponent(lblnombre1))
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(txtMotivoC, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel4)
-                            .addComponent(lblidc)))
-                    .addGap(15, 15, 15)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(10, 10, 10)
-                            .addComponent(lblnombre2))
-                        .addComponent(txtHistoriaM, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(lblnombre3)
-                        .addComponent(txtHistoriaO, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGap(18, 18, 18)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(lblnombre4)
-                        .addComponent(txtExamenC, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGap(16, 16, 16)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(lblnombre5)
-                        .addComponent(txtDX, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGap(18, 18, 18)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(txtpresupuesto, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(lblnombre6, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(btnselecionaredicion)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(btnsalir, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btnGuardar))
-                        .addComponent(btneditar))
-                    .addGap(39, 39, 39)))
-        );
+        lblnombre.setText("Nombre");
+        getContentPane().add(lblnombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(344, 65, -1, -1));
+
+        lblapellido.setText("Apellido");
+        getContentPane().add(lblapellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(415, 65, -1, -1));
+        getContentPane().add(lblid, new org.netbeans.lib.awtextra.AbsoluteConstraints(181, 65, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -375,13 +279,6 @@ public class frmTratamientoGeneral extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_btneditarActionPerformed
 
     private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
-//        String motivo = this.txtMotivoC.getText();
-//        Double total = Double.parseDouble( this.txtpresupuesto.getText());
-//        String historiam = this.txtHistoriaM.getText();
-//        String historiao = this.txtHistoriaO.getText();
-//        String examen = this.txtExamenC.getText();
-//        String dx = this.txtDX.getText();
-        
        
       String dia = Integer.toString(jfecha.getCalendar().get(Calendar.DAY_OF_MONTH));
       String mes = Integer.toString(jfecha.getCalendar().get(Calendar.MONTH) + 1);
@@ -413,7 +310,10 @@ public class frmTratamientoGeneral extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     public static com.toedter.calendar.JDateChooser jfecha;
+    public static javax.swing.JLabel lblapellido;
+    public static javax.swing.JLabel lblid;
     public static javax.swing.JLabel lblidc;
+    public static javax.swing.JLabel lblnombre;
     private javax.swing.JLabel lblnombre1;
     private javax.swing.JLabel lblnombre2;
     private javax.swing.JLabel lblnombre3;

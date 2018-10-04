@@ -144,31 +144,22 @@ public class vistaPClinica extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_txtBuscarKeyTyped
 
     private void jtPacientesMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jtPacientesMousePressed
-        if(evt.getClickCount()==2){
+            if(evt.getClickCount()==2){
             int fila =jtPacientes.getSelectedRow();
             String nombre;
-            String apellido,fecha,id;
+            String apellido,id;
             nombre=jtPacientes.getValueAt(fila, 1).toString();
             apellido=jtPacientes.getValueAt(fila, 2).toString();
-            //            fecha=jtPacientes.getValueAt(fila, 6).toString();
             id=jtPacientes.getValueAt(fila, 0).toString();
+            frmTratamientoGeneral.lblid.setText(id);
+            frmTratamientoGeneral.lblnombre.setText(nombre);
+            frmTratamientoGeneral.lblapellido.setText(apellido);
+            
+            this.dispose();
+         
+           
 
-            //            consulta.lbfecha.setText(fecha);
-//            consulta.lbnombre.setText(nombre+" "+apellido);
-//            consulta.lbid.setText(id);
-//            this.dispose();
-//
-//            consulta.btnGuardar.setEnabled(true);
-//            consulta.btneditar.setEnabled(true);
-//            consulta.txtDX.setEnabled(true);
-//            consulta.txtExamenC.setEnabled(true);
-//            consulta.txtHistoriaM.setEnabled(true);
-//            consulta.txtHistoriaO.setEnabled(true);
-//            consulta.txtMotivoC.setEnabled(true);
-//            consulta.txtpresupuesto.setEnabled(true);
-//            consulta.btneditar.setEnabled(false);
-//            consulta.btnselecionaredicion.setEnabled(false);
-//            consulta.btndientes.setEnabled(true);
+
         }
     }//GEN-LAST:event_jtPacientesMousePressed
 
