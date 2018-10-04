@@ -187,7 +187,7 @@ public static DefaultTableModel modelPac;
         try{
             Object a[]=null;
             List<Paciente>Listapac;
-            Listapac= te.findPacienteEntitiesgen(tipo);
+            Listapac= te.findPacienteEntities();
             for (int i = 0; i < Listapac.size(); i++) {
                 modelPac.addRow(a);
                 modelPac.setValueAt(Listapac.get(i).getIdPaciente(),i, 0);
