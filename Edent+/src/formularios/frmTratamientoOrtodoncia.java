@@ -1170,7 +1170,7 @@ public class frmTratamientoOrtodoncia extends javax.swing.JInternalFrame {
                txtEJE.getText(), txtIS.getText(), txtII.getText(), txtFHIS.getText(), txtANB82.getText(), txtANB80.getText(),
                txtANB2.getText(), txtPALS.getText(), txtPALI.getText(), txtPTB.getText(), txtDSD.getText(), 
                txtmaxilares.getText(), txtEntornoD.getText(),2);
-       JOptionPane.showMessageDialog(null, "Tratamiento Almacenado");
+       
        
        int seleccion = 0;
         if(this.chcurvaleve1.isSelected()== true ) {
@@ -1208,12 +1208,14 @@ public class frmTratamientoOrtodoncia extends javax.swing.JInternalFrame {
                txtEJE.getText(), txtIS.getText(), txtII.getText(), txtFHIS.getText(), txtANB82.getText(), txtANB80.getText(),
                txtANB2.getText(), txtPALS.getText(), txtPALI.getText(), txtPTB.getText(), txtDSD.getText(), 
                txtmaxilares.getText(), txtEntornoD.getText(),2);
+        JOptionPane.showMessageDialog(null, "Tratamiento Actualizado Exitosamente");
     }//GEN-LAST:event_btnEditar1ActionPerformed
 
     private void btnEditar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditar2ActionPerformed
         ConexionDB UpdateTrata = new ConexionDB();
         UpdateTrata.procedureUpdateIngresarTrataOr(txtbandas.getText(), txttubos.getText(), txtotros.getText(), txtAparato.getText(), 
                txtexodoncia.getText(), txtBrakets.getText(), txtRetenciones.getText(), txtMD.getText(),1);
+        JOptionPane.showMessageDialog(null, "Tratamiento Actualizado Exitosamente");
         
     }//GEN-LAST:event_btnEditar2ActionPerformed
 

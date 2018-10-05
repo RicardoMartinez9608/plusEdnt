@@ -36,7 +36,6 @@ public class vistaPG extends javax.swing.JInternalFrame {
         setIconifiable(true);
 
         jLabel5.setFont(new java.awt.Font("Baskerville Old Face", 1, 24)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Vista de Pacientes de Clinica");
 
         jLabel6.setFont(new java.awt.Font("Baskerville Old Face", 1, 14)); // NOI18N
@@ -88,23 +87,21 @@ public class vistaPG extends javax.swing.JInternalFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 866, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel6)
-                        .addGap(12, 12, 12)
-                        .addComponent(txtBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGap(0, 298, Short.MAX_VALUE)
-                        .addComponent(jLabel5)
-                        .addGap(255, 255, 255))))
+                .addComponent(jLabel6)
+                .addGap(12, 12, 12)
+                .addComponent(txtBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(btnCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
+            .addGroup(layout.createSequentialGroup()
+                .addGap(277, 277, 277)
+                .addComponent(jLabel5)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -118,7 +115,7 @@ public class vistaPG extends javax.swing.JInternalFrame {
                         .addGap(1, 1, 1)
                         .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 241, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 245, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
                 .addComponent(btnCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(23, 23, 23))
@@ -146,14 +143,21 @@ public class vistaPG extends javax.swing.JInternalFrame {
     private void jtPacientesMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jtPacientesMousePressed
             if(evt.getClickCount()==2){
             int fila =jtPacientes.getSelectedRow();
-            String nombre;
-            String apellido,id;
+            String nombre, edad,telefono,direccion;
+            String apellido,fecha,id;
             nombre=jtPacientes.getValueAt(fila, 1).toString();
             apellido=jtPacientes.getValueAt(fila, 2).toString();
             id=jtPacientes.getValueAt(fila, 0).toString();
-            frmTratamientoGeneral.lblid.setText(id);
-            frmTratamientoGeneral.lblnombre.setText(nombre);
-            frmTratamientoGeneral.lblapellido.setText(apellido);
+            edad = jtPacientes.getValueAt(fila,5).toString();
+            telefono = jtPacientes.getValueAt(fila,4).toString();
+            direccion = jtPacientes.getValueAt(fila,3).toString();
+            frmExpedienteGeneral.lblid.setText(id);
+            frmExpedienteGeneral.txtnombre.setText(nombre);
+            frmExpedienteGeneral.txtapellido.setText(apellido);
+            frmExpedienteGeneral.txtdireccion.setText(direccion);
+            frmExpedienteGeneral.txttelefono.setText(telefono);
+            frmExpedienteGeneral.txtedad.setText(edad);
+                    
             
             this.dispose();
          

@@ -39,6 +39,7 @@ public class frmExpedienteGeneral extends javax.swing.JInternalFrame {
         lblid1 = new javax.swing.JLabel();
         lblid = new javax.swing.JLabel();
         lblnombre = new javax.swing.JLabel();
+        txtnombre = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         txtapellido = new javax.swing.JTextField();
         lbldireccion = new javax.swing.JLabel();
@@ -411,11 +412,15 @@ public class frmExpedienteGeneral extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_txtdireccionKeyPressed
 
     private void btconActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btconActionPerformed
-
+       frmTratamientoGeneral formProd = new frmTratamientoGeneral();
+       Dpanel.add(formProd);
+       formProd.show();
     }//GEN-LAST:event_btconActionPerformed
 
     private void btnbuscaredicionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnbuscaredicionActionPerformed
-
+       vistaPG formProd = new vistaPG();
+       Dpanel.add(formProd);
+       formProd.show();
     }//GEN-LAST:event_btnbuscaredicionActionPerformed
 
     private void btneditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btneditarActionPerformed
@@ -426,9 +431,10 @@ public class frmExpedienteGeneral extends javax.swing.JInternalFrame {
       String date = fechaA; 
         ConexionDB updateP = new ConexionDB();
         updateP.procedureUpdatePaciente(txtnombre.getText(),txtapellido.getText(),txtdireccion.getText(),txttelefono.getText(),
-              Integer.parseInt(txtedad.getText()),date,3);
+              Integer.parseInt(txtedad.getText()),date,Integer.parseInt(lblid.getText()));
         
                 JOptionPane.showMessageDialog(null, "Datos Actualizados Correctamente");
+        limpiarTxt();
                 
     }//GEN-LAST:event_btneditarActionPerformed
 
@@ -483,7 +489,7 @@ public class frmExpedienteGeneral extends javax.swing.JInternalFrame {
     public static javax.swing.JTextField txtapellido;
     public static javax.swing.JTextField txtdireccion;
     public static javax.swing.JTextField txtedad;
-    public static final javax.swing.JTextField txtnombre = new javax.swing.JTextField();
+    public static javax.swing.JTextField txtnombre;
     public static javax.swing.JTextField txttelefono;
     public static javax.swing.JTextField txttip;
     // End of variables declaration//GEN-END:variables
