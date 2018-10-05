@@ -5,7 +5,6 @@
  */
 package Entidad;
 
-import Entidad.Tipop;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.math.BigInteger;
@@ -59,7 +58,7 @@ public class Paciente implements Serializable {
     @JoinColumn(name = "ID_TIPOP", referencedColumnName = "ID_TIPOP")
     @ManyToOne(optional = false)
     private Tipop idTipop;
-
+    
     public Paciente() {
     }
 
@@ -168,7 +167,7 @@ public class Paciente implements Serializable {
 
     @Override
     public String toString() {
-        return "Entidad.vistaPC.Paciente[ idPaciente=" + idPaciente + " ]";
+        return "Entidad.Paciente[ idPaciente=" + idPaciente + " ]";
     }
     
 }
