@@ -171,7 +171,7 @@ public static DefaultTableModel modelPac;
         try {
             modelPac = (new DefaultTableModel(
                 null, new String [] {
-                "Codigo","Nombre","Apellido","Direccion","Telefono","Edad"}){
+                "Codigo","Nombre","Apellido","Direccion","Telefono","Edad","tipo"}){
                
             });
             this.jtPacientes.setModel(modelPac);
@@ -187,7 +187,7 @@ public static DefaultTableModel modelPac;
         try{
             Object a[]=null;
             List<Paciente>Listapac;
-            Listapac= te.findPacienteEntitiesgen(tipo);
+            Listapac= te.findPacienteEntities();
             for (int i = 0; i < Listapac.size(); i++) {
                 modelPac.addRow(a);
                 modelPac.setValueAt(Listapac.get(i).getIdPaciente(),i, 0);
@@ -196,7 +196,7 @@ public static DefaultTableModel modelPac;
                 modelPac.setValueAt(Listapac.get(i).getDireccion(),i, 3);
                 modelPac.setValueAt(Listapac.get(i).getTelefono(),i, 4);  
                 modelPac.setValueAt(Listapac.get(i).getEdad(),i, 5);
-                //modelPac.setValueAt(Listapac.get(i).getFechaRegistro(),i, 6);
+                modelPac.setValueAt(Listapac.get(i).getIdTipop(),i, 6);
             }
             
         }catch (Exception e){
