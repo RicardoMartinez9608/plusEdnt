@@ -15,10 +15,11 @@ import javax.swing.table.DefaultTableModel;
 public class vistaPClinica extends javax.swing.JInternalFrame {
 
     PacienteJpaController te = new PacienteJpaController(entityPaciente.getInstance());
+     public Integer totalRegistros; // Obtener los registros
+     
     public vistaPClinica() {
         initComponents();
-         CrearModeloPa();
-        LlenarTabla();
+         llenarTabla();
     }
 
     @SuppressWarnings("unchecked")
@@ -56,9 +57,6 @@ public class vistaPClinica extends javax.swing.JInternalFrame {
         };
         jtPacientes.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {},
-                {},
-                {},
                 {}
             },
             new String [] {
@@ -156,51 +154,41 @@ public class vistaPClinica extends javax.swing.JInternalFrame {
             frmTratamientoGeneral.lblapellido.setText(apellido);
             
             this.dispose();
-         
-           
-
-
         }
     }//GEN-LAST:event_jtPacientesMousePressed
 
     private void btnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarActionPerformed
         this.dispose();
     }//GEN-LAST:event_btnCancelarActionPerformed
-public static DefaultTableModel modelPac;
-    private void CrearModeloPa(){
-        try {
-            modelPac = (new DefaultTableModel(
-                null, new String [] {
-                "Codigo","Nombre","Apellido","Direccion","Telefono","Edad","tipo"}){
-               
-            });
-            this.jtPacientes.setModel(modelPac);
-        } catch (Exception e) {
-            JOptionPane.showMessageDialog(null,e.toString()+"Error al consultar los datos");
-        }
-    }
-    
-    private void LlenarTabla()
-    {
-        int tipo=1;
+       
+    private void llenarTabla(){
+        DefaultTableModel modelo;
+        //Arreglo para crear los campos necesarios de la tabla donde se mostraran los datos
+        String[] titulos = {"Codigo","Nombre","Apellido","Direccion","Telefono","Edad","tipo"};
+        String[] registros = new String[7];
+        totalRegistros = 0;
+        //se agregan los campos del arreglo al modelo de la tabla
+        modelo = new DefaultTableModel(null, titulos);
 
-        try{
-            Object a[]=null;
-            List<Paciente>Listapac;
-            Listapac= te.findPacienteEntities();
+        List<Paciente>Listapac;
+        Listapac= te.findPacienteEntities();
+        try {    
             for (int i = 0; i < Listapac.size(); i++) {
-                modelPac.addRow(a);
-                modelPac.setValueAt(Listapac.get(i).getIdPaciente(),i, 0);
-                modelPac.setValueAt(Listapac.get(i).getNombre(),i, 1);  
-                modelPac.setValueAt(Listapac.get(i).getApellido(),i, 2);
-                modelPac.setValueAt(Listapac.get(i).getDireccion(),i, 3);
-                modelPac.setValueAt(Listapac.get(i).getTelefono(),i, 4);  
-                modelPac.setValueAt(Listapac.get(i).getEdad(),i, 5);
-                modelPac.setValueAt(Listapac.get(i).getIdTipop().getIdTipop(),i, 6);
+                if(Listapac.get(i).getIdTipop().getNombret().equals("General")){
+                    registros[0]=Listapac.get(i).getIdPaciente().toString();
+                    registros[1]=Listapac.get(i).getNombre();
+                    registros[2]=Listapac.get(i).getApellido();
+                    registros[3]=Listapac.get(i).getDireccion();
+                    registros[4]=Listapac.get(i).getTelefono();
+                    registros[5]=Listapac.get(i).getEdad().toString();
+                    registros[6]=Listapac.get(i).getIdTipop().getNombret();
+                    totalRegistros = totalRegistros + 1;
+                    modelo.addRow(registros);
+                }
             }
-            
-        }catch (Exception e){
-            JOptionPane.showMessageDialog(this,e.getMessage());
+            this.jtPacientes.setModel(modelo);
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Problema al Consultar los Datos del Paciente");
         }
     }
 
