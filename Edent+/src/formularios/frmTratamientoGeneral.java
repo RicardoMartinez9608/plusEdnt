@@ -5,7 +5,7 @@
  */
 package formularios;
 
-import ConexionSql.ConexionDB;
+import Clases.ConexionDB;
 import static formularios.frmPrincipal.Dpanel;
 import java.util.Calendar;
 import javax.swing.JOptionPane;
@@ -22,7 +22,14 @@ public class frmTratamientoGeneral extends javax.swing.JInternalFrame {
     public frmTratamientoGeneral() {
         initComponents();
     }
-
+public void limpiarTxt(){
+       
+        txtMotivoC.setText("");
+        txtpresupuesto.setText("");
+        txtHistoriaM.setText("");
+        txtHistoriaO.setText("");
+        txtExamenC.setText("");
+        txtDX.setText("");}
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -285,6 +292,7 @@ public class frmTratamientoGeneral extends javax.swing.JInternalFrame {
       UpdateConsulta.procedureUpdateConsultaG(txtMotivoC.getText(), date, Double.parseDouble(txtpresupuesto.getText())
               , txtHistoriaM.getText(), txtHistoriaO.getText(), txtExamenC.getText(), txtDX.getText(),1);
       JOptionPane.showMessageDialog(null, "Datos de Tratamiento Actualizados correctamente");
+       limpiarTxt();
     }//GEN-LAST:event_btneditarActionPerformed
 
     private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
@@ -300,6 +308,7 @@ public class frmTratamientoGeneral extends javax.swing.JInternalFrame {
       consultaG.procedureConsultaG(txtMotivoC.getText(), date, Double.parseDouble(txtpresupuesto.getText())
               , txtHistoriaM.getText(), txtHistoriaO.getText(), txtExamenC.getText(), txtDX.getText(),Integer.parseInt(lblid.getText()));
       JOptionPane.showMessageDialog(null, "Tratamiento ingresado correctamente");
+      limpiarTxt();
       
     }//GEN-LAST:event_btnGuardarActionPerformed
 

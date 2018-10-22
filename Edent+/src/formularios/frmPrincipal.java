@@ -6,7 +6,7 @@
 package formularios;
 
 import Administracion.frmCrearUsuarios;
-import conexionSQL.ImagenFondo;
+import Clases.ImagenFondo;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;

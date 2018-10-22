@@ -5,7 +5,7 @@
  */
 package formularios;
 
-import ConexionSql.ConexionDB;
+import Clases.ConexionDB;
 import javax.swing.JOptionPane;
 
 /**

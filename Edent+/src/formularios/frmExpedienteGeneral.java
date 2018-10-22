@@ -2,8 +2,8 @@
 package formularios;
 
 
-import ConexionSql.ConexionDB;
-import conexionSQL.validaciones;
+import Clases.ConexionDB;
+import Clases.validaciones;
 import static formularios.frmPrincipal.Dpanel;
 import java.util.Calendar;
 import javax.swing.JOptionPane;
