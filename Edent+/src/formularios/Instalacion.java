@@ -1,21 +1,14 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package formularios;
 
-/**
- *
- * @author ricar
- */
+import conexionSQL.Login;
+import javax.swing.JOptionPane;
+
 public class Instalacion extends javax.swing.JFrame {
 
-    /**
-     * Creates new form Instalacion
-     */
     public Instalacion() {
         initComponents();
+        cbTipo.addItem("ADMINISTRADOR");
     }
 
     /**
@@ -29,19 +22,19 @@ public class Instalacion extends javax.swing.JFrame {
 
         jLabel19 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        txtNombre_persona = new javax.swing.JTextField();
-        txtape = new javax.swing.JTextField();
+        txtNombre = new javax.swing.JTextField();
+        txtApellido = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-        txtusua = new javax.swing.JTextField();
+        txtUsua = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
-        txtcont = new javax.swing.JPasswordField();
+        txtContra = new javax.swing.JPasswordField();
         jLabel11 = new javax.swing.JLabel();
-        tipo = new javax.swing.JComboBox<>();
+        cbTipo = new javax.swing.JComboBox<>();
         jLabel10 = new javax.swing.JLabel();
-        txtcorreo = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        txtCorreo = new javax.swing.JTextField();
+        btnGuardar = new javax.swing.JButton();
+        btnSalir = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -52,32 +45,32 @@ public class Instalacion extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Baskerville Old Face", 0, 18)); // NOI18N
         jLabel2.setText(" Nombre:");
 
-        txtNombre_persona.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        txtNombre_persona.setText(" ");
-        txtNombre_persona.addActionListener(new java.awt.event.ActionListener() {
+        txtNombre.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        txtNombre.setText(" ");
+        txtNombre.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtNombre_personaActionPerformed(evt);
+                txtNombreActionPerformed(evt);
             }
         });
-        txtNombre_persona.addKeyListener(new java.awt.event.KeyAdapter() {
+        txtNombre.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
-                txtNombre_personaKeyPressed(evt);
+                txtNombreKeyPressed(evt);
             }
             public void keyTyped(java.awt.event.KeyEvent evt) {
-                txtNombre_personaKeyTyped(evt);
+                txtNombreKeyTyped(evt);
             }
         });
 
-        txtape.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        txtape.setText("    ");
-        txtape.addActionListener(new java.awt.event.ActionListener() {
+        txtApellido.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        txtApellido.setText("    ");
+        txtApellido.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtapeActionPerformed(evt);
+                txtApellidoActionPerformed(evt);
             }
         });
-        txtape.addKeyListener(new java.awt.event.KeyAdapter() {
+        txtApellido.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
-                txtapeKeyPressed(evt);
+                txtApellidoKeyPressed(evt);
             }
         });
 
@@ -87,55 +80,60 @@ public class Instalacion extends javax.swing.JFrame {
         jLabel8.setFont(new java.awt.Font("Baskerville Old Face", 0, 18)); // NOI18N
         jLabel8.setText("Usuario:");
 
-        txtusua.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        txtusua.addActionListener(new java.awt.event.ActionListener() {
+        txtUsua.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        txtUsua.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtusuaActionPerformed(evt);
+                txtUsuaActionPerformed(evt);
             }
         });
-        txtusua.addKeyListener(new java.awt.event.KeyAdapter() {
+        txtUsua.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
-                txtusuaKeyPressed(evt);
+                txtUsuaKeyPressed(evt);
             }
         });
 
         jLabel9.setFont(new java.awt.Font("Baskerville Old Face", 0, 18)); // NOI18N
         jLabel9.setText("contraseña:");
 
-        txtcont.addKeyListener(new java.awt.event.KeyAdapter() {
+        txtContra.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
-                txtcontKeyPressed(evt);
+                txtContraKeyPressed(evt);
             }
         });
 
         jLabel11.setFont(new java.awt.Font("Baskerville Old Face", 0, 18)); // NOI18N
         jLabel11.setText("Tipo acceso:");
 
-        tipo.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        tipo.addActionListener(new java.awt.event.ActionListener() {
+        cbTipo.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        cbTipo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                tipoActionPerformed(evt);
+                cbTipoActionPerformed(evt);
             }
         });
 
         jLabel10.setFont(new java.awt.Font("Baskerville Old Face", 0, 18)); // NOI18N
         jLabel10.setText("Correo:");
 
-        txtcorreo.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        txtcorreo.addActionListener(new java.awt.event.ActionListener() {
+        txtCorreo.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        txtCorreo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtcorreoActionPerformed(evt);
+                txtCorreoActionPerformed(evt);
             }
         });
-        txtcorreo.addKeyListener(new java.awt.event.KeyAdapter() {
+        txtCorreo.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
-                txtcorreoKeyPressed(evt);
+                txtCorreoKeyPressed(evt);
             }
         });
 
-        jButton1.setText("Guardar");
+        btnGuardar.setText("Guardar");
+        btnGuardar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnGuardarActionPerformed(evt);
+            }
+        });
 
-        jButton2.setText("Salir");
+        btnSalir.setText("Salir");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -151,7 +149,7 @@ public class Instalacion extends javax.swing.JFrame {
                         .addGap(45, 45, 45)
                         .addComponent(jLabel5)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(txtape))
+                        .addComponent(txtApellido))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(37, 37, 37)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -163,12 +161,12 @@ public class Instalacion extends javax.swing.JFrame {
                                 .addComponent(jLabel9)
                                 .addGap(11, 11, 11)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(txtusua)
-                                    .addComponent(txtcont)))
+                                    .addComponent(txtUsua)
+                                    .addComponent(txtContra)))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLabel2)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(txtNombre_persona))))
+                                .addComponent(txtNombre))))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(27, 27, 27)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -178,13 +176,13 @@ public class Instalacion extends javax.swing.JFrame {
                                     .addComponent(jLabel10))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(txtcorreo)
-                                    .addComponent(tipo, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                                    .addComponent(txtCorreo)
+                                    .addComponent(cbTipo, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(34, 34, 34)
-                                .addComponent(jButton1)
+                                .addComponent(btnGuardar)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 205, Short.MAX_VALUE)
-                                .addComponent(jButton2)))))
+                                .addComponent(btnSalir)))))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -194,84 +192,108 @@ public class Instalacion extends javax.swing.JFrame {
                 .addComponent(jLabel19)
                 .addGap(30, 30, 30)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtNombre_persona, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtape, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtApellido, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel5))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtusua, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtUsua, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel8))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel9)
-                    .addComponent(txtcont, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtContra, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel11)
-                    .addComponent(tipo, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(cbTipo, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(24, 24, 24)
                         .addComponent(jLabel10))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(18, 18, 18)
-                        .addComponent(txtcorreo, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(txtCorreo, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(66, 66, 66)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2))
+                    .addComponent(btnGuardar)
+                    .addComponent(btnSalir))
                 .addContainerGap(92, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void txtNombre_personaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNombre_personaActionPerformed
+    private void txtNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNombreActionPerformed
 
-    }//GEN-LAST:event_txtNombre_personaActionPerformed
+    }//GEN-LAST:event_txtNombreActionPerformed
 
-    private void txtNombre_personaKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtNombre_personaKeyPressed
+    private void txtNombreKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtNombreKeyPressed
 
-    }//GEN-LAST:event_txtNombre_personaKeyPressed
+    }//GEN-LAST:event_txtNombreKeyPressed
 
-    private void txtNombre_personaKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtNombre_personaKeyTyped
+    private void txtNombreKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtNombreKeyTyped
 
-    }//GEN-LAST:event_txtNombre_personaKeyTyped
+    }//GEN-LAST:event_txtNombreKeyTyped
 
-    private void txtapeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtapeActionPerformed
+    private void txtApellidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtApellidoActionPerformed
 
-    }//GEN-LAST:event_txtapeActionPerformed
+    }//GEN-LAST:event_txtApellidoActionPerformed
 
-    private void txtapeKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtapeKeyPressed
+    private void txtApellidoKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtApellidoKeyPressed
 
-    }//GEN-LAST:event_txtapeKeyPressed
+    }//GEN-LAST:event_txtApellidoKeyPressed
 
-    private void txtusuaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtusuaActionPerformed
+    private void txtUsuaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtUsuaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtusuaActionPerformed
+    }//GEN-LAST:event_txtUsuaActionPerformed
 
-    private void txtusuaKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtusuaKeyPressed
+    private void txtUsuaKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtUsuaKeyPressed
 
-    }//GEN-LAST:event_txtusuaKeyPressed
+    }//GEN-LAST:event_txtUsuaKeyPressed
 
-    private void txtcontKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtcontKeyPressed
+    private void txtContraKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtContraKeyPressed
 
-    }//GEN-LAST:event_txtcontKeyPressed
+    }//GEN-LAST:event_txtContraKeyPressed
 
-    private void tipoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tipoActionPerformed
+    private void cbTipoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbTipoActionPerformed
 
-    }//GEN-LAST:event_tipoActionPerformed
+    }//GEN-LAST:event_cbTipoActionPerformed
 
-    private void txtcorreoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtcorreoActionPerformed
+    private void txtCorreoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCorreoActionPerformed
 
-    }//GEN-LAST:event_txtcorreoActionPerformed
+    }//GEN-LAST:event_txtCorreoActionPerformed
 
-    private void txtcorreoKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtcorreoKeyPressed
+    private void txtCorreoKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtCorreoKeyPressed
 
-    }//GEN-LAST:event_txtcorreoKeyPressed
+    }//GEN-LAST:event_txtCorreoKeyPressed
+
+    
+    private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
+        if ((!(this.txtNombre.getText().isEmpty()) && this.txtNombre.getText()!=null) 
+                && (!(this.txtApellido.getText().isEmpty()) && this.txtApellido.getText()!=null)
+                && (!(this.txtContra.getText().isEmpty()) && this.txtContra.getText()!=null)
+                && (!(this.txtCorreo.getText().isEmpty()) && this.txtCorreo.getText()!=null)
+                && (!(this.txtUsua.getText().isEmpty()) && this.txtUsua.getText()!=null))
+        {
+            Login indicaciones = new Login();
+            String nomb= this.txtNombre.getText().trim();
+            String ape=this.txtApellido.getText().trim();
+            String usser=this.txtUsua.getText().trim();
+            String contra=this.txtContra.getText().trim();
+            String correo=this.txtCorreo.getText().trim();
+            String type=this.cbTipo.getSelectedItem().toString();
+            String msj = indicaciones.procedureRegistarLogin(nomb,ape,usser,contra,correo,type); 
+            JOptionPane.showMessageDialog(null, msj);
+            this.dispose();
+        }else
+        {
+            JOptionPane.showMessageDialog(null, "Dejó Campos Vacíos");
+        }
+    }//GEN-LAST:event_btnGuardarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -309,8 +331,9 @@ public class Instalacion extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JButton btnGuardar;
+    private javax.swing.JButton btnSalir;
+    private javax.swing.JComboBox<String> cbTipo;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel19;
@@ -318,11 +341,10 @@ public class Instalacion extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JComboBox<String> tipo;
-    private javax.swing.JTextField txtNombre_persona;
-    private javax.swing.JTextField txtape;
-    private javax.swing.JPasswordField txtcont;
-    private javax.swing.JTextField txtcorreo;
-    private javax.swing.JTextField txtusua;
+    private javax.swing.JTextField txtApellido;
+    private javax.swing.JPasswordField txtContra;
+    private javax.swing.JTextField txtCorreo;
+    private javax.swing.JTextField txtNombre;
+    private javax.swing.JTextField txtUsua;
     // End of variables declaration//GEN-END:variables
 }
