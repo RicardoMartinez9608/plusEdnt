@@ -32,7 +32,7 @@ public class Login {
         //funcion para iniciar secion
         public Integer procedureLogin(String Contrasenia, String Correo)
         {
-            Integer resultado=null;
+            Integer resultado=0;
            try {
                 CallableStatement proc = bd.conn.prepareCall("{CALL LogIn(?,?,?)}");
                 proc.setString("pContra",Contrasenia );
