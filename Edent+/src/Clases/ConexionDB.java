@@ -19,10 +19,10 @@ import javax.swing.JOptionPane;
  * @author ricar
  */
 public class ConexionDB {
- private String login = "tps";
-  private String password = "tps1234";
-  private String url = "jdbc:oracle:thin:@localhost:1521:XE";
-  private Connection conn = null;
+    private String login = "tps";
+    private String password = "tps1234";
+    private String url = "jdbc:oracle:thin:@localhost:1521:XE";
+    public Connection conn = null;
 //___________________________________________________________________________________ Soy una barra separadora ??
   //Constructor de la clase que se conecta a la base de datos una vez que se crea la instancia
   public ConexionDB(){
