@@ -9,7 +9,9 @@ import java.io.Serializable;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.util.Date;
+import java.util.List;
 import javax.persistence.Basic;
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -17,6 +19,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -30,6 +33,9 @@ import javax.persistence.TemporalType;
 @NamedQueries({
     @NamedQuery(name = "Paciente.findAll", query = "SELECT p FROM Paciente p")})
 public class Paciente implements Serializable {
+
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "idPaciente")
+    private List<Consulta> consultaList;
 
     private static final long serialVersionUID = 1L;
     // @Max(value=?)  @Min(value=?)//if you know range of your decimal fields consider using these annotations to enforce field validation
@@ -168,6 +174,14 @@ public class Paciente implements Serializable {
     @Override
     public String toString() {
         return "Entidad.Paciente[ idPaciente=" + idPaciente + " ]";
+    }
+
+    public List<Consulta> getConsultaList() {
+        return consultaList;
+    }
+
+    public void setConsultaList(List<Consulta> consultaList) {
+        this.consultaList = consultaList;
     }
     
 }

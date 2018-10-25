@@ -86,6 +86,7 @@ public class frmPrincipal extends javax.swing.JFrame implements  Runnable {
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
+        jButton2 = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu3 = new javax.swing.JMenu();
         jMenuItem3 = new javax.swing.JMenuItem();
@@ -158,6 +159,13 @@ public class frmPrincipal extends javax.swing.JFrame implements  Runnable {
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/conexionSQL/logo.jpeg"))); // NOI18N
 
+        jButton2.setText("vista tratamiento general");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+
         Dpanel.setLayer(jButton1, javax.swing.JLayeredPane.DEFAULT_LAYER);
         Dpanel.setLayer(jButton3, javax.swing.JLayeredPane.DEFAULT_LAYER);
         Dpanel.setLayer(jButton5, javax.swing.JLayeredPane.DEFAULT_LAYER);
@@ -168,6 +176,7 @@ public class frmPrincipal extends javax.swing.JFrame implements  Runnable {
         Dpanel.setLayer(jLabel3, javax.swing.JLayeredPane.DEFAULT_LAYER);
         Dpanel.setLayer(jLabel4, javax.swing.JLayeredPane.DEFAULT_LAYER);
         Dpanel.setLayer(jLabel5, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        Dpanel.setLayer(jButton2, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         javax.swing.GroupLayout DpanelLayout = new javax.swing.GroupLayout(Dpanel);
         Dpanel.setLayout(DpanelLayout);
@@ -187,11 +196,16 @@ public class frmPrincipal extends javax.swing.JFrame implements  Runnable {
                     .addComponent(jLabel4)
                     .addComponent(jLabel3)))
             .addGroup(DpanelLayout.createSequentialGroup()
-                .addGap(264, 264, 264)
-                .addComponent(jLabel1)
-                .addGap(53, 53, 53)
-                .addComponent(jLabel2)
-                .addGap(679, 679, 679)
+                .addGroup(DpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(DpanelLayout.createSequentialGroup()
+                        .addGap(264, 264, 264)
+                        .addComponent(jLabel1)
+                        .addGap(53, 53, 53)
+                        .addComponent(jLabel2))
+                    .addGroup(DpanelLayout.createSequentialGroup()
+                        .addGap(228, 228, 228)
+                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(602, 602, 602)
                 .addComponent(lbhora))
         );
         DpanelLayout.setVerticalGroup(
@@ -209,10 +223,15 @@ public class frmPrincipal extends javax.swing.JFrame implements  Runnable {
                         .addGap(50, 50, 50)
                         .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jLabel5))
-                .addGap(90, 90, 90)
-                .addGroup(DpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel4)
-                    .addComponent(jLabel3))
+                .addGroup(DpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(DpanelLayout.createSequentialGroup()
+                        .addGap(90, 90, 90)
+                        .addGroup(DpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel4)
+                            .addComponent(jLabel3)))
+                    .addGroup(DpanelLayout.createSequentialGroup()
+                        .addGap(50, 50, 50)
+                        .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addGap(321, 321, 321)
                 .addGroup(DpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(lbhora)
@@ -452,6 +471,12 @@ public class frmPrincipal extends javax.swing.JFrame implements  Runnable {
        tipop.show();
     }//GEN-LAST:event_jButton5ActionPerformed
 
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        vistaTrataGenral trata = new vistaTrataGenral();
+        Dpanel.add(trata);
+        trata.show();
+    }//GEN-LAST:event_jButton2ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -492,6 +517,7 @@ public class frmPrincipal extends javax.swing.JFrame implements  Runnable {
     public static javax.swing.JDesktopPane Dpanel;
     private javax.swing.JMenuItem back;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton7;
