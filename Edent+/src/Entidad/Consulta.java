@@ -8,7 +8,9 @@ package Entidad;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
+import java.util.List;
 import javax.persistence.Basic;
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -16,6 +18,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -29,6 +32,9 @@ import javax.persistence.TemporalType;
 @NamedQueries({
     @NamedQuery(name = "Consulta.findAll", query = "SELECT c FROM Consulta c")})
 public class Consulta implements Serializable {
+
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "idConsulta")
+    private List<Cefalom> cefalomList;
 
     private static final long serialVersionUID = 1L;
     // @Max(value=?)  @Min(value=?)//if you know range of your decimal fields consider using these annotations to enforce field validation
@@ -169,6 +175,14 @@ public class Consulta implements Serializable {
     @Override
     public String toString() {
         return "Entidad.Consulta[ idConsulta=" + idConsulta + " ]";
+    }
+
+    public List<Cefalom> getCefalomList() {
+        return cefalomList;
+    }
+
+    public void setCefalomList(List<Cefalom> cefalomList) {
+        this.cefalomList = cefalomList;
     }
     
 }

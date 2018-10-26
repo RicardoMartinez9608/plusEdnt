@@ -6,6 +6,7 @@
     <class>Entidad.cefalometria.Cefalom</class>
     <class>Entidad.Paciente</class>
     <class>Entidad.Consulta</class>
+    <class>Entidad.Cefalom</class>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:oracle:thin:@localhost:1521:XE"/>
       <property name="javax.persistence.jdbc.user" value="tps"/>

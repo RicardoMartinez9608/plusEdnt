@@ -4,12 +4,12 @@ package Entidad;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
-public class entityTipop {
-    private static final EntityManagerFactory tipo=Persistence.createEntityManagerFactory("Edent_PU");
+public class entityCefalom {
+    private static final EntityManagerFactory pac=Persistence.createEntityManagerFactory("Edent_PU"); 
     
-    public entityTipop(){}
+    public entityCefalom(){}
     
     public static EntityManagerFactory getInstance(){
-     return tipo;
+     return pac;
     }
 }

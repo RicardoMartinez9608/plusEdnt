@@ -87,6 +87,7 @@ public class frmPrincipal extends javax.swing.JFrame implements  Runnable {
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu3 = new javax.swing.JMenu();
         jMenuItem3 = new javax.swing.JMenuItem();
@@ -166,6 +167,13 @@ public class frmPrincipal extends javax.swing.JFrame implements  Runnable {
             }
         });
 
+        jButton4.setText("Vista Cefalometria");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
+
         Dpanel.setLayer(jButton1, javax.swing.JLayeredPane.DEFAULT_LAYER);
         Dpanel.setLayer(jButton3, javax.swing.JLayeredPane.DEFAULT_LAYER);
         Dpanel.setLayer(jButton5, javax.swing.JLayeredPane.DEFAULT_LAYER);
@@ -177,6 +185,7 @@ public class frmPrincipal extends javax.swing.JFrame implements  Runnable {
         Dpanel.setLayer(jLabel4, javax.swing.JLayeredPane.DEFAULT_LAYER);
         Dpanel.setLayer(jLabel5, javax.swing.JLayeredPane.DEFAULT_LAYER);
         Dpanel.setLayer(jButton2, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        Dpanel.setLayer(jButton4, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         javax.swing.GroupLayout DpanelLayout = new javax.swing.GroupLayout(Dpanel);
         Dpanel.setLayout(DpanelLayout);
@@ -196,17 +205,17 @@ public class frmPrincipal extends javax.swing.JFrame implements  Runnable {
                     .addComponent(jLabel4)
                     .addComponent(jLabel3)))
             .addGroup(DpanelLayout.createSequentialGroup()
-                .addGroup(DpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(DpanelLayout.createSequentialGroup()
-                        .addGap(264, 264, 264)
-                        .addComponent(jLabel1)
-                        .addGap(53, 53, 53)
-                        .addComponent(jLabel2))
-                    .addGroup(DpanelLayout.createSequentialGroup()
-                        .addGap(228, 228, 228)
-                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(264, 264, 264)
+                .addComponent(jLabel1)
+                .addGap(53, 53, 53)
+                .addComponent(jLabel2)
                 .addGap(602, 602, 602)
                 .addComponent(lbhora))
+            .addGroup(DpanelLayout.createSequentialGroup()
+                .addGap(228, 228, 228)
+                .addGroup(DpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, 237, Short.MAX_VALUE)
+                    .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
         DpanelLayout.setVerticalGroup(
             DpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -232,7 +241,9 @@ public class frmPrincipal extends javax.swing.JFrame implements  Runnable {
                     .addGroup(DpanelLayout.createSequentialGroup()
                         .addGap(50, 50, 50)
                         .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addGap(321, 321, 321)
+                .addGap(18, 18, 18)
+                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(270, 270, 270)
                 .addGroup(DpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(lbhora)
                     .addGroup(DpanelLayout.createSequentialGroup()
@@ -477,6 +488,12 @@ public class frmPrincipal extends javax.swing.JFrame implements  Runnable {
         trata.show();
     }//GEN-LAST:event_jButton2ActionPerformed
 
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        vistaCfalom cfalom = new vistaCfalom();
+        Dpanel.add(cfalom);
+        cfalom.show();
+    }//GEN-LAST:event_jButton4ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -519,6 +536,7 @@ public class frmPrincipal extends javax.swing.JFrame implements  Runnable {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton7;
     private javax.swing.JLabel jLabel1;
