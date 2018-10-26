@@ -1,19 +1,19 @@
 
 package formularios;
 
-import Entidad.Cefalom;
-import Entidad.CefalomJpaController;
-import Entidad.Consulta;
-import Entidad.entityCefalom;
+import Entidad.Trataor;
+import Entidad.TrataorJpaController;
+import Entidad.entityTrataOr;
 import java.util.List;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
-public class vistaCfalom extends javax.swing.JInternalFrame {
+public class vistaTratOr extends javax.swing.JInternalFrame {
 
-    CefalomJpaController te = new CefalomJpaController(entityCefalom.getInstance());
+    TrataorJpaController te = new TrataorJpaController(entityTrataOr.getInstance());
      public Integer totalRegistros; // Obtener los registros
-    public vistaCfalom() {
+     
+    public vistaTratOr() {
         initComponents();
         llenarTabla();
     }
@@ -33,7 +33,7 @@ public class vistaCfalom extends javax.swing.JInternalFrame {
 
         jLabel5.setFont(new java.awt.Font("Baskerville Old Face", 1, 24)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel5.setText("Vista Cefalometria");
+        jLabel5.setText("Vista Tratamiento Ortodoncia");
 
         txtBuscar.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
@@ -71,30 +71,33 @@ public class vistaCfalom extends javax.swing.JInternalFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(16, 16, 16)
-                .addComponent(jLabel6)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(txtBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(599, Short.MAX_VALUE)
-                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 314, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(260, 260, 260))
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane1)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 1152, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(16, 16, 16)
+                                .addComponent(jLabel6)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(txtBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(424, 424, 424)
+                                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 314, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(32, 32, 32)
+                .addGap(27, 27, 27)
                 .addComponent(jLabel5)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 59, Short.MAX_VALUE)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 302, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
@@ -134,38 +137,34 @@ public class vistaCfalom extends javax.swing.JInternalFrame {
         }
     }//GEN-LAST:event_jtPacientesMousePressed
 
+
     private void llenarTabla(){
         DefaultTableModel modelo;
         //Arreglo para crear los campos necesarios de la tabla donde se mostraran los datos
-        String[] titulos = {"Codigo de cefalometria","Nombre","Apellido","Articular","Goniaco","Impa","Jarabak",
-        "Facial","I_S","II","Fhis","ANB82","ANB80","ANB2","PALS","PALI","PTB"};
-        String[] registros = new String[17];
+        String[] titulos = {"Codigo de tratamiento","Nombre","Apellido","Arcos","Bandas","Tubos","Otros",
+        "Aparato","Exodoncia","Brackets","Retenciones","MD"};
+        String[] registros = new String[12];
         totalRegistros = 0;
         //se agregan los campos del arreglo al modelo de la tabla
         modelo = new DefaultTableModel(null, titulos);
 
-        List<Cefalom>Listapac;
-        Listapac= te.findCefalomEntities();
+        List<Trataor>Listapac;
+        Listapac= te.findTrataorEntities();
         try {    
             for (int i = 0; i < Listapac.size(); i++) {
                 //if(Listapac.get(i).getIdTipop().getNombret().equals("General")){
-                    registros[0]=Listapac.get(i).getIdCefalometria().toString();
+                    registros[0]=Listapac.get(i).getIdOrtodoncia().toString();
                     registros[1]=Listapac.get(i).getIdConsulta().getIdPaciente().getNombre();
                     registros[2]=Listapac.get(i).getIdConsulta().getIdPaciente().getApellido();
-                    registros[3]=Listapac.get(i).getArticular();
-                    registros[4]=Listapac.get(i).getGoniaco();
-                    registros[5]=Listapac.get(i).getImpa();
-                    registros[6]=Listapac.get(i).getJarabak();
-                    registros[7]=Listapac.get(i).getFacial();
-                    registros[8]=Listapac.get(i).getIS();
-                    registros[9]=Listapac.get(i).getIi();
-                    registros[10]=Listapac.get(i).getFhis();
-                    registros[11]=Listapac.get(i).getAnb82();
-                    registros[12]=Listapac.get(i).getAnb80();
-                    registros[13]=Listapac.get(i).getAnb2();
-                    registros[14]=Listapac.get(i).getPals();
-                    registros[15]=Listapac.get(i).getPali();
-                    registros[16]=Listapac.get(i).getPtb();
+                    registros[3]=Listapac.get(i).getArcos();
+                    registros[4]=Listapac.get(i).getBandas();
+                    registros[5]=Listapac.get(i).getTubos();
+                    registros[6]=Listapac.get(i).getOtros();
+                    registros[7]=Listapac.get(i).getAparato();
+                    registros[8]=Listapac.get(i).getExodoncia();
+                    registros[9]=Listapac.get(i).getBrackets();
+                    registros[10]=Listapac.get(i).getRetenciones();
+                    registros[11]=Listapac.get(i).getMd();
                     totalRegistros = totalRegistros + 1;
                     modelo.addRow(registros);
                 //}
@@ -175,7 +174,6 @@ public class vistaCfalom extends javax.swing.JInternalFrame {
             JOptionPane.showMessageDialog(null, "Problema al Consultar los Datos de la Consulta");
         }
     }
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;

@@ -7,6 +7,7 @@
     <class>Entidad.Paciente</class>
     <class>Entidad.Consulta</class>
     <class>Entidad.Cefalom</class>
+    <class>Entidad.Trataor</class>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:oracle:thin:@localhost:1521:XE"/>
       <property name="javax.persistence.jdbc.user" value="tps"/>

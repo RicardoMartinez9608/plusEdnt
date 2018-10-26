@@ -34,6 +34,9 @@ import javax.persistence.TemporalType;
 public class Consulta implements Serializable {
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "idConsulta")
+    private List<Trataor> trataorList;
+
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "idConsulta")
     private List<Cefalom> cefalomList;
 
     private static final long serialVersionUID = 1L;
@@ -183,6 +186,14 @@ public class Consulta implements Serializable {
 
     public void setCefalomList(List<Cefalom> cefalomList) {
         this.cefalomList = cefalomList;
+    }
+
+    public List<Trataor> getTrataorList() {
+        return trataorList;
+    }
+
+    public void setTrataorList(List<Trataor> trataorList) {
+        this.trataorList = trataorList;
     }
     
 }
