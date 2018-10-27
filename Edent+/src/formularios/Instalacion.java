@@ -10,7 +10,7 @@ public class Instalacion extends internalFrameImagen {
 
     public Instalacion() {
         initComponents();
-        setImagenw("img.jpg");
+        setImagenw("img2.jpg");
         cbTipo.addItem("ADMINISTRADOR");
     }
 
