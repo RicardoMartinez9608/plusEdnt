@@ -1,13 +1,16 @@
 
 package formularios;
 
+import ClaseFondos.internalFrameImagen;
+import Clases.cSesion;
 import conexionSQL.Login;
 import javax.swing.JOptionPane;
 
-public class Instalacion extends javax.swing.JFrame {
+public class Instalacion extends internalFrameImagen {
 
     public Instalacion() {
         initComponents();
+        setImagenw("img.jpg");
         cbTipo.addItem("ADMINISTRADOR");
     }
 
@@ -126,14 +129,20 @@ public class Instalacion extends javax.swing.JFrame {
             }
         });
 
+        btnGuardar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/addUse.png"))); // NOI18N
         btnGuardar.setText("Guardar");
+        btnGuardar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnGuardar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         btnGuardar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnGuardarActionPerformed(evt);
             }
         });
 
+        btnSalir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/cancelar.png"))); // NOI18N
         btnSalir.setText("Salir");
+        btnSalir.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnSalir.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -156,19 +165,13 @@ public class Instalacion extends javax.swing.JFrame {
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(12, 12, 12)
                                 .addComponent(jLabel8)
-                                .addGap(186, 186, 186))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(jLabel9)
-                                .addGap(11, 11, 11)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(txtUsua)
-                                    .addComponent(txtContra)))
+                                .addGap(186, 345, Short.MAX_VALUE))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLabel2)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(txtNombre))))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(27, 27, 27)
+                        .addGap(21, 21, 21)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -181,8 +184,15 @@ public class Instalacion extends javax.swing.JFrame {
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(34, 34, 34)
                                 .addComponent(btnGuardar)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 205, Short.MAX_VALUE)
-                                .addComponent(btnSalir)))))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 209, Short.MAX_VALUE)
+                                .addComponent(btnSalir))))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGap(30, 30, 30)
+                        .addComponent(jLabel9)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtUsua)
+                            .addComponent(txtContra))))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -221,7 +231,7 @@ public class Instalacion extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnGuardar)
                     .addComponent(btnSalir))
-                .addContainerGap(92, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -279,7 +289,7 @@ public class Instalacion extends javax.swing.JFrame {
                 && (!(this.txtCorreo.getText().isEmpty()) && this.txtCorreo.getText()!=null)
                 && (!(this.txtUsua.getText().isEmpty()) && this.txtUsua.getText()!=null))
         {
-            Login indicaciones = new Login();
+            cSesion indicaciones = new cSesion();
             String nomb= this.txtNombre.getText().trim();
             String ape=this.txtApellido.getText().trim();
             String usser=this.txtUsua.getText().trim();
