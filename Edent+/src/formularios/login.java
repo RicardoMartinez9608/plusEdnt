@@ -1,6 +1,7 @@
 
 package formularios;
 
+import Clases.cSesion;
 import conexionSQL.Login;
 import javax.swing.JOptionPane;
 import formularios.*;
@@ -112,7 +113,7 @@ public class login extends javax.swing.JFrame {
            if ((!(this.txtUsuario.getText().isEmpty()) && this.txtUsuario.getText()!=null) 
                 && (!(this.txtContra.getText().isEmpty()) && this.txtContra.getText()!=null))
             {            
-                Login indicaciones = new Login();
+                cSesion indicaciones = new cSesion();
                 String usser= this.txtUsuario.getText().trim();
                 String contra=this.txtContra.getText().trim();
                 Integer resul =indicaciones.procedureLogin(usser,contra); 
