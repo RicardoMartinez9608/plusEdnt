@@ -5,7 +5,7 @@
  */
 package formularios;
 
-import Clases.ConexionDB;
+import Clases.Clases;
 import static formularios.frmPrincipal.Dpanel;
 import java.util.Calendar;
 import javax.swing.JOptionPane;
@@ -279,7 +279,9 @@ public void limpiarTxt(){
     }//GEN-LAST:event_txtpresupuestoKeyTyped
 
     private void btnselecionaredicionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnselecionaredicionActionPerformed
-
+         vistaTrataGenral vpc=new vistaTrataGenral();
+        Dpanel.add(vpc);
+        vpc.show();
     }//GEN-LAST:event_btnselecionaredicionActionPerformed
 
     private void btneditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btneditarActionPerformed
@@ -288,9 +290,9 @@ public void limpiarTxt(){
       String year = Integer.toString(jfecha.getCalendar().get(Calendar.YEAR));
       String fechaA = (dia + "-" + mes+ "-" + year);
       String date = fechaA; 
-      ConexionDB UpdateConsulta = new ConexionDB();
+      Clases UpdateConsulta = new Clases();
       UpdateConsulta.procedureUpdateConsultaG(txtMotivoC.getText(), date, Double.parseDouble(txtpresupuesto.getText())
-              , txtHistoriaM.getText(), txtHistoriaO.getText(), txtExamenC.getText(), txtDX.getText(),1);
+              , txtHistoriaM.getText(), txtHistoriaO.getText(), txtExamenC.getText(), txtDX.getText(),Integer.parseInt(lblidc.getText()));
       JOptionPane.showMessageDialog(null, "Datos de Tratamiento Actualizados correctamente");
        limpiarTxt();
     }//GEN-LAST:event_btneditarActionPerformed
@@ -303,7 +305,7 @@ public void limpiarTxt(){
       String fechaA = (dia + "-" + mes+ "-" + year);
       String date = fechaA; 
       
-      ConexionDB consultaG = new ConexionDB();
+      Clases consultaG = new Clases();
       
       consultaG.procedureConsultaG(txtMotivoC.getText(), date, Double.parseDouble(txtpresupuesto.getText())
               , txtHistoriaM.getText(), txtHistoriaO.getText(), txtExamenC.getText(), txtDX.getText(),Integer.parseInt(lblid.getText()));

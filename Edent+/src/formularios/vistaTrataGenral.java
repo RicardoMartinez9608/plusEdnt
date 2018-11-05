@@ -140,13 +140,26 @@ public class vistaTrataGenral extends javax.swing.JInternalFrame {
         if(evt.getClickCount()==2){
             int fila =jtPacientes.getSelectedRow();
             String nombre;
-            String apellido,id;
+            String apellido,id,motivo,total,historiam,historiaO,examen,dx;
             nombre=jtPacientes.getValueAt(fila, 1).toString();
             apellido=jtPacientes.getValueAt(fila, 2).toString();
             id=jtPacientes.getValueAt(fila, 0).toString();
-            frmTratamientoGeneral.lblid.setText(id);
+            motivo = jtPacientes.getValueAt(fila, 3).toString();
+            total = jtPacientes.getValueAt(fila, 4).toString();
+            historiam = jtPacientes.getValueAt(fila, 5).toString();
+            historiaO = jtPacientes.getValueAt(fila, 6).toString();
+            examen = jtPacientes.getValueAt(fila, 7).toString();
+            dx = jtPacientes.getValueAt(fila, 8).toString();
+            frmTratamientoGeneral.lblidc.setText(id);
             frmTratamientoGeneral.lblnombre.setText(nombre);
             frmTratamientoGeneral.lblapellido.setText(apellido);
+            frmTratamientoGeneral.txtMotivoC.setText(motivo);
+            frmTratamientoGeneral.txtHistoriaM.setText(historiam);
+            frmTratamientoGeneral.txtHistoriaO.setText(historiaO);
+            frmTratamientoGeneral.txtExamenC.setText(examen);
+            frmTratamientoGeneral.txtDX.setText(dx);
+            frmTratamientoGeneral.txtpresupuesto.setText(total);
+            
 
             this.dispose();
         }
@@ -159,7 +172,7 @@ public class vistaTrataGenral extends javax.swing.JInternalFrame {
     private void llenarTabla(){
         DefaultTableModel modelo;
         //Arreglo para crear los campos necesarios de la tabla donde se mostraran los datos
-        String[] titulos = {"Codigo de Consulta","Nombre","Apellido","Motivo","Fecha","Historial M","Historial O",
+        String[] titulos = {"Codigo de Consulta","Nombre","Apellido","Motivo","Total Pagar","Historial M","Historial O",
         "Examen C","DX Odontologico"};
         String[] registros = new String[9];
         totalRegistros = 0;
@@ -175,7 +188,7 @@ public class vistaTrataGenral extends javax.swing.JInternalFrame {
                     registros[1]=Listapac.get(i).getIdPaciente().getNombre();
                     registros[2]=Listapac.get(i).getIdPaciente().getApellido();
                     registros[3]=Listapac.get(i).getMotivoConsulta();
-                    registros[4]=Listapac.get(i).getFechaConsulta().toString();
+                    registros[4]=String.valueOf(Listapac.get(i).getTotalPagar());
                     registros[5]=Listapac.get(i).getHistoriam();
                     registros[6]=Listapac.get(i).getHistoriao();
                     registros[7]=Listapac.get(i).getExamenc();
