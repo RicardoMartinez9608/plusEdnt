@@ -2,7 +2,7 @@
 package formularios;
 
 
-import Clases.ConexionDB;
+import Clases.Clases;
 import Clases.validaciones;
 import static formularios.frmPrincipal.Dpanel;
 import java.util.Calendar;
@@ -429,7 +429,7 @@ public class frmExpedienteGeneral extends javax.swing.JInternalFrame {
       String year = Integer.toString(fecha.getCalendar().get(Calendar.YEAR));
       String fechaA = (dia + "-" + mes+ "-" + year);
       String date = fechaA; 
-        ConexionDB updateP = new ConexionDB();
+        Clases updateP = new Clases();
         updateP.procedureUpdatePaciente(txtnombre.getText(),txtapellido.getText(),txtdireccion.getText(),txttelefono.getText(),
               Integer.parseInt(txtedad.getText()),date,Integer.parseInt(lblid.getText()));
         
@@ -443,7 +443,7 @@ public class frmExpedienteGeneral extends javax.swing.JInternalFrame {
             JOptionPane.showMessageDialog(null, "Debe complementar los campos requeridos");
             }else{
         
-        ConexionDB prueba = new ConexionDB();
+        Clases prueba = new Clases();
     
       String dia = Integer.toString(fecha.getCalendar().get(Calendar.DAY_OF_MONTH));
       String mes = Integer.toString(fecha.getCalendar().get(Calendar.MONTH) + 1);
