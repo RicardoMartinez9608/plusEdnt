@@ -125,14 +125,32 @@ public class vistaTratOr extends javax.swing.JInternalFrame {
         if(evt.getClickCount()==2){
             int fila =jtPacientes.getSelectedRow();
             String nombre;
-            String apellido,id;
+            String apellido,id,bandas,tubos,otros,aparato,exodoncia,brackets,retenciones,md;
             nombre=jtPacientes.getValueAt(fila, 1).toString();
             apellido=jtPacientes.getValueAt(fila, 2).toString();
             id=jtPacientes.getValueAt(fila, 0).toString();
-            frmTratamientoGeneral.lblid.setText(id);
-            frmTratamientoGeneral.lblnombre.setText(nombre);
-            frmTratamientoGeneral.lblapellido.setText(apellido);
-
+            bandas=jtPacientes.getValueAt(fila, 3).toString();
+            tubos=jtPacientes.getValueAt(fila, 4).toString();
+            otros=jtPacientes.getValueAt(fila, 5).toString();
+            aparato=jtPacientes.getValueAt(fila, 6).toString();
+            exodoncia=jtPacientes.getValueAt(fila, 7).toString();
+            brackets=jtPacientes.getValueAt(fila, 8).toString();
+            retenciones=jtPacientes.getValueAt(fila, 9).toString();
+            md=jtPacientes.getValueAt(fila, 10).toString();         
+            
+            
+            frmTratamientoOrtodoncia.lbidplan.setText(id);
+            frmTratamientoOrtodoncia.lbnombre.setText(nombre);
+            frmTratamientoOrtodoncia.lbapellido.setText(apellido);
+            frmTratamientoOrtodoncia.txtbandas.setText(bandas);
+            frmTratamientoOrtodoncia.txttubos.setText(tubos);
+            frmTratamientoOrtodoncia.txtotros.setText(otros);
+            frmTratamientoOrtodoncia.txtAparato.setText(aparato);
+            frmTratamientoOrtodoncia.txtexodoncia.setText(exodoncia);
+            frmTratamientoOrtodoncia.txtBrakets.setText(brackets);
+            frmTratamientoOrtodoncia.txtRetenciones.setText(retenciones);
+            frmTratamientoOrtodoncia.txtMD.setText(md);
+          
             this.dispose();
         }
     }//GEN-LAST:event_jtPacientesMousePressed
@@ -141,7 +159,7 @@ public class vistaTratOr extends javax.swing.JInternalFrame {
     private void llenarTabla(){
         DefaultTableModel modelo;
         //Arreglo para crear los campos necesarios de la tabla donde se mostraran los datos
-        String[] titulos = {"Codigo de tratamiento","Nombre","Apellido","Arcos","Bandas","Tubos","Otros",
+        String[] titulos = {"Codigo de tratamiento","Nombre","Apellido","Bandas","Tubos","Otros",
         "Aparato","Exodoncia","Brackets","Retenciones","MD"};
         String[] registros = new String[12];
         totalRegistros = 0;
@@ -156,15 +174,14 @@ public class vistaTratOr extends javax.swing.JInternalFrame {
                     registros[0]=Listapac.get(i).getIdOrtodoncia().toString();
                     registros[1]=Listapac.get(i).getIdConsulta().getIdPaciente().getNombre();
                     registros[2]=Listapac.get(i).getIdConsulta().getIdPaciente().getApellido();
-                    registros[3]=Listapac.get(i).getArcos();
-                    registros[4]=Listapac.get(i).getBandas();
-                    registros[5]=Listapac.get(i).getTubos();
-                    registros[6]=Listapac.get(i).getOtros();
-                    registros[7]=Listapac.get(i).getAparato();
-                    registros[8]=Listapac.get(i).getExodoncia();
-                    registros[9]=Listapac.get(i).getBrackets();
-                    registros[10]=Listapac.get(i).getRetenciones();
-                    registros[11]=Listapac.get(i).getMd();
+                    registros[3]=Listapac.get(i).getBandas();
+                    registros[4]=Listapac.get(i).getTubos();
+                    registros[5]=Listapac.get(i).getOtros();
+                    registros[6]=Listapac.get(i).getAparato();
+                    registros[7]=Listapac.get(i).getExodoncia();
+                    registros[8]=Listapac.get(i).getBrackets();
+                    registros[9]=Listapac.get(i).getRetenciones();
+                    registros[10]=Listapac.get(i).getMd();
                     totalRegistros = totalRegistros + 1;
                     modelo.addRow(registros);
                 //}

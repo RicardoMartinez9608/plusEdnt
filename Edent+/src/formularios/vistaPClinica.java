@@ -174,7 +174,7 @@ public class vistaPClinica extends javax.swing.JInternalFrame {
         Listapac= te.findPacienteEntities();
         try {    
             for (int i = 0; i < Listapac.size(); i++) {
-                if(Listapac.get(i).getIdTipop().getNombret().equals("General")){
+                if(Listapac.get(i).getIdTipop().getNombret().equals("general")){
                     registros[0]=Listapac.get(i).getIdPaciente().toString();
                     registros[1]=Listapac.get(i).getNombre();
                     registros[2]=Listapac.get(i).getApellido();

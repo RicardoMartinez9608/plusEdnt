@@ -666,7 +666,7 @@ public class frmTratamientoOrtodoncia extends javax.swing.JInternalFrame {
                 txtexodonciaKeyPressed(evt);
             }
         });
-        getContentPane().add(txtexodoncia, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 510, 380, -1));
+        getContentPane().add(txtexodoncia, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 510, 380, -1));
 
         lblnombre17.setFont(new java.awt.Font("Baskerville Old Face", 1, 11)); // NOI18N
         lblnombre17.setText("Brackets:");
@@ -877,6 +877,11 @@ public class frmTratamientoOrtodoncia extends javax.swing.JInternalFrame {
         btnBuscarEditar2.setText("Buscar para Editar");
         btnBuscarEditar2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnBuscarEditar2.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        btnBuscarEditar2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBuscarEditar2ActionPerformed(evt);
+            }
+        });
         getContentPane().add(btnBuscarEditar2, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 550, -1, -1));
 
         btnEditar2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/editar.png"))); // NOI18N
@@ -1220,7 +1225,7 @@ public class frmTratamientoOrtodoncia extends javax.swing.JInternalFrame {
     private void btnEditar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditar2ActionPerformed
         Clases UpdateTrata = new Clases();
         UpdateTrata.procedureUpdateIngresarTrataOr(txtbandas.getText(), txttubos.getText(), txtotros.getText(), txtAparato.getText(), 
-               txtexodoncia.getText(), txtBrakets.getText(), txtRetenciones.getText(), txtMD.getText(),1);
+               txtexodoncia.getText(), txtBrakets.getText(), txtRetenciones.getText(), txtMD.getText(),Integer.parseInt(lbidplan.getText()));
         JOptionPane.showMessageDialog(null, "Tratamiento Actualizado Exitosamente");
         
     }//GEN-LAST:event_btnEditar2ActionPerformed
@@ -1230,6 +1235,12 @@ public class frmTratamientoOrtodoncia extends javax.swing.JInternalFrame {
         Dpanel.add(cfalom);
         cfalom.show();
     }//GEN-LAST:event_btnBuscarEditar1ActionPerformed
+
+    private void btnBuscarEditar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarEditar2ActionPerformed
+        vistaTratOr trataor=new vistaTratOr();
+        Dpanel.add(trataor);
+        trataor.show();
+    }//GEN-LAST:event_btnBuscarEditar2ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
