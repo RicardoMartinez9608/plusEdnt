@@ -5,7 +5,8 @@
  */
 package formularios;
 
-import Clases.ConexionDB;
+import Clases.Clases;
+import static formularios.frmPrincipal.Dpanel;
 import javax.swing.JOptionPane;
 
 /**
@@ -169,7 +170,7 @@ public class frmTratamientoOrtodoncia extends javax.swing.JInternalFrame {
         jLabel82.setBackground(new java.awt.Color(255, 255, 255));
         jLabel82.setFont(new java.awt.Font("Baskerville Old Face", 1, 24)); // NOI18N
         jLabel82.setText("Expediente Ortodoncia");
-        getContentPane().add(jLabel82, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 20, 280, 30));
+        getContentPane().add(jLabel82, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 10, 280, 30));
 
         jLabel2.setFont(new java.awt.Font("Baskerville Old Face", 1, 14)); // NOI18N
         jLabel2.setText("Para poder continuar debe elegir un paciente:");
@@ -199,7 +200,7 @@ public class frmTratamientoOrtodoncia extends javax.swing.JInternalFrame {
         getContentPane().add(jSeparator12, new org.netbeans.lib.awtextra.AbsoluteConstraints(970, 170, -1, 110));
 
         lbidplan.setFont(new java.awt.Font("Baskerville Old Face", 1, 11)); // NOI18N
-        getContentPane().add(lbidplan, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 70, 57, 18));
+        getContentPane().add(lbidplan, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 70, 57, 18));
 
         jLabel3.setFont(new java.awt.Font("Baskerville Old Face", 0, 11)); // NOI18N
         jLabel3.setText("IS-LS");
@@ -665,7 +666,7 @@ public class frmTratamientoOrtodoncia extends javax.swing.JInternalFrame {
                 txtexodonciaKeyPressed(evt);
             }
         });
-        getContentPane().add(txtexodoncia, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 510, 380, -1));
+        getContentPane().add(txtexodoncia, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 510, 380, -1));
 
         lblnombre17.setFont(new java.awt.Font("Baskerville Old Face", 1, 11)); // NOI18N
         lblnombre17.setText("Brackets:");
@@ -837,6 +838,11 @@ public class frmTratamientoOrtodoncia extends javax.swing.JInternalFrame {
         btnBuscarEditar1.setText("Buscar para Editar");
         btnBuscarEditar1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnBuscarEditar1.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        btnBuscarEditar1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBuscarEditar1ActionPerformed(evt);
+            }
+        });
         getContentPane().add(btnBuscarEditar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1160, 170, 120, -1));
 
         btnEditar1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/editar.png"))); // NOI18N
@@ -1091,7 +1097,7 @@ public class frmTratamientoOrtodoncia extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_txtrocabadoKeyPressed
 
     private void btnGuardarPT2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarPT2ActionPerformed
-       ConexionDB trata = new ConexionDB();
+       Clases trata = new Clases();
        trata.procedureIngresarTrataOr(txtbandas.getText(), txttubos.getText(), txtotros.getText(), txtAparato.getText(), 
                txtexodoncia.getText(), txtBrakets.getText(), txtRetenciones.getText(), txtMD.getText(),1);
        
@@ -1154,7 +1160,7 @@ public class frmTratamientoOrtodoncia extends javax.swing.JInternalFrame {
         int rx_incicivos = seleccion9;
         String rx_rocabado = this.txtrocabado.getText();
         
-        ConexionDB indicaciones = new ConexionDB();
+        Clases indicaciones = new Clases();
         
         indicaciones.procedureIndicacionEspecial(f_faciales, f_intraorales, modelo_mx, modelo_md, rx_panoramica, 
                 rx_cefalometria, rx_incicivos, rx_rocabado, 1);
@@ -1165,7 +1171,7 @@ public class frmTratamientoOrtodoncia extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_btnGuardarPT2ActionPerformed
 
     private void btnGuardar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardar1ActionPerformed
-       ConexionDB cefalometria = new ConexionDB();
+       Clases cefalometria = new Clases();
        cefalometria.procedureIngresarCefalom(txtanguloA1.getText(), txtanguloG1.getText(), txtIMPA1.getText(), txtJa1.getText(), 
                txtEJE.getText(), txtIS.getText(), txtII.getText(), txtFHIS.getText(), txtANB82.getText(), txtANB80.getText(),
                txtANB2.getText(), txtPALS.getText(), txtPALI.getText(), txtPTB.getText(), txtDSD.getText(), 
@@ -1194,7 +1200,7 @@ public class frmTratamientoOrtodoncia extends javax.swing.JInternalFrame {
         }
         int speesvera= seleccion2;
        
-       ConexionDB spee = new ConexionDB();
+       Clases spee = new Clases();
        
        spee.procedureTrataSpee(speeleve, speemoderada, speesvera,1);
       
@@ -1203,21 +1209,27 @@ public class frmTratamientoOrtodoncia extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_btnGuardar1ActionPerformed
 
     private void btnEditar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditar1ActionPerformed
-        ConexionDB Updatecefalometria = new ConexionDB();
+        Clases Updatecefalometria = new Clases();
         Updatecefalometria.procedureUpdateIngresarCefalom(txtanguloA1.getText(), txtanguloG1.getText(), txtIMPA1.getText(), txtJa1.getText(), 
                txtEJE.getText(), txtIS.getText(), txtII.getText(), txtFHIS.getText(), txtANB82.getText(), txtANB80.getText(),
                txtANB2.getText(), txtPALS.getText(), txtPALI.getText(), txtPTB.getText(), txtDSD.getText(), 
-               txtmaxilares.getText(), txtEntornoD.getText(),2);
+               txtmaxilares.getText(), txtEntornoD.getText(),Integer.parseInt(lbidplan.getText()));
         JOptionPane.showMessageDialog(null, "Tratamiento Actualizado Exitosamente");
     }//GEN-LAST:event_btnEditar1ActionPerformed
 
     private void btnEditar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditar2ActionPerformed
-        ConexionDB UpdateTrata = new ConexionDB();
+        Clases UpdateTrata = new Clases();
         UpdateTrata.procedureUpdateIngresarTrataOr(txtbandas.getText(), txttubos.getText(), txtotros.getText(), txtAparato.getText(), 
                txtexodoncia.getText(), txtBrakets.getText(), txtRetenciones.getText(), txtMD.getText(),1);
         JOptionPane.showMessageDialog(null, "Tratamiento Actualizado Exitosamente");
         
     }//GEN-LAST:event_btnEditar2ActionPerformed
+
+    private void btnBuscarEditar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarEditar1ActionPerformed
+       vistaCfalom cfalom = new vistaCfalom();
+        Dpanel.add(cfalom);
+        cfalom.show();
+    }//GEN-LAST:event_btnBuscarEditar1ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

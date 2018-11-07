@@ -122,14 +122,43 @@ public class vistaCfalom extends javax.swing.JInternalFrame {
         if(evt.getClickCount()==2){
             int fila =jtPacientes.getSelectedRow();
             String nombre;
-            String apellido,id;
+            String apellido,id,articular,goniaco,impa,jarabak,facial,is,ii,fhis,anb82,anb80,anb2,pals,pali,ptb;
             nombre=jtPacientes.getValueAt(fila, 1).toString();
             apellido=jtPacientes.getValueAt(fila, 2).toString();
             id=jtPacientes.getValueAt(fila, 0).toString();
-            frmTratamientoGeneral.lblid.setText(id);
-            frmTratamientoGeneral.lblnombre.setText(nombre);
-            frmTratamientoGeneral.lblapellido.setText(apellido);
-
+            articular=jtPacientes.getValueAt(fila, 3).toString();
+            goniaco=jtPacientes.getValueAt(fila, 4).toString();
+            impa=jtPacientes.getValueAt(fila, 5).toString();
+            jarabak=jtPacientes.getValueAt(fila, 6).toString();
+            facial=jtPacientes.getValueAt(fila, 7).toString();
+            is=jtPacientes.getValueAt(fila, 8).toString();
+            ii=jtPacientes.getValueAt(fila, 9).toString();
+            fhis=jtPacientes.getValueAt(fila, 10).toString();
+            anb82=jtPacientes.getValueAt(fila, 11).toString();
+            anb80=jtPacientes.getValueAt(fila, 12).toString();
+            anb2=jtPacientes.getValueAt(fila, 13).toString();
+            pals=jtPacientes.getValueAt(fila, 14).toString();
+            pali=jtPacientes.getValueAt(fila, 15).toString();
+            ptb=jtPacientes.getValueAt(fila, 16).toString();
+            
+            
+            frmTratamientoOrtodoncia.lbidplan.setText(id);
+            frmTratamientoOrtodoncia.lbnombre.setText(nombre);
+            frmTratamientoOrtodoncia.lbapellido.setText(apellido);
+            frmTratamientoOrtodoncia.txtanguloA1.setText(articular);
+            frmTratamientoOrtodoncia.txtanguloG1.setText(goniaco);
+            frmTratamientoOrtodoncia.txtIMPA1.setText(impa);
+            frmTratamientoOrtodoncia.txtJa1.setText(jarabak);
+            frmTratamientoOrtodoncia.txtEJE.setText(facial);
+            frmTratamientoOrtodoncia.txtIS.setText(is);
+            frmTratamientoOrtodoncia.txtII.setText(ii);
+            frmTratamientoOrtodoncia.txtFHIS.setText(fhis);
+            frmTratamientoOrtodoncia.txtANB82.setText(anb82);
+            frmTratamientoOrtodoncia.txtANB80.setText(anb80);
+            frmTratamientoOrtodoncia.txtANB2.setText(anb2);
+            frmTratamientoOrtodoncia.txtPALS.setText(pals);
+            frmTratamientoOrtodoncia.txtPALI.setText(pali);
+            frmTratamientoOrtodoncia.txtPTB.setText(ptb);
             this.dispose();
         }
     }//GEN-LAST:event_jtPacientesMousePressed
