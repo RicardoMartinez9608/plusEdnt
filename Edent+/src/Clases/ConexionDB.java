@@ -25,7 +25,7 @@ public class ConexionDB {
     public Connection conn = null;
 //___________________________________________________________________________________ Soy una barra separadora ??
   //Constructor de la clase que se conecta a la base de datos una vez que se crea la instancia
-  public ConexionDB(){
+  public Connection ConexionDB(){
       try{         
          Class.forName("oracle.jdbc.driver.OracleDriver");         
          conn = DriverManager.getConnection(url,login,password);         
@@ -34,6 +34,7 @@ public class ConexionDB {
       }catch(ClassNotFoundException e){
          System.out.println(e);
       }
+      return conn;
     }
    public String procedurePaciente(String nombre, String apellido, String direccion, String tel, 
            Integer edad, String fecha, Integer tipo)

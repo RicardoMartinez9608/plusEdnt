@@ -5,7 +5,7 @@
  */
 
 package Clases;
-import ConexionSql.ConexionDB;
+import Clases.ConexionDB;
 import conexionSQL.*;
 import java.sql.CallableStatement;
 import java.sql.Connection;
