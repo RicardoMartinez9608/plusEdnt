@@ -183,7 +183,7 @@ public class vistaTrataGenral extends javax.swing.JInternalFrame {
         Listapac= te.findConsultaEntities();
         try {    
             for (int i = 0; i < Listapac.size(); i++) {
-                //if(Listapac.get(i).getIdTipop().getNombret().equals("General")){
+                if(Listapac.get(i).getIdPaciente().getIdTipop().getNombret().equals("general")){
                     registros[0]=Listapac.get(i).getIdConsulta().toString();
                     registros[1]=Listapac.get(i).getIdPaciente().getNombre();
                     registros[2]=Listapac.get(i).getIdPaciente().getApellido();
@@ -195,7 +195,7 @@ public class vistaTrataGenral extends javax.swing.JInternalFrame {
                     registros[8]=Listapac.get(i).getDxodon();
                     totalRegistros = totalRegistros + 1;
                     modelo.addRow(registros);
-                //}
+                }
             }
             this.jtPacientes.setModel(modelo);
         } catch (Exception e) {

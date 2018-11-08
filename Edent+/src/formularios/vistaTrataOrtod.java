@@ -156,15 +156,15 @@ public class vistaTrataOrtod extends javax.swing.JInternalFrame {
             historiaO = jtPacientes.getValueAt(fila, 6).toString();
             examen = jtPacientes.getValueAt(fila, 7).toString();
             dx = jtPacientes.getValueAt(fila, 8).toString();
-            frmTratamientoGeneral.lblidc.setText(id);
-            frmTratamientoGeneral.lblnombre.setText(nombre);
-            frmTratamientoGeneral.lblapellido.setText(apellido);
-            frmTratamientoGeneral.txtMotivoC.setText(motivo);
-            frmTratamientoGeneral.txtHistoriaM.setText(historiam);
-            frmTratamientoGeneral.txtHistoriaO.setText(historiaO);
-            frmTratamientoGeneral.txtExamenC.setText(examen);
-            frmTratamientoGeneral.txtDX.setText(dx);
-            frmTratamientoGeneral.txtpresupuesto.setText(total);
+            frmExpedienteOrtodoncia.lblid.setText(id);
+            frmExpedienteOrtodoncia.txtnombre.setText(nombre);
+            frmExpedienteOrtodoncia.txtapellido.setText(apellido);
+            frmExpedienteOrtodoncia.txtMotivoC.setText(motivo);
+            frmExpedienteOrtodoncia.txtHistoriaM.setText(historiam);
+            frmExpedienteOrtodoncia.txtHistoriaO.setText(historiaO);
+            frmExpedienteOrtodoncia.txtExamenC.setText(examen);
+            frmExpedienteOrtodoncia.txtDX.setText(dx);
+            frmExpedienteOrtodoncia.txtpresupuesto.setText(total);
             
 
             this.dispose();
