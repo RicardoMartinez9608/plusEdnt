@@ -21,6 +21,35 @@ public class frmExpedienteOrtodoncia extends javax.swing.JInternalFrame {
      */
     public frmExpedienteOrtodoncia() {
         initComponents();
+        frmExpedienteOrtodoncia.jfecha.setEnabled(false);
+        frmExpedienteOrtodoncia.txtedad.setEnabled(false);
+        frmExpedienteOrtodoncia.txttelefono.setEnabled(false);
+        frmExpedienteOrtodoncia.txtnombre.setEnabled(false);
+        frmExpedienteOrtodoncia.txtapellido.setEnabled(false);
+        frmExpedienteOrtodoncia.txtMotivoC.setEnabled(false);
+        frmExpedienteOrtodoncia.btneditar.setEnabled(false);
+        frmExpedienteOrtodoncia.btnbuscaredicion.setEnabled(true);
+        frmExpedienteOrtodoncia.btnGuardar.setEnabled(false);
+        frmExpedienteOrtodoncia.txtHistoriaO.setEnabled(false);
+        frmExpedienteOrtodoncia.txtHistoriaM.setEnabled(false);
+        frmExpedienteOrtodoncia.txtExamenC.setEnabled(false);
+        frmExpedienteOrtodoncia.txtDX.setEnabled(false);
+        frmExpedienteOrtodoncia.txtdireccion.setEnabled(false);
+        frmExpedienteOrtodoncia.txtpresupuesto.setEnabled(false);
+        
+    }
+    public void limpiarTxt(){
+        txtedad.setText("");
+        txttelefono.setText("");
+        txtnombre.setText("");
+        txtapellido.setText("");
+        txtMotivoC.setText("");
+        txtHistoriaO.setText("");
+        txtHistoriaM.setText("");
+        txtExamenC.setText("");
+        txtDX.setText("");
+        txtdireccion.setText("");
+        jfecha.setCalendar(null);
     }
 
     /**
@@ -497,7 +526,9 @@ public class frmExpedienteOrtodoncia extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_txtDXKeyPressed
 
     private void btconActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btconActionPerformed
-       
+       frmTratamientoOrtodoncia formProd = new frmTratamientoOrtodoncia();
+       Dpanel.add(formProd);
+       formProd.show();
     }//GEN-LAST:event_btconActionPerformed
 
     private void btnbuscaredicionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnbuscaredicionActionPerformed
@@ -507,7 +538,12 @@ public class frmExpedienteOrtodoncia extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_btnbuscaredicionActionPerformed
 
     private void btneditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btneditarActionPerformed
-         String dia = Integer.toString(jfecha.getCalendar().get(Calendar.DAY_OF_MONTH));
+        if(jfecha.getDate()==null){
+            JOptionPane.showMessageDialog(null, "Debe ingresar la fecha de la edicion de datos");
+        }else
+        {
+        
+        String dia = Integer.toString(jfecha.getCalendar().get(Calendar.DAY_OF_MONTH));
       String mes = Integer.toString(jfecha.getCalendar().get(Calendar.MONTH) + 1);
       String year = Integer.toString(jfecha.getCalendar().get(Calendar.YEAR));
       String fechaA = (dia + "-" + mes+ "-" + year);
@@ -516,9 +552,32 @@ public class frmExpedienteOrtodoncia extends javax.swing.JInternalFrame {
       UpdateConsulta.procedureUpdateConsultaG(txtMotivoC.getText(), date, Double.parseDouble(txtpresupuesto.getText())
               , txtHistoriaM.getText(), txtHistoriaO.getText(), txtExamenC.getText(), txtDX.getText(),Integer.parseInt(lblid.getText()));
       JOptionPane.showMessageDialog(null, "Datos de Tratamiento Actualizados correctamente");
+      
+      limpiarTxt();
+      
+        frmExpedienteOrtodoncia.jfecha.setEnabled(false);
+        frmExpedienteOrtodoncia.txtedad.setEnabled(false);
+        frmExpedienteOrtodoncia.txttelefono.setEnabled(false);
+        frmExpedienteOrtodoncia.txtnombre.setEnabled(false);
+        frmExpedienteOrtodoncia.txtapellido.setEnabled(false);
+        frmExpedienteOrtodoncia.txtMotivoC.setEnabled(false);
+        frmExpedienteOrtodoncia.btneditar.setEnabled(false);
+        frmExpedienteOrtodoncia.btnbuscaredicion.setEnabled(true);
+        frmExpedienteOrtodoncia.btnGuardar.setEnabled(false);
+        frmExpedienteOrtodoncia.txtHistoriaO.setEnabled(false);
+        frmExpedienteOrtodoncia.txtHistoriaM.setEnabled(false);
+        frmExpedienteOrtodoncia.txtExamenC.setEnabled(false);
+        frmExpedienteOrtodoncia.txtDX.setEnabled(false);
+        frmExpedienteOrtodoncia.txtdireccion.setEnabled(false);
+        frmExpedienteOrtodoncia.txtpresupuesto.setEnabled(false);
+         } 
     }//GEN-LAST:event_btneditarActionPerformed
 
     private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
+      if(jfecha.getDate()==null){
+            JOptionPane.showMessageDialog(null, "Debe ingresar la fecha para guardar los datos");
+        }else
+        {
       String dia = Integer.toString(jfecha.getCalendar().get(Calendar.DAY_OF_MONTH));
       String mes = Integer.toString(jfecha.getCalendar().get(Calendar.MONTH) + 1);
       String year = Integer.toString(jfecha.getCalendar().get(Calendar.YEAR));
@@ -530,6 +589,8 @@ public class frmExpedienteOrtodoncia extends javax.swing.JInternalFrame {
       consultaG.procedureConsultaG(txtMotivoC.getText(), date, Double.parseDouble(txtpresupuesto.getText())
               , txtHistoriaM.getText(), txtHistoriaO.getText(), txtExamenC.getText(), txtDX.getText(),Integer.parseInt(lblid.getText()));
       JOptionPane.showMessageDialog(null, "Tratamiento ingresado correctamente");
+      limpiarTxt();
+      }
     }//GEN-LAST:event_btnGuardarActionPerformed
 
     private void btnsalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnsalirActionPerformed

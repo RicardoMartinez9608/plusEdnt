@@ -12,6 +12,16 @@ public class frmExpedienteGeneral extends javax.swing.JInternalFrame {
 
     public frmExpedienteGeneral() {
         initComponents();
+         btcon.setVisible(false);
+        frmExpedienteGeneral.fecha.setEnabled(false);
+        frmExpedienteGeneral.txtedad.setEnabled(false);
+        frmExpedienteGeneral.txttelefono.setEnabled(false);
+        frmExpedienteGeneral.txtnombre.setEnabled(false);
+        frmExpedienteGeneral.txtapellido.setEnabled(false);
+        frmExpedienteGeneral.txtdireccion.setEnabled(false);
+        frmExpedienteGeneral.btneditar.setEnabled(false);
+        frmExpedienteGeneral.btnbuscaredicion.setEnabled(true);
+        frmExpedienteGeneral.btnGuardar.setEnabled(false);
     }
      public void limpiarTxt(){
         txtnombre.setText("");
@@ -20,6 +30,7 @@ public class frmExpedienteGeneral extends javax.swing.JInternalFrame {
         txttelefono.setText("");
         txtedad.setText("");
         lblid.setText("");
+        fecha.setCalendar(null);
         
        
     }
@@ -29,7 +40,7 @@ public class frmExpedienteGeneral extends javax.swing.JInternalFrame {
 
         lbltitulo = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        btnElegir = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         fecha = new com.toedter.calendar.JDateChooser();
         lbltelefono = new javax.swing.JLabel();
@@ -60,15 +71,15 @@ public class frmExpedienteGeneral extends javax.swing.JInternalFrame {
         jLabel3.setFont(new java.awt.Font("Baskerville Old Face", 1, 14)); // NOI18N
         jLabel3.setText("Para realizar una consulta elija el tipo de paciente:");
 
-        jButton1.setFont(new java.awt.Font("Baskerville Old Face", 1, 14)); // NOI18N
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/elegir tp.png"))); // NOI18N
-        jButton1.setText("Elegir tipo de paciente");
-        jButton1.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        jButton1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jButton1.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btnElegir.setFont(new java.awt.Font("Baskerville Old Face", 1, 14)); // NOI18N
+        btnElegir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/elegir tp.png"))); // NOI18N
+        btnElegir.setText("Elegir tipo de paciente");
+        btnElegir.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        btnElegir.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnElegir.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        btnElegir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btnElegirActionPerformed(evt);
             }
         });
 
@@ -282,7 +293,7 @@ public class frmExpedienteGeneral extends javax.swing.JInternalFrame {
                             .addComponent(btnsalir, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(layout.createSequentialGroup()
                             .addGap(51, 51, 51)
-                            .addComponent(jButton1)))
+                            .addComponent(btnElegir)))
                     .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
@@ -294,11 +305,11 @@ public class frmExpedienteGeneral extends javax.swing.JInternalFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
                     .addComponent(txttip, javax.swing.GroupLayout.PREFERRED_SIZE, 0, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(477, Short.MAX_VALUE))
+                .addContainerGap(475, Short.MAX_VALUE))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(85, 85, 85)
-                    .addComponent(jButton1)
+                    .addComponent(btnElegir)
                     .addGap(49, 49, 49)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(txtedad, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -353,11 +364,11 @@ public class frmExpedienteGeneral extends javax.swing.JInternalFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void btnElegirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnElegirActionPerformed
        frmTipoPaciente formProd = new frmTipoPaciente();
        Dpanel.add(formProd);
        formProd.show();
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_btnElegirActionPerformed
 
     private void fechaKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_fechaKeyPressed
 
@@ -424,6 +435,10 @@ public class frmExpedienteGeneral extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_btnbuscaredicionActionPerformed
 
     private void btneditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btneditarActionPerformed
+      if(fecha.getDate()==null){
+            JOptionPane.showMessageDialog(null, "Debe ingresar la fecha de la edicion de datos");
+        }else
+        {
       String dia = Integer.toString(fecha.getCalendar().get(Calendar.DAY_OF_MONTH));
       String mes = Integer.toString(fecha.getCalendar().get(Calendar.MONTH) + 1);
       String year = Integer.toString(fecha.getCalendar().get(Calendar.YEAR));
@@ -435,11 +450,23 @@ public class frmExpedienteGeneral extends javax.swing.JInternalFrame {
         
                 JOptionPane.showMessageDialog(null, "Datos Actualizados Correctamente");
         limpiarTxt();
-                
+        
+        
+        frmExpedienteGeneral.fecha.setEnabled(true);
+        frmExpedienteGeneral.txtedad.setEnabled(false);
+        frmExpedienteGeneral.txttelefono.setEnabled(false);
+        frmExpedienteGeneral.txtnombre.setEnabled(false);
+        frmExpedienteGeneral.txtapellido.setEnabled(false);
+        frmExpedienteGeneral.txtdireccion.setEnabled(false);
+        frmExpedienteGeneral.btneditar.setEnabled(false);
+        frmExpedienteGeneral.btnbuscaredicion.setEnabled(true);
+        frmExpedienteGeneral.btnGuardar.setEnabled(false);
+        frmExpedienteGeneral.btnElegir.setEnabled(true);
+        }            
     }//GEN-LAST:event_btneditarActionPerformed
 
     private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
-        if (this.txtnombre.getText().length() == 0 || this.txtapellido.getText().length() == 0|| this.txtedad.getText().length() == 0){
+        if (this.txtnombre.getText().length() == 0 || this.txtapellido.getText().length() == 0|| fecha.getDate()==null){
             JOptionPane.showMessageDialog(null, "Debe complementar los campos requeridos");
             }else{
         
@@ -470,12 +497,12 @@ public class frmExpedienteGeneral extends javax.swing.JInternalFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btcon;
+    public static javax.swing.JButton btnElegir;
     public static javax.swing.JButton btnGuardar;
     public static javax.swing.JButton btnbuscaredicion;
     public static javax.swing.JButton btneditar;
     private javax.swing.JButton btnsalir;
     public static com.toedter.calendar.JDateChooser fecha;
-    public static javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
