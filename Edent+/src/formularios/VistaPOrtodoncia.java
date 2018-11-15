@@ -161,6 +161,16 @@ public class VistaPOrtodoncia extends javax.swing.JInternalFrame {
             frmExpedienteOrtodoncia.txtdireccion.setText(direccion);
             this.dispose();
         }
+        frmExpedienteOrtodoncia.txtMotivoC.setEnabled(true);
+        frmExpedienteOrtodoncia.btneditar.setEnabled(false);
+        frmExpedienteOrtodoncia.btnbuscaredicion.setEnabled(false);
+        frmExpedienteOrtodoncia.btnGuardar.setEnabled(true);
+        frmExpedienteOrtodoncia.txtHistoriaO.setEnabled(true);
+        frmExpedienteOrtodoncia.txtHistoriaM.setEnabled(true);
+        frmExpedienteOrtodoncia.txtExamenC.setEnabled(true);
+        frmExpedienteOrtodoncia.txtDX.setEnabled(true);
+        frmExpedienteOrtodoncia.jfecha.setEnabled(true);
+     
     }//GEN-LAST:event_jtPacientesMousePressed
 
     private void btnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarActionPerformed

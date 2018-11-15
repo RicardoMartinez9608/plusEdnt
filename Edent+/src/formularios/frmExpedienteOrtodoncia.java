@@ -21,6 +21,21 @@ public class frmExpedienteOrtodoncia extends javax.swing.JInternalFrame {
      */
     public frmExpedienteOrtodoncia() {
         initComponents();
+        frmExpedienteOrtodoncia.jfecha.setEnabled(false);
+        frmExpedienteOrtodoncia.txtedad.setEnabled(false);
+        frmExpedienteOrtodoncia.txttelefono.setEnabled(false);
+        frmExpedienteOrtodoncia.txtnombre.setEnabled(false);
+        frmExpedienteOrtodoncia.txtapellido.setEnabled(false);
+        frmExpedienteOrtodoncia.txtMotivoC.setEnabled(false);
+        frmExpedienteOrtodoncia.btneditar.setEnabled(false);
+        frmExpedienteOrtodoncia.btnbuscaredicion.setEnabled(true);
+        frmExpedienteOrtodoncia.btnGuardar.setEnabled(false);
+        frmExpedienteOrtodoncia.txtHistoriaO.setEnabled(false);
+        frmExpedienteOrtodoncia.txtHistoriaM.setEnabled(false);
+        frmExpedienteOrtodoncia.txtExamenC.setEnabled(false);
+        frmExpedienteOrtodoncia.txtDX.setEnabled(false);
+        frmExpedienteOrtodoncia.txtdireccion.setEnabled(false);
+        
     }
 
     /**
@@ -497,7 +512,9 @@ public class frmExpedienteOrtodoncia extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_txtDXKeyPressed
 
     private void btconActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btconActionPerformed
-       
+       frmTratamientoOrtodoncia formProd = new frmTratamientoOrtodoncia();
+       Dpanel.add(formProd);
+       formProd.show();
     }//GEN-LAST:event_btconActionPerformed
 
     private void btnbuscaredicionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnbuscaredicionActionPerformed
