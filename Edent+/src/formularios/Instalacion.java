@@ -297,8 +297,7 @@ public class Instalacion extends javax.swing.JFrame {
             }else{
                 JOptionPane.showMessageDialog(null, msj);
                 this.txtUsua.setText("");
-            } 
-            
+            }             
         }else
         {
             JOptionPane.showMessageDialog(null, "Dejó Campos Vacíos");
