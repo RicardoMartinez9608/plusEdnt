@@ -37,6 +37,18 @@ public class frmExpedienteOrtodoncia extends javax.swing.JInternalFrame {
         frmExpedienteOrtodoncia.txtdireccion.setEnabled(false);
         
     }
+    public void limpiarTxt(){
+        txtedad.setText("");
+        txttelefono.setText("");
+        txtnombre.setText("");
+        txtapellido.setText("");
+        txtMotivoC.setText("");
+        txtHistoriaO.setText("");
+        txtHistoriaM.setText("");
+        txtExamenC.setText("");
+        txtDX.setText("");
+        txtdireccion.setText("");
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -533,6 +545,23 @@ public class frmExpedienteOrtodoncia extends javax.swing.JInternalFrame {
       UpdateConsulta.procedureUpdateConsultaG(txtMotivoC.getText(), date, Double.parseDouble(txtpresupuesto.getText())
               , txtHistoriaM.getText(), txtHistoriaO.getText(), txtExamenC.getText(), txtDX.getText(),Integer.parseInt(lblid.getText()));
       JOptionPane.showMessageDialog(null, "Datos de Tratamiento Actualizados correctamente");
+      
+      limpiarTxt();
+      
+        frmExpedienteOrtodoncia.jfecha.setEnabled(false);
+        frmExpedienteOrtodoncia.txtedad.setEnabled(false);
+        frmExpedienteOrtodoncia.txttelefono.setEnabled(false);
+        frmExpedienteOrtodoncia.txtnombre.setEnabled(false);
+        frmExpedienteOrtodoncia.txtapellido.setEnabled(false);
+        frmExpedienteOrtodoncia.txtMotivoC.setEnabled(false);
+        frmExpedienteOrtodoncia.btneditar.setEnabled(false);
+        frmExpedienteOrtodoncia.btnbuscaredicion.setEnabled(true);
+        frmExpedienteOrtodoncia.btnGuardar.setEnabled(false);
+        frmExpedienteOrtodoncia.txtHistoriaO.setEnabled(false);
+        frmExpedienteOrtodoncia.txtHistoriaM.setEnabled(false);
+        frmExpedienteOrtodoncia.txtExamenC.setEnabled(false);
+        frmExpedienteOrtodoncia.txtDX.setEnabled(false);
+        frmExpedienteOrtodoncia.txtdireccion.setEnabled(false);
     }//GEN-LAST:event_btneditarActionPerformed
 
     private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
@@ -547,6 +576,7 @@ public class frmExpedienteOrtodoncia extends javax.swing.JInternalFrame {
       consultaG.procedureConsultaG(txtMotivoC.getText(), date, Double.parseDouble(txtpresupuesto.getText())
               , txtHistoriaM.getText(), txtHistoriaO.getText(), txtExamenC.getText(), txtDX.getText(),Integer.parseInt(lblid.getText()));
       JOptionPane.showMessageDialog(null, "Tratamiento ingresado correctamente");
+      limpiarTxt();
     }//GEN-LAST:event_btnGuardarActionPerformed
 
     private void btnsalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnsalirActionPerformed
