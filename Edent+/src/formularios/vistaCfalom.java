@@ -183,6 +183,7 @@ public class vistaCfalom extends javax.swing.JInternalFrame {
             frmTratamientoOrtodoncia.btnGuardar.setEnabled(false);
             frmTratamientoOrtodoncia.btnEditar1.setEnabled(true);
             frmTratamientoOrtodoncia.btnElegirTP.setEnabled(false);
+            
         }
     }//GEN-LAST:event_jtPacientesMousePressed
 

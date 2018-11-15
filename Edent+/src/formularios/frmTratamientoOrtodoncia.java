@@ -1268,7 +1268,8 @@ public class frmTratamientoOrtodoncia extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_btnEditarActionPerformed
 
     private void btnBuscarEditar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarEditar1ActionPerformed
-       vistaCfalom cfalom = new vistaCfalom();
+
+        vistaCfalom cfalom = new vistaCfalom();
         Dpanel.add(cfalom);
         cfalom.show();
     }//GEN-LAST:event_btnBuscarEditar1ActionPerformed
