@@ -6,6 +6,7 @@
 package formularios;
 
 import Clases.Clases;
+import Clases.internalFrameImagen;
 import static formularios.frmPrincipal.Dpanel;
 import javax.swing.JOptionPane;
 
@@ -13,13 +14,14 @@ import javax.swing.JOptionPane;
  *
  * @author ricar
  */
-public class frmTratamientoOrtodoncia extends javax.swing.JInternalFrame {
+public class frmTratamientoOrtodoncia extends internalFrameImagen {
 
     /**
      * Creates new form frmTratamientoOrtodoncia
      */
     public frmTratamientoOrtodoncia() {
         initComponents();
+        setImagenw("imag1.jpg");
            activacion();
             
     }
@@ -235,54 +237,41 @@ public class frmTratamientoOrtodoncia extends javax.swing.JInternalFrame {
 
         setClosable(true);
         setIconifiable(true);
-        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel82.setBackground(new java.awt.Color(255, 255, 255));
         jLabel82.setFont(new java.awt.Font("Baskerville Old Face", 1, 24)); // NOI18N
         jLabel82.setText("Expediente Ortodoncia");
-        getContentPane().add(jLabel82, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 10, 280, 30));
 
         jLabel2.setFont(new java.awt.Font("Baskerville Old Face", 1, 14)); // NOI18N
         jLabel2.setText("Para poder continuar debe elegir un paciente:");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, -1, -1));
 
         jSeparator1.setBackground(new java.awt.Color(0, 0, 0));
         jSeparator1.setForeground(new java.awt.Color(0, 0, 0));
         jSeparator1.setOrientation(javax.swing.SwingConstants.VERTICAL);
-        getContentPane().add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1150, 170, 10, 110));
 
         jSeparator2.setBackground(new java.awt.Color(0, 0, 0));
         jSeparator2.setForeground(new java.awt.Color(0, 0, 0));
-        getContentPane().add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 170, 1140, -1));
 
         jSeparator6.setBackground(new java.awt.Color(0, 0, 0));
         jSeparator6.setForeground(new java.awt.Color(0, 0, 0));
-        getContentPane().add(jSeparator6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 280, 1140, 10));
 
         jSeparator11.setBackground(new java.awt.Color(0, 0, 0));
         jSeparator11.setForeground(new java.awt.Color(0, 0, 0));
-        getContentPane().add(jSeparator11, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 200, 1140, 10));
-        getContentPane().add(lbid, new org.netbeans.lib.awtextra.AbsoluteConstraints(1140, 80, 57, 18));
 
         jSeparator12.setBackground(new java.awt.Color(0, 0, 0));
         jSeparator12.setForeground(new java.awt.Color(0, 0, 0));
         jSeparator12.setOrientation(javax.swing.SwingConstants.VERTICAL);
-        getContentPane().add(jSeparator12, new org.netbeans.lib.awtextra.AbsoluteConstraints(970, 170, -1, 110));
 
         lbidplan.setFont(new java.awt.Font("Baskerville Old Face", 1, 11)); // NOI18N
-        getContentPane().add(lbidplan, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 70, 57, 18));
 
         jLabel3.setFont(new java.awt.Font("Baskerville Old Face", 0, 11)); // NOI18N
         jLabel3.setText("IS-LS");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 180, 40, -1));
 
         jSeparator13.setBackground(new java.awt.Color(0, 0, 0));
         jSeparator13.setForeground(new java.awt.Color(0, 0, 0));
-        getContentPane().add(jSeparator13, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 230, 1140, 20));
 
         jLabel4.setFont(new java.awt.Font("Baskerville Old Face", 1, 11)); // NOI18N
         jLabel4.setText("4");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 210, 40, -1));
 
         txtEJE.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -294,20 +283,16 @@ public class frmTratamientoOrtodoncia extends javax.swing.JInternalFrame {
                 txtEJEKeyPressed(evt);
             }
         });
-        getContentPane().add(txtEJE, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 250, 59, -1));
 
         jSeparator14.setBackground(new java.awt.Color(0, 0, 0));
         jSeparator14.setForeground(new java.awt.Color(0, 0, 0));
         jSeparator14.setOrientation(javax.swing.SwingConstants.VERTICAL);
-        getContentPane().add(jSeparator14, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 170, 20, 110));
 
         jLabel5.setFont(new java.awt.Font("Baskerville Old Face", 0, 11)); // NOI18N
         jLabel5.setText("Ángulo Articular");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 180, 90, -1));
 
         jLabel6.setFont(new java.awt.Font("Baskerville Old Face", 1, 11)); // NOI18N
         jLabel6.setText("150°");
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 210, 40, -1));
 
         txtanguloA1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -319,20 +304,16 @@ public class frmTratamientoOrtodoncia extends javax.swing.JInternalFrame {
                 txtanguloA1KeyPressed(evt);
             }
         });
-        getContentPane().add(txtanguloA1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 250, 59, -1));
 
         jSeparator15.setBackground(new java.awt.Color(0, 0, 0));
         jSeparator15.setForeground(new java.awt.Color(0, 0, 0));
         jSeparator15.setOrientation(javax.swing.SwingConstants.VERTICAL);
-        getContentPane().add(jSeparator15, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 170, 30, 110));
 
         jLabel7.setFont(new java.awt.Font("Baskerville Old Face", 0, 11)); // NOI18N
         jLabel7.setText("Ángulo Goniaco Inferior");
-        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 180, 130, -1));
 
         jLabel9.setFont(new java.awt.Font("Baskerville Old Face", 1, 11)); // NOI18N
         jLabel9.setText("75°");
-        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 210, 30, -1));
 
         txtanguloG1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -344,20 +325,16 @@ public class frmTratamientoOrtodoncia extends javax.swing.JInternalFrame {
                 txtanguloG1KeyPressed(evt);
             }
         });
-        getContentPane().add(txtanguloG1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 250, 59, -1));
 
         jSeparator16.setBackground(new java.awt.Color(0, 0, 0));
         jSeparator16.setForeground(new java.awt.Color(0, 0, 0));
         jSeparator16.setOrientation(javax.swing.SwingConstants.VERTICAL);
-        getContentPane().add(jSeparator16, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 170, 30, 110));
 
         jLabel18.setFont(new java.awt.Font("Baskerville Old Face", 0, 11)); // NOI18N
         jLabel18.setText("IMPA");
-        getContentPane().add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 180, 40, -1));
 
         jLabel19.setFont(new java.awt.Font("Baskerville Old Face", 1, 11)); // NOI18N
         jLabel19.setText("85-93-97°");
-        getContentPane().add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 210, 60, -1));
 
         txtIMPA1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -369,23 +346,18 @@ public class frmTratamientoOrtodoncia extends javax.swing.JInternalFrame {
                 txtIMPA1KeyPressed(evt);
             }
         });
-        getContentPane().add(txtIMPA1, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 250, 59, -1));
 
         jLabel20.setFont(new java.awt.Font("Baskerville Old Face", 0, 11)); // NOI18N
         jLabel20.setText("Porcentaje JARABAK");
-        getContentPane().add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 180, 130, -1));
 
         jLabel21.setFont(new java.awt.Font("Baskerville Old Face", 0, 11)); // NOI18N
         jLabel21.setText("EJE FACIAL");
-        getContentPane().add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 180, 70, -1));
 
         jLabel22.setFont(new java.awt.Font("Baskerville Old Face", 1, 11)); // NOI18N
         jLabel22.setText("56%");
-        getContentPane().add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 210, 40, -1));
 
         jLabel23.setFont(new java.awt.Font("Baskerville Old Face", 1, 11)); // NOI18N
         jLabel23.setText("90");
-        getContentPane().add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 210, 30, -1));
 
         txtJa1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -397,7 +369,6 @@ public class frmTratamientoOrtodoncia extends javax.swing.JInternalFrame {
                 txtJa1KeyPressed(evt);
             }
         });
-        getContentPane().add(txtJa1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 250, 59, -1));
 
         txtIS.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -409,20 +380,16 @@ public class frmTratamientoOrtodoncia extends javax.swing.JInternalFrame {
                 txtISKeyPressed(evt);
             }
         });
-        getContentPane().add(txtIS, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 250, 59, -1));
 
         jLabel24.setFont(new java.awt.Font("Baskerville Old Face", 0, 11)); // NOI18N
         jLabel24.setText("II-LS");
-        getContentPane().add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 180, 40, -1));
 
         jSeparator17.setBackground(new java.awt.Color(0, 0, 0));
         jSeparator17.setForeground(new java.awt.Color(0, 0, 0));
         jSeparator17.setOrientation(javax.swing.SwingConstants.VERTICAL);
-        getContentPane().add(jSeparator17, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 170, 10, 110));
 
         jLabel25.setFont(new java.awt.Font("Baskerville Old Face", 1, 11)); // NOI18N
         jLabel25.setText("0");
-        getContentPane().add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 210, 20, -1));
 
         txtII.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -434,20 +401,16 @@ public class frmTratamientoOrtodoncia extends javax.swing.JInternalFrame {
                 txtIIKeyPressed(evt);
             }
         });
-        getContentPane().add(txtII, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 250, 59, -1));
 
         jSeparator18.setBackground(new java.awt.Color(0, 0, 0));
         jSeparator18.setForeground(new java.awt.Color(0, 0, 0));
         jSeparator18.setOrientation(javax.swing.SwingConstants.VERTICAL);
-        getContentPane().add(jSeparator18, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 170, 10, 110));
 
         jLabel26.setFont(new java.awt.Font("Baskerville Old Face", 0, 11)); // NOI18N
         jLabel26.setText("FHIS");
-        getContentPane().add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 180, 40, -1));
 
         jLabel27.setFont(new java.awt.Font("Baskerville Old Face", 1, 11)); // NOI18N
         jLabel27.setText("110°-115°");
-        getContentPane().add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 210, 60, -1));
 
         txtFHIS.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -459,25 +422,20 @@ public class frmTratamientoOrtodoncia extends javax.swing.JInternalFrame {
                 txtFHISKeyPressed(evt);
             }
         });
-        getContentPane().add(txtFHIS, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 250, 59, -1));
 
         jSeparator19.setBackground(new java.awt.Color(0, 0, 0));
         jSeparator19.setForeground(new java.awt.Color(0, 0, 0));
         jSeparator19.setOrientation(javax.swing.SwingConstants.VERTICAL);
-        getContentPane().add(jSeparator19, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 170, 10, 110));
 
         jSeparator20.setBackground(new java.awt.Color(0, 0, 0));
         jSeparator20.setForeground(new java.awt.Color(0, 0, 0));
         jSeparator20.setOrientation(javax.swing.SwingConstants.VERTICAL);
-        getContentPane().add(jSeparator20, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 170, 90, 110));
 
         jLabel28.setFont(new java.awt.Font("Baskerville Old Face", 0, 11)); // NOI18N
         jLabel28.setText("ANB");
-        getContentPane().add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 180, 40, -1));
 
         jLabel29.setFont(new java.awt.Font("Baskerville Old Face", 1, 11)); // NOI18N
         jLabel29.setText("2°");
-        getContentPane().add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 210, 30, -1));
 
         txtANB82.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -489,43 +447,34 @@ public class frmTratamientoOrtodoncia extends javax.swing.JInternalFrame {
                 txtANB82KeyPressed(evt);
             }
         });
-        getContentPane().add(txtANB82, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 250, 20, -1));
 
         jSeparator21.setBackground(new java.awt.Color(0, 0, 0));
         jSeparator21.setForeground(new java.awt.Color(0, 0, 0));
         jSeparator21.setOrientation(javax.swing.SwingConstants.VERTICAL);
-        getContentPane().add(jSeparator21, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 170, 10, 110));
 
         jSeparator22.setBackground(new java.awt.Color(0, 0, 0));
         jSeparator22.setForeground(new java.awt.Color(0, 0, 0));
         jSeparator22.setOrientation(javax.swing.SwingConstants.VERTICAL);
-        getContentPane().add(jSeparator22, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 170, 10, 110));
 
         jLabel30.setFont(new java.awt.Font("Baskerville Old Face", 1, 11)); // NOI18N
         jLabel30.setText("82°");
-        getContentPane().add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 210, 30, -1));
 
         jLabel31.setFont(new java.awt.Font("Baskerville Old Face", 1, 11)); // NOI18N
         jLabel31.setText("80°");
-        getContentPane().add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 210, 30, -1));
 
         jLabel32.setFont(new java.awt.Font("Baskerville Old Face", 0, 11)); // NOI18N
         jLabel32.setText("PALS");
-        getContentPane().add(jLabel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 180, 40, -1));
 
         jLabel33.setFont(new java.awt.Font("Baskerville Old Face", 1, 11)); // NOI18N
         jLabel33.setText("4 mm");
-        getContentPane().add(jLabel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 210, 40, -1));
 
         jSeparator24.setBackground(new java.awt.Color(0, 0, 0));
         jSeparator24.setForeground(new java.awt.Color(0, 0, 0));
         jSeparator24.setOrientation(javax.swing.SwingConstants.VERTICAL);
-        getContentPane().add(jSeparator24, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 200, 10, 80));
 
         jSeparator25.setBackground(new java.awt.Color(0, 0, 0));
         jSeparator25.setForeground(new java.awt.Color(0, 0, 0));
         jSeparator25.setOrientation(javax.swing.SwingConstants.VERTICAL);
-        getContentPane().add(jSeparator25, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 200, 10, 80));
 
         txtPALS.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -537,7 +486,6 @@ public class frmTratamientoOrtodoncia extends javax.swing.JInternalFrame {
                 txtPALSKeyPressed(evt);
             }
         });
-        getContentPane().add(txtPALS, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 250, 59, -1));
 
         txtANB80.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -549,7 +497,6 @@ public class frmTratamientoOrtodoncia extends javax.swing.JInternalFrame {
                 txtANB80KeyPressed(evt);
             }
         });
-        getContentPane().add(txtANB80, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 250, 20, -1));
 
         txtANB2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -561,15 +508,12 @@ public class frmTratamientoOrtodoncia extends javax.swing.JInternalFrame {
                 txtANB2KeyPressed(evt);
             }
         });
-        getContentPane().add(txtANB2, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 250, 20, -1));
 
         jLabel78.setFont(new java.awt.Font("Baskerville Old Face", 0, 11)); // NOI18N
         jLabel78.setText("PALI");
-        getContentPane().add(jLabel78, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 180, 50, -1));
 
         jLabel79.setFont(new java.awt.Font("Baskerville Old Face", 1, 11)); // NOI18N
         jLabel79.setText("2 mm");
-        getContentPane().add(jLabel79, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 210, 40, 20));
 
         txtPALI.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -581,20 +525,16 @@ public class frmTratamientoOrtodoncia extends javax.swing.JInternalFrame {
                 txtPALIKeyPressed(evt);
             }
         });
-        getContentPane().add(txtPALI, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 250, 59, -1));
 
         jSeparator23.setBackground(new java.awt.Color(0, 0, 0));
         jSeparator23.setForeground(new java.awt.Color(0, 0, 0));
         jSeparator23.setOrientation(javax.swing.SwingConstants.VERTICAL);
-        getContentPane().add(jSeparator23, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 170, 10, 110));
 
         jLabel80.setFont(new java.awt.Font("Baskerville Old Face", 0, 11)); // NOI18N
         jLabel80.setText("PTB");
-        getContentPane().add(jLabel80, new org.netbeans.lib.awtextra.AbsoluteConstraints(1080, 180, 40, -1));
 
         jLabel81.setFont(new java.awt.Font("Baskerville Old Face", 1, 11)); // NOI18N
         jLabel81.setText("-3 mm");
-        getContentPane().add(jLabel81, new org.netbeans.lib.awtextra.AbsoluteConstraints(1070, 210, 40, -1));
 
         txtPTB.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -606,103 +546,81 @@ public class frmTratamientoOrtodoncia extends javax.swing.JInternalFrame {
                 txtPTBKeyPressed(evt);
             }
         });
-        getContentPane().add(txtPTB, new org.netbeans.lib.awtextra.AbsoluteConstraints(1080, 250, 59, -1));
 
         jSeparator26.setBackground(new java.awt.Color(0, 0, 0));
         jSeparator26.setForeground(new java.awt.Color(0, 0, 0));
         jSeparator26.setOrientation(javax.swing.SwingConstants.VERTICAL);
-        getContentPane().add(jSeparator26, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 170, 10, 110));
 
         jSeparator27.setBackground(new java.awt.Color(0, 0, 0));
         jSeparator27.setForeground(new java.awt.Color(0, 0, 0));
         jSeparator27.setOrientation(javax.swing.SwingConstants.VERTICAL);
-        getContentPane().add(jSeparator27, new org.netbeans.lib.awtextra.AbsoluteConstraints(1060, 170, 10, 110));
 
         jSeparator28.setBackground(new java.awt.Color(0, 0, 0));
         jSeparator28.setForeground(new java.awt.Color(0, 0, 0));
-        getContentPane().add(jSeparator28, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 200, 1140, 10));
 
         lbnombre.setFont(new java.awt.Font("Baskerville Old Face", 1, 11)); // NOI18N
-        getContentPane().add(lbnombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 70, 130, 18));
 
         lbapellido.setFont(new java.awt.Font("Baskerville Old Face", 1, 11)); // NOI18N
-        getContentPane().add(lbapellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 70, 130, 18));
 
         lblnombre10.setFont(new java.awt.Font("Baskerville Old Face", 1, 14)); // NOI18N
         lblnombre10.setText("Curva de Spee: ");
-        getContentPane().add(lblnombre10, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 300, 120, -1));
 
         chcurvaleve1.setText("Leve");
-        getContentPane().add(chcurvaleve1, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 300, 60, -1));
 
         chcurvamoderada1.setText("Moderada");
-        getContentPane().add(chcurvamoderada1, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 300, 80, -1));
 
         chcurvasevera.setText("Severa");
-        getContentPane().add(chcurvasevera, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 300, 70, -1));
 
         lblnombre6.setFont(new java.awt.Font("Baskerville Old Face", 1, 14)); // NOI18N
         lblnombre6.setText("DSD:");
-        getContentPane().add(lblnombre6, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 300, 40, -1));
 
         txtDSD.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 txtDSDKeyPressed(evt);
             }
         });
-        getContentPane().add(txtDSD, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 300, 60, -1));
 
         lblnombre9.setFont(new java.awt.Font("Baskerville Old Face", 1, 14)); // NOI18N
         lblnombre9.setText("mm.");
-        getContentPane().add(lblnombre9, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 300, 30, -1));
 
         lblnombre8.setFont(new java.awt.Font("Baskerville Old Face", 1, 14)); // NOI18N
         lblnombre8.setText("Clasificación Maxilares:");
-        getContentPane().add(lblnombre8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 330, -1, -1));
 
         txtmaxilares.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 txtmaxilaresKeyPressed(evt);
             }
         });
-        getContentPane().add(txtmaxilares, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 330, 380, -1));
 
         lblnombre7.setFont(new java.awt.Font("Baskerville Old Face", 1, 14)); // NOI18N
         lblnombre7.setText("Entorno Dental:");
-        getContentPane().add(lblnombre7, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 330, -1, -1));
 
         txtEntornoD.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 txtEntornoDKeyPressed(evt);
             }
         });
-        getContentPane().add(txtEntornoD, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 330, 380, -1));
 
         lblnombre11.setFont(new java.awt.Font("Baskerville Old Face", 1, 11)); // NOI18N
         lblnombre11.setText("Bandas en:");
-        getContentPane().add(lblnombre11, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 390, 70, 20));
 
         txtbandas.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 txtbandasKeyPressed(evt);
             }
         });
-        getContentPane().add(txtbandas, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 390, 380, -1));
 
         lblnombre12.setFont(new java.awt.Font("Baskerville Old Face", 1, 11)); // NOI18N
         lblnombre12.setText("tubos:");
-        getContentPane().add(lblnombre12, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 420, 50, 10));
 
         txttubos.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 txttubosKeyPressed(evt);
             }
         });
-        getContentPane().add(txttubos, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 420, 380, -1));
 
         lblnombre13.setFont(new java.awt.Font("Baskerville Old Face", 1, 11)); // NOI18N
         lblnombre13.setText("Otros:");
-        getContentPane().add(lblnombre13, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 450, 50, 20));
 
         txtotros.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -714,33 +632,27 @@ public class frmTratamientoOrtodoncia extends javax.swing.JInternalFrame {
                 txtotrosKeyPressed(evt);
             }
         });
-        getContentPane().add(txtotros, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 450, 380, -1));
 
         lblnombre14.setFont(new java.awt.Font("Baskerville Old Face", 1, 11)); // NOI18N
         lblnombre14.setText("Aparato tipo:");
-        getContentPane().add(lblnombre14, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 480, 80, 20));
 
         txtAparato.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 txtAparatoKeyPressed(evt);
             }
         });
-        getContentPane().add(txtAparato, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 480, 380, -1));
 
         lblnombre15.setFont(new java.awt.Font("Baskerville Old Face", 1, 11)); // NOI18N
         lblnombre15.setText("Exodoncia:");
-        getContentPane().add(lblnombre15, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 510, 70, 20));
 
         txtexodoncia.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 txtexodonciaKeyPressed(evt);
             }
         });
-        getContentPane().add(txtexodoncia, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 510, 380, -1));
 
         lblnombre17.setFont(new java.awt.Font("Baskerville Old Face", 1, 11)); // NOI18N
         lblnombre17.setText("Brackets:");
-        getContentPane().add(lblnombre17, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 540, 60, 20));
 
         txtBrakets.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -752,11 +664,9 @@ public class frmTratamientoOrtodoncia extends javax.swing.JInternalFrame {
                 txtBraketsKeyPressed(evt);
             }
         });
-        getContentPane().add(txtBrakets, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 540, 380, -1));
 
         lblnombre19.setFont(new java.awt.Font("Baskerville Old Face", 1, 11)); // NOI18N
         lblnombre19.setText("RETENCIONES MX:");
-        getContentPane().add(lblnombre19, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 570, 110, 20));
 
         txtRetenciones.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -768,120 +678,92 @@ public class frmTratamientoOrtodoncia extends javax.swing.JInternalFrame {
                 txtRetencionesKeyPressed(evt);
             }
         });
-        getContentPane().add(txtRetenciones, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 570, 380, -1));
 
         lblnombre18.setFont(new java.awt.Font("Baskerville Old Face", 1, 11)); // NOI18N
         lblnombre18.setText("Secuencia de Arcos:");
-        getContentPane().add(lblnombre18, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 600, -1, 20));
 
         txtsecuencia.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 txtsecuenciaKeyPressed(evt);
             }
         });
-        getContentPane().add(txtsecuencia, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 600, 380, -1));
 
         lblnombre20.setFont(new java.awt.Font("Baskerville Old Face", 1, 11)); // NOI18N
         lblnombre20.setText("MD:");
-        getContentPane().add(lblnombre20, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 630, 40, 20));
 
         txtMD.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 txtMDKeyPressed(evt);
             }
         });
-        getContentPane().add(txtMD, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 630, 380, -1));
 
         jLabel1.setFont(new java.awt.Font("Baskerville Old Face", 1, 14)); // NOI18N
         jLabel1.setText("Indicación especial antes de colocar Brackets");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 390, 300, -1));
 
         jLabel83.setFont(new java.awt.Font("Baskerville Old Face", 1, 15)); // NOI18N
         jLabel83.setText("Plan de Tratamiento");
-        getContentPane().add(jLabel83, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 380, -1, 20));
 
         jSeparator3.setForeground(new java.awt.Color(0, 0, 0));
-        getContentPane().add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 540, 400, 10));
 
         jLabel84.setBackground(new java.awt.Color(0, 0, 0));
         jLabel84.setFont(new java.awt.Font("Baskerville Old Face", 0, 10)); // NOI18N
         jLabel84.setText("Tomar imp.");
-        getContentPane().add(jLabel84, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 450, 60, -1));
 
         jLabel85.setBackground(new java.awt.Color(0, 0, 0));
         jLabel85.setFont(new java.awt.Font("Baskerville Old Face", 0, 10)); // NOI18N
         jLabel85.setText("Repetir Fotos");
-        getContentPane().add(jLabel85, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 420, 80, -1));
 
         jLabel86.setBackground(new java.awt.Color(0, 0, 0));
         jLabel86.setFont(new java.awt.Font("Baskerville Old Face", 0, 10)); // NOI18N
         jLabel86.setText("Tomar Rx");
-        getContentPane().add(jLabel86, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 480, 50, -1));
 
         jSeparator29.setForeground(new java.awt.Color(0, 0, 0));
-        getContentPane().add(jSeparator29, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 410, 400, -1));
 
         jSeparator30.setForeground(new java.awt.Color(0, 0, 0));
-        getContentPane().add(jSeparator30, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 440, 400, 10));
 
         jLabel87.setFont(new java.awt.Font("Baskerville Old Face", 0, 10)); // NOI18N
         jLabel87.setText("RX Rocabado");
-        getContentPane().add(jLabel87, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 510, 80, -1));
 
         jSeparator31.setForeground(new java.awt.Color(0, 0, 0));
-        getContentPane().add(jSeparator31, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 470, 400, 10));
 
         jSeparator32.setForeground(new java.awt.Color(0, 0, 0));
         jSeparator32.setOrientation(javax.swing.SwingConstants.VERTICAL);
         jSeparator32.setToolTipText("");
-        getContentPane().add(jSeparator32, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 410, 10, 130));
 
         jSeparator33.setForeground(new java.awt.Color(0, 0, 0));
         jSeparator33.setOrientation(javax.swing.SwingConstants.VERTICAL);
-        getContentPane().add(jSeparator33, new org.netbeans.lib.awtextra.AbsoluteConstraints(1040, 410, -1, 90));
 
         jSeparator67.setForeground(new java.awt.Color(0, 0, 0));
         jSeparator67.setOrientation(javax.swing.SwingConstants.VERTICAL);
-        getContentPane().add(jSeparator67, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 410, -1, 90));
 
         chmodelo.setBackground(new java.awt.Color(255, 255, 255));
         chmodelo.setText("Modelo mx ");
-        getContentPane().add(chmodelo, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 440, 93, -1));
 
         chfaciales.setBackground(new java.awt.Color(255, 255, 255));
         chfaciales.setText("Faciales");
-        getContentPane().add(chfaciales, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 410, -1, -1));
 
         chpanoramica.setBackground(new java.awt.Color(255, 255, 255));
         chpanoramica.setText("Panorámica");
-        getContentPane().add(chpanoramica, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 470, 93, -1));
 
         chintraorales.setBackground(new java.awt.Color(255, 255, 255));
         chintraorales.setText("Intraorales");
-        getContentPane().add(chintraorales, new org.netbeans.lib.awtextra.AbsoluteConstraints(1050, 410, 93, -1));
 
         jSeparator68.setForeground(new java.awt.Color(0, 0, 0));
         jSeparator68.setOrientation(javax.swing.SwingConstants.VERTICAL);
-        getContentPane().add(jSeparator68, new org.netbeans.lib.awtextra.AbsoluteConstraints(1150, 410, -1, 90));
 
         chmodeloMD.setBackground(new java.awt.Color(255, 255, 255));
         chmodeloMD.setText("Modelo md");
-        getContentPane().add(chmodeloMD, new org.netbeans.lib.awtextra.AbsoluteConstraints(1050, 440, 93, -1));
 
         chcefalometrica.setBackground(new java.awt.Color(255, 255, 255));
         chcefalometrica.setText("Cefalométrica");
-        getContentPane().add(chcefalometrica, new org.netbeans.lib.awtextra.AbsoluteConstraints(1050, 470, 93, -1));
 
         chincicivos.setBackground(new java.awt.Color(255, 255, 255));
         chincicivos.setText("Incicivos");
-        getContentPane().add(chincicivos, new org.netbeans.lib.awtextra.AbsoluteConstraints(1160, 470, 70, -1));
 
         jSeparator69.setForeground(new java.awt.Color(0, 0, 0));
         jSeparator69.setOrientation(javax.swing.SwingConstants.VERTICAL);
-        getContentPane().add(jSeparator69, new org.netbeans.lib.awtextra.AbsoluteConstraints(1240, 410, -1, 130));
 
         jSeparator70.setForeground(new java.awt.Color(0, 0, 0));
-        getContentPane().add(jSeparator70, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 500, 400, -1));
 
         txtrocabado.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -893,16 +775,13 @@ public class frmTratamientoOrtodoncia extends javax.swing.JInternalFrame {
                 txtrocabadoKeyPressed(evt);
             }
         });
-        getContentPane().add(txtrocabado, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 510, 280, -1));
 
         jSeparator7.setForeground(new java.awt.Color(0, 0, 0));
         jSeparator7.setOrientation(javax.swing.SwingConstants.VERTICAL);
         jSeparator7.setToolTipText("");
-        getContentPane().add(jSeparator7, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 410, 12, 250));
 
         jSeparator8.setForeground(new java.awt.Color(0, 0, 0));
         jSeparator8.setToolTipText("");
-        getContentPane().add(jSeparator8, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 370, 1350, 10));
 
         btnBuscarEditar1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/buscar edicion.png"))); // NOI18N
         btnBuscarEditar1.setText("Buscar para Editar");
@@ -913,7 +792,6 @@ public class frmTratamientoOrtodoncia extends javax.swing.JInternalFrame {
                 btnBuscarEditar1ActionPerformed(evt);
             }
         });
-        getContentPane().add(btnBuscarEditar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1160, 170, 120, -1));
 
         btnEditar1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/editar.png"))); // NOI18N
         btnEditar1.setText("Editar");
@@ -924,7 +802,6 @@ public class frmTratamientoOrtodoncia extends javax.swing.JInternalFrame {
                 btnEditar1ActionPerformed(evt);
             }
         });
-        getContentPane().add(btnEditar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1280, 170, 90, -1));
 
         btnGuardar1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/guardar.png"))); // NOI18N
         btnGuardar1.setText("Guardar");
@@ -935,13 +812,11 @@ public class frmTratamientoOrtodoncia extends javax.swing.JInternalFrame {
                 btnGuardar1ActionPerformed(evt);
             }
         });
-        getContentPane().add(btnGuardar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1160, 270, 120, 90));
 
         btnCancelar1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/cancelar.png"))); // NOI18N
         btnCancelar1.setText("Cancelar");
         btnCancelar1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnCancelar1.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        getContentPane().add(btnCancelar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1280, 270, 90, 90));
 
         btnBuscarEditar2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/buscar edicion.png"))); // NOI18N
         btnBuscarEditar2.setText("Buscar para Editar");
@@ -952,7 +827,6 @@ public class frmTratamientoOrtodoncia extends javax.swing.JInternalFrame {
                 btnBuscarEditar2ActionPerformed(evt);
             }
         });
-        getContentPane().add(btnBuscarEditar2, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 550, -1, -1));
 
         btnEditar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/editar.png"))); // NOI18N
         btnEditar.setText("Editar");
@@ -963,7 +837,6 @@ public class frmTratamientoOrtodoncia extends javax.swing.JInternalFrame {
                 btnEditarActionPerformed(evt);
             }
         });
-        getContentPane().add(btnEditar, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 550, -1, -1));
 
         btnGuardar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/guardar.png"))); // NOI18N
         btnGuardar.setText("Guardar");
@@ -974,13 +847,11 @@ public class frmTratamientoOrtodoncia extends javax.swing.JInternalFrame {
                 btnGuardarActionPerformed(evt);
             }
         });
-        getContentPane().add(btnGuardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(1060, 550, -1, -1));
 
         btnCancelar2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/cancelar.png"))); // NOI18N
         btnCancelar2.setText("Cancelar");
         btnCancelar2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnCancelar2.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        getContentPane().add(btnCancelar2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1180, 550, -1, 90));
 
         btnElegirTP.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/elegir tp.png"))); // NOI18N
         btnElegirTP.setText("Elegir tipo de paciente");
@@ -991,7 +862,652 @@ public class frmTratamientoOrtodoncia extends javax.swing.JInternalFrame {
                 btnElegirTPActionPerformed(evt);
             }
         });
-        getContentPane().add(btnElegirTP, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 50, 180, 90));
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(80, 80, 80)
+                        .addComponent(lblnombre11, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(10, 10, 10)
+                        .addComponent(txtbandas, javax.swing.GroupLayout.PREFERRED_SIZE, 380, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(80, 80, 80)
+                        .addComponent(jLabel83)
+                        .addGap(137, 137, 137)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(40, 40, 40)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(60, 60, 60)
+                                .addComponent(lblnombre12, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(60, 60, 60)
+                                .addComponent(lblnombre13, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(30, 30, 30)
+                                .addComponent(lblnombre14, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(40, 40, 40)
+                                .addComponent(lblnombre15, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(50, 50, 50)
+                                .addComponent(lblnombre17, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(10, 10, 10)
+                                .addComponent(lblnombre19, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(lblnombre18)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(80, 80, 80)
+                                .addComponent(lblnombre20, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txttubos, javax.swing.GroupLayout.PREFERRED_SIZE, 380, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtotros, javax.swing.GroupLayout.PREFERRED_SIZE, 380, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtAparato, javax.swing.GroupLayout.PREFERRED_SIZE, 380, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtexodoncia, javax.swing.GroupLayout.PREFERRED_SIZE, 380, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtBrakets, javax.swing.GroupLayout.PREFERRED_SIZE, 380, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtRetenciones, javax.swing.GroupLayout.PREFERRED_SIZE, 380, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtsecuencia, javax.swing.GroupLayout.PREFERRED_SIZE, 380, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtMD, javax.swing.GroupLayout.PREFERRED_SIZE, 380, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(140, 140, 140)
+                        .addComponent(jSeparator7, javax.swing.GroupLayout.PREFERRED_SIZE, 12, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(108, 108, 108)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(btnBuscarEditar2)
+                                .addGap(19, 19, 19)
+                                .addComponent(btnEditar)
+                                .addGap(23, 23, 23)
+                                .addComponent(btnGuardar)
+                                .addGap(23, 23, 23)
+                                .addComponent(btnCancelar2))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(40, 40, 40)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addGap(310, 310, 310)
+                                                .addComponent(jSeparator68, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addGap(110, 110, 110)
+                                                .addComponent(chpanoramica, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addComponent(jSeparator29, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addGap(110, 110, 110)
+                                                .addComponent(chmodelo, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addComponent(jSeparator70, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addGap(10, 10, 10)
+                                                .addComponent(jLabel87, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGap(20, 20, 20)
+                                                .addComponent(txtrocabado, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addGap(10, 10, 10)
+                                                .addComponent(jLabel84, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addGap(100, 100, 100)
+                                                .addComponent(jSeparator67, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addGap(110, 110, 110)
+                                                .addComponent(chfaciales))
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addGap(210, 210, 210)
+                                                .addComponent(chintraorales, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addGap(200, 200, 200)
+                                                .addComponent(jSeparator33, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addGap(10, 10, 10)
+                                                .addComponent(jLabel85, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addGap(210, 210, 210)
+                                                .addComponent(chmodeloMD, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addComponent(jSeparator31, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jSeparator30, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addGap(210, 210, 210)
+                                                .addComponent(chcefalometrica, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addGap(320, 320, 320)
+                                                .addComponent(chincicivos, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addGap(10, 10, 10)
+                                                .addComponent(jLabel86, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addComponent(jSeparator32, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(jSeparator69, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(20, 20, 20)
+                                .addComponent(jLabel2)
+                                .addGap(5, 5, 5)
+                                .addComponent(btnElegirTP, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(130, 130, 130)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(lbnombre, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(10, 10, 10)
+                                        .addComponent(lbapellido, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(10, 10, 10)
+                                        .addComponent(lbidplan, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(jLabel82, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(btnEditar1, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(btnBuscarEditar1, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(16, 16, 16)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGap(0, 0, 0)
+                                                .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addGroup(layout.createSequentialGroup()
+                                                        .addGap(20, 20, 20)
+                                                        .addComponent(txtIMPA1, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                    .addComponent(jSeparator20, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                    .addGroup(layout.createSequentialGroup()
+                                                        .addGap(30, 30, 30)
+                                                        .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                                .addGap(10, 10, 10)
+                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                    .addGroup(layout.createSequentialGroup()
+                                                        .addGap(120, 120, 120)
+                                                        .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                                .addGap(20, 20, 20)
+                                                .addComponent(txtIS, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGap(91, 91, 91)
+                                                .addComponent(jSeparator21, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addComponent(jLabel27, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                    .addGroup(layout.createSequentialGroup()
+                                                        .addGap(10, 10, 10)
+                                                        .addComponent(txtFHIS, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                                .addGap(11, 11, 11)
+                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addComponent(jLabel30, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                    .addGroup(layout.createSequentialGroup()
+                                                        .addGap(10, 10, 10)
+                                                        .addComponent(txtANB82, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                                .addGap(90, 90, 90)
+                                                .addComponent(jLabel32, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGap(50, 50, 50)
+                                                .addComponent(txtPALI, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGap(31, 31, 31)
+                                                .addComponent(jLabel80, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addComponent(jSeparator13, javax.swing.GroupLayout.PREFERRED_SIZE, 1140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addGap(1070, 1070, 1070)
+                                                .addComponent(txtPTB, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addGap(830, 830, 830)
+                                                .addComponent(jLabel29, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addGap(520, 520, 520)
+                                                .addComponent(jSeparator18, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addGap(240, 240, 240)
+                                                .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addGap(680, 680, 680)
+                                                .addComponent(jSeparator22, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addGap(350, 350, 350)
+                                                .addComponent(txtJa1, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addGap(620, 620, 620)
+                                                .addComponent(jLabel25, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addGap(310, 310, 310)
+                                                .addComponent(jSeparator16, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addGap(700, 700, 700)
+                                                .addComponent(jLabel26, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addGap(450, 450, 450)
+                                                .addComponent(txtEJE, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addGap(360, 360, 360)
+                                                .addComponent(jLabel22, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addGap(980, 980, 980)
+                                                .addComponent(jLabel79, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addGap(440, 440, 440)
+                                                .addComponent(jSeparator17, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addGap(90, 90, 90)
+                                                .addComponent(jSeparator15, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addGap(770, 770, 770)
+                                                .addComponent(jSeparator26, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addGap(550, 550, 550)
+                                                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addGap(800, 800, 800)
+                                                .addComponent(jSeparator24, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addGap(840, 840, 840)
+                                                .addComponent(txtANB2, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addGap(800, 800, 800)
+                                                .addComponent(jLabel31, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addGap(860, 860, 860)
+                                                .addComponent(jSeparator23, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addGap(140, 140, 140)
+                                                .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addGap(800, 800, 800)
+                                                .addComponent(jLabel28, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addGap(980, 980, 980)
+                                                .addComponent(jLabel78, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addGap(610, 610, 610)
+                                                .addComponent(jLabel24, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addGap(830, 830, 830)
+                                                .addComponent(jSeparator25, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addGap(610, 610, 610)
+                                                .addComponent(txtII, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addGap(540, 540, 540)
+                                                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addComponent(jSeparator28, javax.swing.GroupLayout.PREFERRED_SIZE, 1140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addGap(890, 890, 890)
+                                                .addComponent(jLabel33, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addGap(40, 40, 40)
+                                                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addGap(810, 810, 810)
+                                                .addComponent(txtANB80, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addGap(1060, 1060, 1060)
+                                                .addComponent(jLabel81, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addComponent(jSeparator11, javax.swing.GroupLayout.PREFERRED_SIZE, 1140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 1140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addGap(460, 460, 460)
+                                                .addComponent(jLabel23, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addGap(600, 600, 600)
+                                                .addComponent(jSeparator19, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addGap(880, 880, 880)
+                                                .addComponent(txtPALS, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addGap(20, 20, 20)
+                                                .addComponent(txtanguloA1, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addGap(960, 960, 960)
+                                                .addComponent(jSeparator12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addGap(130, 130, 130)
+                                                .addComponent(txtanguloG1, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addGap(1050, 1050, 1050)
+                                                .addComponent(jSeparator27, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addComponent(jSeparator14, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(10, 10, 10)
+                                        .addComponent(jSeparator6, javax.swing.GroupLayout.PREFERRED_SIZE, 1140, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(300, 300, 300)
+                                        .addComponent(lblnombre10, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(10, 10, 10)
+                                        .addComponent(chcurvaleve1, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(30, 30, 30)
+                                        .addComponent(chcurvamoderada1, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(20, 20, 20)
+                                        .addComponent(chcurvasevera, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(20, 20, 20)
+                                        .addComponent(lblnombre6, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(10, 10, 10)
+                                        .addComponent(txtDSD, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(40, 40, 40)
+                                        .addComponent(lblnombre9, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(14, 14, 14)
+                                        .addComponent(lblnombre8)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(txtmaxilares, javax.swing.GroupLayout.PREFERRED_SIZE, 380, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(47, 47, 47)
+                                        .addComponent(lblnombre7)
+                                        .addGap(5, 5, 5)
+                                        .addComponent(txtEntornoD, javax.swing.GroupLayout.PREFERRED_SIZE, 380, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(btnCancelar1, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(btnGuardar1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(lbid, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(20, 20, 20)
+                        .addComponent(jSeparator8, javax.swing.GroupLayout.PREFERRED_SIZE, 1273, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(0, 0, 0))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(43, 43, 43)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(btnEditar1)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(1, 1, 1)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addGap(20, 20, 20)
+                                    .addComponent(jLabel2))
+                                .addComponent(btnElegirTP, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addGap(20, 20, 20)
+                                    .addComponent(lbidplan, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(layout.createSequentialGroup()
+                                    .addGap(27, 27, 27)
+                                    .addComponent(lbid, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addComponent(btnBuscarEditar1, javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGroup(layout.createSequentialGroup()
+                            .addComponent(jLabel82, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(18, 18, 18)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(lbnombre, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addGap(18, 18, 18)
+                                    .addComponent(lbapellido, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(21, 21, 21)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(10, 10, 10)
+                                        .addComponent(jLabel5))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(10, 10, 10)
+                                        .addComponent(jLabel7))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(80, 80, 80)
+                                        .addComponent(txtIMPA1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(jSeparator20, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(10, 10, 10)
+                                        .addComponent(jLabel18))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(10, 10, 10)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jLabel20)
+                                            .addComponent(jLabel21)))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(80, 80, 80)
+                                        .addComponent(txtIS, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(jSeparator21, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(40, 40, 40)
+                                        .addComponent(jLabel27)
+                                        .addGap(28, 28, 28)
+                                        .addComponent(txtFHIS, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(40, 40, 40)
+                                        .addComponent(jLabel30)
+                                        .addGap(28, 28, 28)
+                                        .addComponent(txtANB82, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(10, 10, 10)
+                                        .addComponent(jLabel32))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(80, 80, 80)
+                                        .addComponent(txtPALI, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(10, 10, 10)
+                                        .addComponent(jLabel80))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(60, 60, 60)
+                                        .addComponent(jSeparator13, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(80, 80, 80)
+                                        .addComponent(txtPTB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(40, 40, 40)
+                                        .addComponent(jLabel29))
+                                    .addComponent(jSeparator18, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(40, 40, 40)
+                                        .addComponent(jLabel19))
+                                    .addComponent(jSeparator22, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(80, 80, 80)
+                                        .addComponent(txtJa1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(40, 40, 40)
+                                        .addComponent(jLabel25))
+                                    .addComponent(jSeparator16, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(10, 10, 10)
+                                        .addComponent(jLabel26))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(80, 80, 80)
+                                        .addComponent(txtEJE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(40, 40, 40)
+                                        .addComponent(jLabel22))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(40, 40, 40)
+                                        .addComponent(jLabel79, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(jSeparator17, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jSeparator15, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jSeparator26, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(40, 40, 40)
+                                        .addComponent(jLabel4))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(30, 30, 30)
+                                        .addComponent(jSeparator24, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(80, 80, 80)
+                                        .addComponent(txtANB2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(40, 40, 40)
+                                        .addComponent(jLabel31))
+                                    .addComponent(jSeparator23, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(40, 40, 40)
+                                        .addComponent(jLabel9))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(10, 10, 10)
+                                        .addComponent(jLabel28))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(10, 10, 10)
+                                        .addComponent(jLabel78))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(10, 10, 10)
+                                        .addComponent(jLabel24))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(30, 30, 30)
+                                        .addComponent(jSeparator25, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(80, 80, 80)
+                                        .addComponent(txtII, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(10, 10, 10)
+                                        .addComponent(jLabel3))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(30, 30, 30)
+                                        .addComponent(jSeparator28, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(40, 40, 40)
+                                        .addComponent(jLabel33))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(40, 40, 40)
+                                        .addComponent(jLabel6))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(80, 80, 80)
+                                        .addComponent(txtANB80, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(40, 40, 40)
+                                        .addComponent(jLabel81))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(30, 30, 30)
+                                        .addComponent(jSeparator11, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(40, 40, 40)
+                                        .addComponent(jLabel23))
+                                    .addComponent(jSeparator19, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(80, 80, 80)
+                                        .addComponent(txtPALS, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(80, 80, 80)
+                                        .addComponent(txtanguloA1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(jSeparator12, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(80, 80, 80)
+                                        .addComponent(txtanguloG1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(jSeparator27, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jSeparator14, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(jSeparator6, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(10, 10, 10)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(lblnombre10)
+                                    .addComponent(chcurvaleve1)
+                                    .addComponent(chcurvamoderada1)
+                                    .addComponent(chcurvasevera)
+                                    .addComponent(lblnombre6)
+                                    .addComponent(txtDSD, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(lblnombre9))
+                                .addGap(7, 7, 7)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(txtmaxilares, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(lblnombre8))
+                                    .addComponent(lblnombre7)
+                                    .addComponent(txtEntornoD, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(9, 9, 9)
+                        .addComponent(btnGuardar1, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnCancelar1, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(20, 20, 20)
+                .addComponent(jSeparator8, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel83, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lblnombre11, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtbandas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel1))))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jSeparator7, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jSeparator68, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(60, 60, 60)
+                                        .addComponent(chpanoramica))
+                                    .addComponent(jSeparator29, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(30, 30, 30)
+                                        .addComponent(chmodelo)))
+                                .addComponent(jSeparator70, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(8, 8, 8)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel87)
+                                    .addComponent(txtrocabado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(40, 40, 40)
+                                .addComponent(jLabel84))
+                            .addComponent(jSeparator67, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(chfaciales)
+                            .addComponent(chintraorales)
+                            .addComponent(jSeparator33, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(10, 10, 10)
+                                .addComponent(jLabel85))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(30, 30, 30)
+                                .addComponent(chmodeloMD))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(60, 60, 60)
+                                .addComponent(jSeparator31, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(30, 30, 30)
+                                .addComponent(jSeparator30, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(60, 60, 60)
+                                .addComponent(chcefalometrica))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(60, 60, 60)
+                                .addComponent(chincicivos))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(70, 70, 70)
+                                .addComponent(jLabel86))
+                            .addComponent(jSeparator32, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jSeparator69, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btnBuscarEditar2)
+                            .addComponent(btnEditar)
+                            .addComponent(btnGuardar)
+                            .addComponent(btnCancelar2, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(lblnombre12, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(20, 20, 20)
+                                .addComponent(lblnombre13, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(10, 10, 10)
+                                .addComponent(lblnombre14, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(10, 10, 10)
+                                .addComponent(lblnombre15, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(10, 10, 10)
+                                .addComponent(lblnombre17, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(10, 10, 10)
+                                .addComponent(lblnombre19, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(10, 10, 10)
+                                .addComponent(lblnombre18, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(10, 10, 10)
+                                .addComponent(lblnombre20, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(txttubos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(10, 10, 10)
+                                .addComponent(txtotros, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(10, 10, 10)
+                                .addComponent(txtAparato, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(10, 10, 10)
+                                .addComponent(txtexodoncia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(10, 10, 10)
+                                .addComponent(txtBrakets, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(10, 10, 10)
+                                .addComponent(txtRetenciones, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(10, 10, 10)
+                                .addComponent(txtsecuencia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(10, 10, 10)
+                                .addComponent(txtMD, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addContainerGap(36, Short.MAX_VALUE))
+        );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

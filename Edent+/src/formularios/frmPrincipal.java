@@ -251,7 +251,7 @@ public class frmPrincipal extends javax.swing.JFrame implements  Runnable {
                     .addComponent(jLabel1)
                     .addComponent(jLabel2)
                     .addComponent(lbhora))
-                .addGap(35, 35, 35))
+                .addGap(44, 44, 44))
         );
 
         jMenu3.setForeground(new java.awt.Color(0, 102, 153));
