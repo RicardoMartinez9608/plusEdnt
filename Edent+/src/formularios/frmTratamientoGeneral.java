@@ -21,6 +21,14 @@ public class frmTratamientoGeneral extends javax.swing.JInternalFrame {
      */
     public frmTratamientoGeneral() {
         initComponents();
+        frmTratamientoGeneral.btnGuardar.setEnabled(false);
+        frmTratamientoGeneral.btneditar.setEnabled(false);
+        frmTratamientoGeneral.txtDX.setEnabled(false);
+        frmTratamientoGeneral.txtExamenC.setEnabled(false);
+        frmTratamientoGeneral.txtHistoriaM.setEnabled(false);
+        frmTratamientoGeneral.txtHistoriaO.setEnabled(false);
+        frmTratamientoGeneral.txtMotivoC.setEnabled(false);
+        frmTratamientoGeneral.txtpresupuesto.setEnabled(false);
     }
 public void limpiarTxt(){
        
