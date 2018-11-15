@@ -169,7 +169,7 @@ public class vistaTrataOrtod extends javax.swing.JInternalFrame {
 
             this.dispose();
         }
-        frmExpedienteOrtodoncia.jfecha.setEnabled(false);
+        frmExpedienteOrtodoncia.jfecha.setEnabled(true);
         frmExpedienteOrtodoncia.txtedad.setEnabled(false);
         frmExpedienteOrtodoncia.txttelefono.setEnabled(false);
         frmExpedienteOrtodoncia.txtnombre.setEnabled(false);
