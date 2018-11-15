@@ -916,6 +916,11 @@ public class frmTratamientoOrtodoncia extends javax.swing.JInternalFrame {
         btnElegirTP.setText("Elegir tipo de paciente");
         btnElegirTP.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnElegirTP.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        btnElegirTP.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnElegirTPActionPerformed(evt);
+            }
+        });
         getContentPane().add(btnElegirTP, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 50, 180, 90));
 
         pack();
@@ -1241,6 +1246,12 @@ public class frmTratamientoOrtodoncia extends javax.swing.JInternalFrame {
         Dpanel.add(trataor);
         trataor.show();
     }//GEN-LAST:event_btnBuscarEditar2ActionPerformed
+
+    private void btnElegirTPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnElegirTPActionPerformed
+        vistaTrataOrto trataor=new vistaTrataOrto();
+        Dpanel.add(trataor);
+        trataor.show();
+    }//GEN-LAST:event_btnElegirTPActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

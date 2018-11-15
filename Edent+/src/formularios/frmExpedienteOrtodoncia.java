@@ -501,11 +501,21 @@ public class frmExpedienteOrtodoncia extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_btconActionPerformed
 
     private void btnbuscaredicionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnbuscaredicionActionPerformed
-       
+       vistaTrataOrtod formProd = new vistaTrataOrtod();
+       Dpanel.add(formProd);
+       formProd.show();
     }//GEN-LAST:event_btnbuscaredicionActionPerformed
 
     private void btneditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btneditarActionPerformed
-       
+         String dia = Integer.toString(jfecha.getCalendar().get(Calendar.DAY_OF_MONTH));
+      String mes = Integer.toString(jfecha.getCalendar().get(Calendar.MONTH) + 1);
+      String year = Integer.toString(jfecha.getCalendar().get(Calendar.YEAR));
+      String fechaA = (dia + "-" + mes+ "-" + year);
+      String date = fechaA; 
+      Clases UpdateConsulta = new Clases();
+      UpdateConsulta.procedureUpdateConsultaG(txtMotivoC.getText(), date, Double.parseDouble(txtpresupuesto.getText())
+              , txtHistoriaM.getText(), txtHistoriaO.getText(), txtExamenC.getText(), txtDX.getText(),Integer.parseInt(lblid.getText()));
+      JOptionPane.showMessageDialog(null, "Datos de Tratamiento Actualizados correctamente");
     }//GEN-LAST:event_btneditarActionPerformed
 
     private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed

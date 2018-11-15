@@ -13,12 +13,12 @@ import javax.swing.RowFilter;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableRowSorter;
 
-public class vistaTrataOrtod extends javax.swing.JInternalFrame {
+public class vistaTrataOrto extends javax.swing.JInternalFrame {
 
      private TableRowSorter trsFiltro;
     ConsultaJpaController te = new ConsultaJpaController(entityConsulta.getInstance());
      public Integer totalRegistros; // Obtener los registros
-    public vistaTrataOrtod() {
+    public vistaTrataOrto() {
         initComponents();
          llenarTabla();
     }
@@ -146,25 +146,15 @@ public class vistaTrataOrtod extends javax.swing.JInternalFrame {
         if(evt.getClickCount()==2){
             int fila =jtPacientes.getSelectedRow();
             String nombre;
-            String apellido,id,motivo,total,historiam,historiaO,examen,dx;
+            String apellido,id;
             nombre=jtPacientes.getValueAt(fila, 1).toString();
             apellido=jtPacientes.getValueAt(fila, 2).toString();
             id=jtPacientes.getValueAt(fila, 0).toString();
-            motivo = jtPacientes.getValueAt(fila, 3).toString();
-            total = jtPacientes.getValueAt(fila, 4).toString();
-            historiam = jtPacientes.getValueAt(fila, 5).toString();
-            historiaO = jtPacientes.getValueAt(fila, 6).toString();
-            examen = jtPacientes.getValueAt(fila, 7).toString();
-            dx = jtPacientes.getValueAt(fila, 8).toString();
-            frmExpedienteOrtodoncia.lblid.setText(id);
-            frmExpedienteOrtodoncia.txtnombre.setText(nombre);
-            frmExpedienteOrtodoncia.txtapellido.setText(apellido);
-            frmExpedienteOrtodoncia.txtMotivoC.setText(motivo);
-            frmExpedienteOrtodoncia.txtHistoriaM.setText(historiam);
-            frmExpedienteOrtodoncia.txtHistoriaO.setText(historiaO);
-            frmExpedienteOrtodoncia.txtExamenC.setText(examen);
-            frmExpedienteOrtodoncia.txtDX.setText(dx);
-            frmExpedienteOrtodoncia.txtpresupuesto.setText(total);
+           
+            frmTratamientoOrtodoncia.lbidplan.setText(id);
+            frmTratamientoOrtodoncia.lbnombre.setText(nombre);
+            frmTratamientoOrtodoncia.lbapellido.setText(apellido);
+           
             
 
             this.dispose();
