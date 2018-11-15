@@ -39,7 +39,7 @@ public class frmExpedienteGeneral extends javax.swing.JInternalFrame {
 
         lbltitulo = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        btnElegir = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         fecha = new com.toedter.calendar.JDateChooser();
         lbltelefono = new javax.swing.JLabel();
@@ -70,15 +70,15 @@ public class frmExpedienteGeneral extends javax.swing.JInternalFrame {
         jLabel3.setFont(new java.awt.Font("Baskerville Old Face", 1, 14)); // NOI18N
         jLabel3.setText("Para realizar una consulta elija el tipo de paciente:");
 
-        jButton1.setFont(new java.awt.Font("Baskerville Old Face", 1, 14)); // NOI18N
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/elegir tp.png"))); // NOI18N
-        jButton1.setText("Elegir tipo de paciente");
-        jButton1.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        jButton1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jButton1.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btnElegir.setFont(new java.awt.Font("Baskerville Old Face", 1, 14)); // NOI18N
+        btnElegir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/elegir tp.png"))); // NOI18N
+        btnElegir.setText("Elegir tipo de paciente");
+        btnElegir.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        btnElegir.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnElegir.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        btnElegir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btnElegirActionPerformed(evt);
             }
         });
 
@@ -292,7 +292,7 @@ public class frmExpedienteGeneral extends javax.swing.JInternalFrame {
                             .addComponent(btnsalir, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(layout.createSequentialGroup()
                             .addGap(51, 51, 51)
-                            .addComponent(jButton1)))
+                            .addComponent(btnElegir)))
                     .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
@@ -308,7 +308,7 @@ public class frmExpedienteGeneral extends javax.swing.JInternalFrame {
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(85, 85, 85)
-                    .addComponent(jButton1)
+                    .addComponent(btnElegir)
                     .addGap(49, 49, 49)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(txtedad, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -363,11 +363,11 @@ public class frmExpedienteGeneral extends javax.swing.JInternalFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void btnElegirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnElegirActionPerformed
        frmTipoPaciente formProd = new frmTipoPaciente();
        Dpanel.add(formProd);
        formProd.show();
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_btnElegirActionPerformed
 
     private void fechaKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_fechaKeyPressed
 
@@ -480,12 +480,12 @@ public class frmExpedienteGeneral extends javax.swing.JInternalFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btcon;
+    public static javax.swing.JButton btnElegir;
     public static javax.swing.JButton btnGuardar;
     public static javax.swing.JButton btnbuscaredicion;
     public static javax.swing.JButton btneditar;
     private javax.swing.JButton btnsalir;
     public static com.toedter.calendar.JDateChooser fecha;
-    public static javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

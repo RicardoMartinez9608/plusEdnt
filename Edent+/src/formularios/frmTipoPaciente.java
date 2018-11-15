@@ -141,7 +141,7 @@ TipopJpaController te = new TipopJpaController(entityTipop.getInstance());
             nombre=jtpacientes.getValueAt(fila, 1).toString();
             frmExpedienteGeneral.txttip.setText(cod);
             
-            
+            frmExpedienteGeneral.btnElegir.setEnabled(false);
             frmExpedienteGeneral.fecha.setEnabled(true);
             frmExpedienteGeneral.txtedad.setEnabled(true);
             frmExpedienteGeneral.txttelefono.setEnabled(true);
