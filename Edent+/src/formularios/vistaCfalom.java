@@ -160,6 +160,30 @@ public class vistaCfalom extends javax.swing.JInternalFrame {
             frmTratamientoOrtodoncia.txtPALI.setText(pali);
             frmTratamientoOrtodoncia.txtPTB.setText(ptb);
             this.dispose();
+            
+            
+            frmTratamientoOrtodoncia.txtanguloA1.setEnabled(true);
+            frmTratamientoOrtodoncia.txtanguloG1.setEnabled(true);
+            frmTratamientoOrtodoncia.txtIMPA1.setEnabled(true);
+            frmTratamientoOrtodoncia.txtJa1.setEnabled(true);
+            frmTratamientoOrtodoncia.txtIS.setEnabled(true);
+            frmTratamientoOrtodoncia.txtII.setEnabled(true);
+            frmTratamientoOrtodoncia.txtFHIS.setEnabled(true);
+            frmTratamientoOrtodoncia.txtANB82.setEnabled(true);
+            frmTratamientoOrtodoncia.txtANB80.setEnabled(true);
+            frmTratamientoOrtodoncia.txtANB2.setEnabled(true);
+            frmTratamientoOrtodoncia.txtPALS.setEnabled(true);
+            frmTratamientoOrtodoncia.txtPALI.setEnabled(true);
+            frmTratamientoOrtodoncia.txtPTB.setEnabled(true);
+            frmTratamientoOrtodoncia.txtDSD.setEnabled(true);
+            frmTratamientoOrtodoncia.txtmaxilares.setEnabled(true);
+            frmTratamientoOrtodoncia.txtEntornoD.setEnabled(true);
+            frmTratamientoOrtodoncia.btnBuscarEditar1.setEnabled(false);
+            frmTratamientoOrtodoncia.btnBuscarEditar2.setEnabled(false);
+            frmTratamientoOrtodoncia.btnGuardar.setEnabled(false);
+            frmTratamientoOrtodoncia.btnEditar1.setEnabled(true);
+            frmTratamientoOrtodoncia.btnElegirTP.setEnabled(false);
+            
         }
     }//GEN-LAST:event_jtPacientesMousePressed
 

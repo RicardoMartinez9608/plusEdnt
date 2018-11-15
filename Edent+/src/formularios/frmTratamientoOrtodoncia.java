@@ -1268,7 +1268,8 @@ public class frmTratamientoOrtodoncia extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_btnEditarActionPerformed
 
     private void btnBuscarEditar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarEditar1ActionPerformed
-       vistaCfalom cfalom = new vistaCfalom();
+
+        vistaCfalom cfalom = new vistaCfalom();
         Dpanel.add(cfalom);
         cfalom.show();
     }//GEN-LAST:event_btnBuscarEditar1ActionPerformed
@@ -1293,7 +1294,7 @@ public class frmTratamientoOrtodoncia extends javax.swing.JInternalFrame {
     private javax.swing.JButton btnCancelar2;
     public static javax.swing.JButton btnEditar;
     public static javax.swing.JButton btnEditar1;
-    private javax.swing.JButton btnElegirTP;
+    public static javax.swing.JButton btnElegirTP;
     public static javax.swing.JButton btnGuardar;
     public static javax.swing.JButton btnGuardar1;
     private javax.swing.JCheckBox chcefalometrica;
