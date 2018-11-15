@@ -20,6 +20,37 @@ public class frmTratamientoOrtodoncia extends javax.swing.JInternalFrame {
      */
     public frmTratamientoOrtodoncia() {
         initComponents();
+            frmTratamientoOrtodoncia.txtanguloA1.setEnabled(false);
+            frmTratamientoOrtodoncia.txtanguloG1.setEnabled(false);
+            frmTratamientoOrtodoncia.txtIMPA1.setEnabled(false);
+            frmTratamientoOrtodoncia.txtJa1.setEnabled(false);
+            frmTratamientoOrtodoncia.txtEJE.setEnabled(false);
+            frmTratamientoOrtodoncia.txtIS.setEnabled(false);
+            frmTratamientoOrtodoncia.txtII.setEnabled(false);
+            frmTratamientoOrtodoncia.txtFHIS.setEnabled(false);
+            frmTratamientoOrtodoncia.txtANB82.setEnabled(false);
+            frmTratamientoOrtodoncia.txtANB80.setEnabled(false);
+            frmTratamientoOrtodoncia.txtANB2.setEnabled(false);
+            frmTratamientoOrtodoncia.txtPALS.setEnabled(false);
+            frmTratamientoOrtodoncia.txtPALI.setEnabled(false);
+            frmTratamientoOrtodoncia.txtPTB.setEnabled(false);
+            frmTratamientoOrtodoncia.txtDSD.setEnabled(false);
+            frmTratamientoOrtodoncia.txtmaxilares.setEnabled(false);
+            frmTratamientoOrtodoncia.txtEntornoD.setEnabled(false);
+            frmTratamientoOrtodoncia.txtbandas.setEnabled(false);
+            frmTratamientoOrtodoncia.txttubos.setEnabled(false);
+            frmTratamientoOrtodoncia.txtotros.setEnabled(false);
+            frmTratamientoOrtodoncia.txtAparato.setEnabled(false);
+            frmTratamientoOrtodoncia.txtexodoncia.setEnabled(false);
+            frmTratamientoOrtodoncia.txtBrakets.setEnabled(false);
+            frmTratamientoOrtodoncia.txtRetenciones.setEnabled(false);
+            frmTratamientoOrtodoncia.txtsecuencia.setEnabled(false);
+            frmTratamientoOrtodoncia.txtMD.setEnabled(false);
+            frmTratamientoOrtodoncia.txtrocabado.setEnabled(false);
+            frmTratamientoOrtodoncia.btnGuardar.setEnabled(false);
+            frmTratamientoOrtodoncia.btnEditar.setEnabled(false);
+            frmTratamientoOrtodoncia.btnGuardar1.setEnabled(false);
+            frmTratamientoOrtodoncia.btnEditar1.setEnabled(false);
     }
 
     /**
@@ -158,8 +189,8 @@ public class frmTratamientoOrtodoncia extends javax.swing.JInternalFrame {
         btnGuardar1 = new javax.swing.JButton();
         btnCancelar1 = new javax.swing.JButton();
         btnBuscarEditar2 = new javax.swing.JButton();
-        btnEditar2 = new javax.swing.JButton();
-        btnGuardarPT2 = new javax.swing.JButton();
+        btnEditar = new javax.swing.JButton();
+        btnGuardar = new javax.swing.JButton();
         btnCancelar2 = new javax.swing.JButton();
         btnElegirTP = new javax.swing.JButton();
 
@@ -884,27 +915,27 @@ public class frmTratamientoOrtodoncia extends javax.swing.JInternalFrame {
         });
         getContentPane().add(btnBuscarEditar2, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 550, -1, -1));
 
-        btnEditar2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/editar.png"))); // NOI18N
-        btnEditar2.setText("Editar");
-        btnEditar2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        btnEditar2.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        btnEditar2.addActionListener(new java.awt.event.ActionListener() {
+        btnEditar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/editar.png"))); // NOI18N
+        btnEditar.setText("Editar");
+        btnEditar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnEditar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        btnEditar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnEditar2ActionPerformed(evt);
+                btnEditarActionPerformed(evt);
             }
         });
-        getContentPane().add(btnEditar2, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 550, -1, -1));
+        getContentPane().add(btnEditar, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 550, -1, -1));
 
-        btnGuardarPT2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/guardar.png"))); // NOI18N
-        btnGuardarPT2.setText("Guardar");
-        btnGuardarPT2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        btnGuardarPT2.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        btnGuardarPT2.addActionListener(new java.awt.event.ActionListener() {
+        btnGuardar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/guardar.png"))); // NOI18N
+        btnGuardar.setText("Guardar");
+        btnGuardar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnGuardar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        btnGuardar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnGuardarPT2ActionPerformed(evt);
+                btnGuardarActionPerformed(evt);
             }
         });
-        getContentPane().add(btnGuardarPT2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1060, 550, -1, -1));
+        getContentPane().add(btnGuardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(1060, 550, -1, -1));
 
         btnCancelar2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/cancelar.png"))); // NOI18N
         btnCancelar2.setText("Cancelar");
@@ -1106,7 +1137,7 @@ public class frmTratamientoOrtodoncia extends javax.swing.JInternalFrame {
 
     }//GEN-LAST:event_txtrocabadoKeyPressed
 
-    private void btnGuardarPT2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarPT2ActionPerformed
+    private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
        Clases trata = new Clases();
        trata.procedureIngresarTrataOr(txtbandas.getText(), txttubos.getText(), txtotros.getText(), txtAparato.getText(), 
                txtexodoncia.getText(), txtBrakets.getText(), txtRetenciones.getText(), txtMD.getText(),1);
@@ -1178,7 +1209,7 @@ public class frmTratamientoOrtodoncia extends javax.swing.JInternalFrame {
         JOptionPane.showMessageDialog(null, "Paciente Almacenado");
         
         
-    }//GEN-LAST:event_btnGuardarPT2ActionPerformed
+    }//GEN-LAST:event_btnGuardarActionPerformed
 
     private void btnGuardar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardar1ActionPerformed
        Clases cefalometria = new Clases();
@@ -1227,13 +1258,13 @@ public class frmTratamientoOrtodoncia extends javax.swing.JInternalFrame {
         JOptionPane.showMessageDialog(null, "Tratamiento Actualizado Exitosamente");
     }//GEN-LAST:event_btnEditar1ActionPerformed
 
-    private void btnEditar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditar2ActionPerformed
+    private void btnEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarActionPerformed
         Clases UpdateTrata = new Clases();
         UpdateTrata.procedureUpdateIngresarTrataOr(txtbandas.getText(), txttubos.getText(), txtotros.getText(), txtAparato.getText(), 
                txtexodoncia.getText(), txtBrakets.getText(), txtRetenciones.getText(), txtMD.getText(),Integer.parseInt(lbidplan.getText()));
         JOptionPane.showMessageDialog(null, "Tratamiento Actualizado Exitosamente");
         
-    }//GEN-LAST:event_btnEditar2ActionPerformed
+    }//GEN-LAST:event_btnEditarActionPerformed
 
     private void btnBuscarEditar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarEditar1ActionPerformed
        vistaCfalom cfalom = new vistaCfalom();
@@ -1259,11 +1290,11 @@ public class frmTratamientoOrtodoncia extends javax.swing.JInternalFrame {
     private javax.swing.JButton btnBuscarEditar2;
     private javax.swing.JButton btnCancelar1;
     private javax.swing.JButton btnCancelar2;
-    private javax.swing.JButton btnEditar1;
-    private javax.swing.JButton btnEditar2;
+    public static javax.swing.JButton btnEditar;
+    public static javax.swing.JButton btnEditar1;
     private javax.swing.JButton btnElegirTP;
-    private javax.swing.JButton btnGuardar1;
-    private javax.swing.JButton btnGuardarPT2;
+    public static javax.swing.JButton btnGuardar;
+    public static javax.swing.JButton btnGuardar1;
     private javax.swing.JCheckBox chcefalometrica;
     private javax.swing.JCheckBox chcurvaleve1;
     private javax.swing.JCheckBox chcurvamoderada1;
