@@ -153,6 +153,7 @@ public class vistaTratOr extends javax.swing.JInternalFrame {
           
             this.dispose();
             
+            
             frmTratamientoOrtodoncia.txtbandas.setEnabled(true);
             frmTratamientoOrtodoncia.txttubos.setEnabled(true);
             frmTratamientoOrtodoncia.txtotros.setEnabled(true);
