@@ -35,6 +35,7 @@ public class frmExpedienteOrtodoncia extends javax.swing.JInternalFrame {
         frmExpedienteOrtodoncia.txtExamenC.setEnabled(false);
         frmExpedienteOrtodoncia.txtDX.setEnabled(false);
         frmExpedienteOrtodoncia.txtdireccion.setEnabled(false);
+        frmExpedienteOrtodoncia.txtpresupuesto.setEnabled(false);
         
     }
     public void limpiarTxt(){
@@ -48,6 +49,7 @@ public class frmExpedienteOrtodoncia extends javax.swing.JInternalFrame {
         txtExamenC.setText("");
         txtDX.setText("");
         txtdireccion.setText("");
+        jfecha.setCalendar(null);
     }
 
     /**
@@ -536,7 +538,12 @@ public class frmExpedienteOrtodoncia extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_btnbuscaredicionActionPerformed
 
     private void btneditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btneditarActionPerformed
-         String dia = Integer.toString(jfecha.getCalendar().get(Calendar.DAY_OF_MONTH));
+        if(jfecha.getDate()==null){
+            JOptionPane.showMessageDialog(null, "Debe ingresar la fecha de la edicion de datos");
+        }else
+        {
+        
+        String dia = Integer.toString(jfecha.getCalendar().get(Calendar.DAY_OF_MONTH));
       String mes = Integer.toString(jfecha.getCalendar().get(Calendar.MONTH) + 1);
       String year = Integer.toString(jfecha.getCalendar().get(Calendar.YEAR));
       String fechaA = (dia + "-" + mes+ "-" + year);
@@ -562,9 +569,15 @@ public class frmExpedienteOrtodoncia extends javax.swing.JInternalFrame {
         frmExpedienteOrtodoncia.txtExamenC.setEnabled(false);
         frmExpedienteOrtodoncia.txtDX.setEnabled(false);
         frmExpedienteOrtodoncia.txtdireccion.setEnabled(false);
+        frmExpedienteOrtodoncia.txtpresupuesto.setEnabled(false);
+         } 
     }//GEN-LAST:event_btneditarActionPerformed
 
     private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
+      if(jfecha.getDate()==null){
+            JOptionPane.showMessageDialog(null, "Debe ingresar la fecha para guardar los datos");
+        }else
+        {
       String dia = Integer.toString(jfecha.getCalendar().get(Calendar.DAY_OF_MONTH));
       String mes = Integer.toString(jfecha.getCalendar().get(Calendar.MONTH) + 1);
       String year = Integer.toString(jfecha.getCalendar().get(Calendar.YEAR));
@@ -577,6 +590,7 @@ public class frmExpedienteOrtodoncia extends javax.swing.JInternalFrame {
               , txtHistoriaM.getText(), txtHistoriaO.getText(), txtExamenC.getText(), txtDX.getText(),Integer.parseInt(lblid.getText()));
       JOptionPane.showMessageDialog(null, "Tratamiento ingresado correctamente");
       limpiarTxt();
+      }
     }//GEN-LAST:event_btnGuardarActionPerformed
 
     private void btnsalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnsalirActionPerformed

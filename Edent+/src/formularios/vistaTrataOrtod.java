@@ -183,6 +183,7 @@ public class vistaTrataOrtod extends javax.swing.JInternalFrame {
         frmExpedienteOrtodoncia.txtHistoriaM.setEnabled(true);
         frmExpedienteOrtodoncia.txtExamenC.setEnabled(true);
         frmExpedienteOrtodoncia.txtDX.setEnabled(true);
+        frmExpedienteOrtodoncia.txtpresupuesto.setEnabled(true);
     }//GEN-LAST:event_jtPacientesMousePressed
 
     private void btnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarActionPerformed

@@ -435,6 +435,10 @@ public class frmExpedienteGeneral extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_btnbuscaredicionActionPerformed
 
     private void btneditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btneditarActionPerformed
+      if(fecha.getDate()==null){
+            JOptionPane.showMessageDialog(null, "Debe ingresar la fecha de la edicion de datos");
+        }else
+        {
       String dia = Integer.toString(fecha.getCalendar().get(Calendar.DAY_OF_MONTH));
       String mes = Integer.toString(fecha.getCalendar().get(Calendar.MONTH) + 1);
       String year = Integer.toString(fecha.getCalendar().get(Calendar.YEAR));
@@ -458,11 +462,11 @@ public class frmExpedienteGeneral extends javax.swing.JInternalFrame {
         frmExpedienteGeneral.btnbuscaredicion.setEnabled(true);
         frmExpedienteGeneral.btnGuardar.setEnabled(false);
         frmExpedienteGeneral.btnElegir.setEnabled(true);
-                
+        }            
     }//GEN-LAST:event_btneditarActionPerformed
 
     private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
-        if (this.txtnombre.getText().length() == 0 || this.txtapellido.getText().length() == 0|| this.txtedad.getText().length() == 0){
+        if (this.txtnombre.getText().length() == 0 || this.txtapellido.getText().length() == 0|| fecha.getDate()==null){
             JOptionPane.showMessageDialog(null, "Debe complementar los campos requeridos");
             }else{
         
