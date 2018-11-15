@@ -20,7 +20,11 @@ public class frmTratamientoOrtodoncia extends javax.swing.JInternalFrame {
      */
     public frmTratamientoOrtodoncia() {
         initComponents();
-            frmTratamientoOrtodoncia.txtanguloA1.setEnabled(false);
+           activacion();
+            
+    }
+    public void activacion(){
+         frmTratamientoOrtodoncia.txtanguloA1.setEnabled(false);
             frmTratamientoOrtodoncia.txtanguloG1.setEnabled(false);
             frmTratamientoOrtodoncia.txtIMPA1.setEnabled(false);
             frmTratamientoOrtodoncia.txtJa1.setEnabled(false);
@@ -51,7 +55,41 @@ public class frmTratamientoOrtodoncia extends javax.swing.JInternalFrame {
             frmTratamientoOrtodoncia.btnEditar.setEnabled(false);
             frmTratamientoOrtodoncia.btnGuardar1.setEnabled(false);
             frmTratamientoOrtodoncia.btnEditar1.setEnabled(false);
-            
+    }
+    
+    public void limpiarTXT(){
+        txtanguloA1.setText("");
+        txtanguloG1.setText("");
+        txtIMPA1.setText("");
+        txtJa1.setText("");
+        txtJa1.setText("");
+        txtEJE.setText("");
+        txtIS.setText("");
+        txtII.setText("");
+        txtFHIS.setText("");
+        txtANB82.setText("");
+        txtANB80.setText("");
+        txtANB2.setText("");
+        txtPALS.setText("");
+        txtPALI.setText("");
+        txtPTB.setText("");
+        txtDSD.setText("");
+        txtmaxilares.setText("");
+        txtEntornoD.setText("");
+        txttubos.setText("");
+        txtbandas.setText("");
+        txtotros.setText("");
+        txtAparato.setText("");
+        txtexodoncia.setText("");
+        txtBrakets.setText("");
+        txtRetenciones.setText("");
+        txtsecuencia.setText("");
+        txtMD.setText("");
+        txtrocabado.setText("");
+        
+        
+        
+        
     }
 
     /**
@@ -1245,6 +1283,7 @@ public class frmTratamientoOrtodoncia extends javax.swing.JInternalFrame {
        Clases spee = new Clases();
        
        spee.procedureTrataSpee(speeleve, speemoderada, speesvera,1);
+       limpiarTXT();
       
        JOptionPane.showMessageDialog(null, "Tratamiento Almacenado");
        
@@ -1257,6 +1296,8 @@ public class frmTratamientoOrtodoncia extends javax.swing.JInternalFrame {
                txtANB2.getText(), txtPALS.getText(), txtPALI.getText(), txtPTB.getText(), txtDSD.getText(), 
                txtmaxilares.getText(), txtEntornoD.getText(),Integer.parseInt(lbidplan.getText()));
         JOptionPane.showMessageDialog(null, "Tratamiento Actualizado Exitosamente");
+        limpiarTXT();
+           activacion();
     }//GEN-LAST:event_btnEditar1ActionPerformed
 
     private void btnEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarActionPerformed
@@ -1264,6 +1305,8 @@ public class frmTratamientoOrtodoncia extends javax.swing.JInternalFrame {
         UpdateTrata.procedureUpdateIngresarTrataOr(txtbandas.getText(), txttubos.getText(), txtotros.getText(), txtAparato.getText(), 
                txtexodoncia.getText(), txtBrakets.getText(), txtRetenciones.getText(), txtMD.getText(),Integer.parseInt(lbidplan.getText()));
         JOptionPane.showMessageDialog(null, "Tratamiento Actualizado Exitosamente");
+        limpiarTXT();
+        activacion();
         
     }//GEN-LAST:event_btnEditarActionPerformed
 
