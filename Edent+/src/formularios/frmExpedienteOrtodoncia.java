@@ -1,26 +1,17 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package formularios;
 
 import Clases.Clases;
+import Clases.internalFrameImagen;
 import static formularios.frmPrincipal.Dpanel;
 import java.util.Calendar;
 import javax.swing.JOptionPane;
 
-/**
- *
- * @author ricar
- */
-public class frmExpedienteOrtodoncia extends javax.swing.JInternalFrame {
+public class frmExpedienteOrtodoncia extends internalFrameImagen {
 
-    /**
-     * Creates new form frmExpedienteOrtodoncia
-     */
     public frmExpedienteOrtodoncia() {
         initComponents();
+        setImagenw("imag1.jpg");
         frmExpedienteOrtodoncia.jfecha.setEnabled(false);
         frmExpedienteOrtodoncia.txtedad.setEnabled(false);
         frmExpedienteOrtodoncia.txttelefono.setEnabled(false);
