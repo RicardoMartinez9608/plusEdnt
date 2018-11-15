@@ -170,6 +170,7 @@ public class vistaPG extends javax.swing.JInternalFrame {
         frmExpedienteGeneral.txtdireccion.setEnabled(true);
         frmExpedienteGeneral.btneditar.setEnabled(true);
         frmExpedienteGeneral.btnbuscaredicion.setEnabled(false);
+        frmExpedienteGeneral.btnElegir.setEnabled(false);
         frmExpedienteGeneral.btnGuardar.setEnabled(false);
            
 
