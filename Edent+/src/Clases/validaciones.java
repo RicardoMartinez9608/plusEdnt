@@ -1,6 +1,8 @@
 
 package Clases;
 
+import conexionSQL.*;
+import Clases.*;
 import java.awt.Toolkit;
 import javax.swing.JOptionPane;
 
