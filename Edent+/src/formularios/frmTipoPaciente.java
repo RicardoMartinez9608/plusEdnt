@@ -74,6 +74,11 @@ TipopJpaController te = new TipopJpaController(entityTipop.getInstance());
         btnCancelar.setText("Cancelar");
         btnCancelar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnCancelar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        btnCancelar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCancelarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -158,7 +163,7 @@ TipopJpaController te = new TipopJpaController(entityTipop.getInstance());
     }//GEN-LAST:event_jtpacientesMousePressed
 
     private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
-        String tip=this.txtpaciente.getText();
+        String tip=this.txtpaciente.getText().toUpperCase();
         
         if(tip.length()>0){
             TipopJpaController t = new TipopJpaController(entityTipop.getInstance());
@@ -177,6 +182,10 @@ TipopJpaController te = new TipopJpaController(entityTipop.getInstance());
         }
          
     }//GEN-LAST:event_btnGuardarActionPerformed
+
+    private void btnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarActionPerformed
+        this.dispose();
+    }//GEN-LAST:event_btnCancelarActionPerformed
 public static DefaultTableModel modelo2;
     private void CrearModelo2(){
         try {
