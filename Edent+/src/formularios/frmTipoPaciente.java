@@ -1,5 +1,6 @@
 package formularios;
 
+import Clases.internalFrameImagen;
 import Entidad.Tipop;
 import Entidad.TipopJpaController;
 import Entidad.entityTipop;
@@ -7,11 +8,12 @@ import java.util.List;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
-public class frmTipoPaciente extends javax.swing.JInternalFrame {
+public class frmTipoPaciente extends internalFrameImagen {
 TipopJpaController te = new TipopJpaController(entityTipop.getInstance());
 
     public frmTipoPaciente() {
         initComponents();
+        setImagenw("imag2.png");
         CrearModelo2();
         LlenarTabla();
     }
