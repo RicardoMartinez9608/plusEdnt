@@ -13,7 +13,7 @@ TipopJpaController te = new TipopJpaController(entityTipop.getInstance());
 
     public frmTipoPaciente() {
         initComponents();
-        setImagenw("imag2.png");
+        setImagenw("imag1.jpg");
         CrearModelo2();
         LlenarTabla();
     }
