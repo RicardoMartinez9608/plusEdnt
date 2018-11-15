@@ -5,9 +5,19 @@ import Clases.cSesion;
 import javax.swing.JOptionPane;
 
 public class login extends javax.swing.JFrame {
-
+    cSesion indicaciones;
     public login() {
         initComponents();
+        indicaciones= new cSesion();
+        Integer res= indicaciones.ContarUsuarios();
+        if (res.equals(0)) {
+            JOptionPane.showMessageDialog(null, "Debe Registrarse");
+            indicaciones.procTipoUsser("ADMINISTRADOR");
+            Instalacion install = new Instalacion();  
+            install.show();
+//            this.btnSalirActionPerformed(true);
+//            System.exit(0);           
+        }
     }
 
     @SuppressWarnings("unchecked")
@@ -107,6 +117,9 @@ public class login extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    public void cerrar(){
+        this.dispose();
+    }
     private void txtUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtUsuarioActionPerformed
 
     }//GEN-LAST:event_txtUsuarioActionPerformed
@@ -121,18 +134,21 @@ public class login extends javax.swing.JFrame {
             if ((!(this.txtUsuario.getText().isEmpty()) && this.txtUsuario.getText()!=null)
                 && (!(this.txtContra.getText().isEmpty()) && this.txtContra.getText()!=null))
             {
-                cSesion indicaciones = new cSesion();
+                
                 String usser= this.txtUsuario.getText().trim();
                 String contra=this.txtContra.getText();
-                Integer resul =indicaciones.procedureLogin(usser,contra);
+                Integer resul = indicaciones.procedureLogin(usser,contra);
                 if (resul.equals(1))
                 {
+//                    ArrayList<String> datosU= new ArrayList<String>();
                     JOptionPane.showMessageDialog(null, "Credenciales Correctas");
                     frmPrincipal frmPrim = new frmPrincipal();
                     frmPrim.show();
+                    this.dispose();
                 }else
                 {
                     JOptionPane.showMessageDialog(null, "Credenciales Incorrectas");
+                    this.txtContra.setText("");
                 }
             }
             else

@@ -288,8 +288,16 @@ public class Instalacion extends javax.swing.JFrame {
             String type=String.valueOf(this.cbTipo.getSelectedItem());
 //            String type="ADMINISTRADOR";
             String msj = indicaciones.procedureRegistarLogin(nomb,ape,usser,contra,correo,type);
-            JOptionPane.showMessageDialog(null, msj);
-//            this.dispose();
+            if (msj.equals("Usuario Registrado Correctamente")) {
+                JOptionPane.showMessageDialog(null, msj);                
+                login log = new login();
+                log.show();
+                this.dispose();
+                
+            }else{
+                JOptionPane.showMessageDialog(null, msj);
+                this.txtUsua.setText("");
+            }             
         }else
         {
             JOptionPane.showMessageDialog(null, "Dejó Campos Vacíos");

@@ -2,6 +2,7 @@
 package Clases;
 
 import java.sql.CallableStatement;
+import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import org.apache.commons.codec.digest.DigestUtils;
 
@@ -17,14 +18,14 @@ public class cSesion extends ConexionDB {
                 proc.setString("pNombre",Nombre );
                 proc.setString("pApellido",Apellido );
                 proc.setString("pUsuario",Usuario );
-                proc.setString("pContra",Contrasenia);
+                proc.setString("pContra",DigestUtils.md5Hex(Contrasenia));
                 proc.setString("pCorreo",Correo );
                 proc.setString("pTipoU",TipoUsser );
                 proc.registerOutParameter("pmsj", java.sql.Types.VARCHAR);
                 proc.executeQuery();           
 
                 resultado = proc.getString("pmsj");
-            } 
+            }
            catch (Exception e) {
                 JOptionPane.showMessageDialog(null, e);
            }
@@ -37,7 +38,7 @@ public class cSesion extends ConexionDB {
             try {
                 CallableStatement proc = ConexionDB().prepareCall("{CALL LogIn(?,?,?)}");                
                 proc.setString("pUsser",usuario );
-                proc.setString("pContra",Contrasenia);
+                proc.setString("pContra",DigestUtils.md5Hex(Contrasenia));
                 proc.registerOutParameter("pmsj", java.sql.Types.INTEGER);
                 proc.executeQuery();            
 
@@ -48,4 +49,67 @@ public class cSesion extends ConexionDB {
             }
             return resultado;
         }
+        //funcion para verificar si existen usuarios en la DB
+        public Integer ContarUsuarios()
+        {
+            Integer resultado=null;
+            try {
+                CallableStatement proc = ConexionDB().prepareCall("{CALL VerificarUssers(?)}");
+                proc.registerOutParameter("pmsj", java.sql.Types.INTEGER);
+                proc.executeQuery();            
+
+                resultado = proc.getInt("pmsj");
+                
+            return resultado;
+            } 
+            catch (Exception e) {                  
+                JOptionPane.showMessageDialog(null, e);                
+            return resultado;
+            }
+        }        
+        //Funcion para ingresar el tipo de usuario
+        public void procTipoUsser(String TipoU)
+        {
+            String resultado=null;
+            try {
+                CallableStatement proc = ConexionDB().prepareCall("{CALL InsTipoUsser(?,?)}");                
+                proc.setString("pUsser",TipoU );
+                proc.registerOutParameter("pmsj", java.sql.Types.VARCHAR);
+                proc.executeQuery();            
+
+                resultado = proc.getString("pmsj");
+            } 
+            catch (Exception e) {                  
+                JOptionPane.showMessageDialog(null, e);
+            }
+        }
+//        public ArrayList<String> DatosUsser(String user)
+//        {
+//            String nombre="";
+//            String ape="";
+//            String acce="";
+//            ArrayList<String> datos = new ArrayList<String>();
+//            datos.clear();
+//            try {
+//                CallableStatement proc = ConexionDB().prepareCall("{CALL DatosUsser(?,?,?,?)}");
+//                proc.setString("pUsser",user );
+//                proc.registerOutParameter("pNombre", java.sql.Types.VARCHAR);
+//                proc.registerOutParameter("pApellido", java.sql.Types.VARCHAR);                
+//                proc.registerOutParameter("pAcceso", java.sql.Types.VARCHAR);
+//                proc.executeQuery();            
+//
+//                nombre = proc.getString("pNombre");
+//                ape=proc.getString("pApellido");
+//                acce=proc.getString("pAcceso");
+//                datos.add(nombre);
+//                datos.add(ape);
+//                datos.add(acce);
+//                
+//            return datos;
+//            } 
+//            catch (Exception e) {                  
+//                JOptionPane.showMessageDialog(null, e);                
+//            return datos;
+//            }
+//        }
 }
