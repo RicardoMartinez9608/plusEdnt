@@ -158,16 +158,19 @@ public class vistaPG extends javax.swing.JInternalFrame {
             frmExpedienteGeneral.txttelefono.setText(telefono);
             frmExpedienteGeneral.txtedad.setText(edad);
             
-            frmExpedienteGeneral.txtnombre.setText(nombre);
-            frmExpedienteGeneral.lblid.setText(id);
-            frmExpedienteGeneral.txtapellido.setText(apellido);
-            frmExpedienteGeneral.txtedad.setText(edad);
-            frmExpedienteGeneral.txttelefono.setText(telefono);
-            frmExpedienteGeneral.txtdireccion.setText(direccion);
             frmExpedienteGeneral.btneditar.setEnabled(true);     
             
             this.dispose();
          
+        frmExpedienteGeneral.fecha.setEnabled(true);
+        frmExpedienteGeneral.txtedad.setEnabled(true);
+        frmExpedienteGeneral.txttelefono.setEnabled(true);
+        frmExpedienteGeneral.txtnombre.setEnabled(true);
+        frmExpedienteGeneral.txtapellido.setEnabled(true);
+        frmExpedienteGeneral.txtdireccion.setEnabled(true);
+        frmExpedienteGeneral.btneditar.setEnabled(true);
+        frmExpedienteGeneral.btnbuscaredicion.setEnabled(false);
+        frmExpedienteGeneral.btnGuardar.setEnabled(false);
            
 
 
