@@ -18,7 +18,7 @@ public class cSesion extends ConexionDB {
                 proc.setString("pNombre",Nombre );
                 proc.setString("pApellido",Apellido );
                 proc.setString("pUsuario",Usuario );
-                proc.setString("pContra",Contrasenia);
+                proc.setString("pContra",DigestUtils.md5Hex(Contrasenia));
                 proc.setString("pCorreo",Correo );
                 proc.setString("pTipoU",TipoUsser );
                 proc.registerOutParameter("pmsj", java.sql.Types.VARCHAR);
@@ -38,7 +38,7 @@ public class cSesion extends ConexionDB {
             try {
                 CallableStatement proc = ConexionDB().prepareCall("{CALL LogIn(?,?,?)}");                
                 proc.setString("pUsser",usuario );
-                proc.setString("pContra",Contrasenia);
+                proc.setString("pContra",DigestUtils.md5Hex(Contrasenia));
                 proc.registerOutParameter("pmsj", java.sql.Types.INTEGER);
                 proc.executeQuery();            
 
@@ -65,6 +65,22 @@ public class cSesion extends ConexionDB {
             catch (Exception e) {                  
                 JOptionPane.showMessageDialog(null, e);                
             return resultado;
+            }
+        }
+        //Funcion para ingresar el tipo de usuario
+        public void procTipoUsser(String TipoU)
+        {
+            String resultado=null;
+            try {
+                CallableStatement proc = ConexionDB().prepareCall("{CALL InsTipoUsser(?,?)}");                
+                proc.setString("pUsser",TipoU );
+                proc.registerOutParameter("pmsj", java.sql.Types.VARCHAR);
+                proc.executeQuery();            
+
+                resultado = proc.getString("pmsj");
+            } 
+            catch (Exception e) {                  
+                JOptionPane.showMessageDialog(null, e);
             }
         }
 //        public ArrayList<String> DatosUsser(String user)
