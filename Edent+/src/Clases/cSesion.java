@@ -66,7 +66,7 @@ public class cSesion extends ConexionDB {
                 JOptionPane.showMessageDialog(null, e);                
             return resultado;
             }
-        }
+        }        
         //Funcion para ingresar el tipo de usuario
         public void procTipoUsser(String TipoU)
         {
