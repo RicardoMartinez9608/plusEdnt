@@ -30,6 +30,7 @@ public class frmExpedienteGeneral extends javax.swing.JInternalFrame {
         txttelefono.setText("");
         txtedad.setText("");
         lblid.setText("");
+        fecha.setCalendar(null);
         
        
     }
@@ -445,6 +446,18 @@ public class frmExpedienteGeneral extends javax.swing.JInternalFrame {
         
                 JOptionPane.showMessageDialog(null, "Datos Actualizados Correctamente");
         limpiarTxt();
+        
+        
+        frmExpedienteGeneral.fecha.setEnabled(true);
+        frmExpedienteGeneral.txtedad.setEnabled(false);
+        frmExpedienteGeneral.txttelefono.setEnabled(false);
+        frmExpedienteGeneral.txtnombre.setEnabled(false);
+        frmExpedienteGeneral.txtapellido.setEnabled(false);
+        frmExpedienteGeneral.txtdireccion.setEnabled(false);
+        frmExpedienteGeneral.btneditar.setEnabled(false);
+        frmExpedienteGeneral.btnbuscaredicion.setEnabled(true);
+        frmExpedienteGeneral.btnGuardar.setEnabled(false);
+        frmExpedienteGeneral.btnElegir.setEnabled(true);
                 
     }//GEN-LAST:event_btneditarActionPerformed
 
