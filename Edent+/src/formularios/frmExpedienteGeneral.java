@@ -12,6 +12,16 @@ public class frmExpedienteGeneral extends javax.swing.JInternalFrame {
 
     public frmExpedienteGeneral() {
         initComponents();
+         btcon.setVisible(false);
+        frmExpedienteGeneral.fecha.setEnabled(false);
+        frmExpedienteGeneral.txtedad.setEnabled(false);
+        frmExpedienteGeneral.txttelefono.setEnabled(false);
+        frmExpedienteGeneral.txtnombre.setEnabled(false);
+        frmExpedienteGeneral.txtapellido.setEnabled(false);
+        frmExpedienteGeneral.txtdireccion.setEnabled(false);
+        frmExpedienteGeneral.btneditar.setEnabled(false);
+        frmExpedienteGeneral.btnbuscaredicion.setEnabled(true);
+        frmExpedienteGeneral.btnGuardar.setEnabled(false);
     }
      public void limpiarTxt(){
         txtnombre.setText("");
@@ -294,7 +304,7 @@ public class frmExpedienteGeneral extends javax.swing.JInternalFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
                     .addComponent(txttip, javax.swing.GroupLayout.PREFERRED_SIZE, 0, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(477, Short.MAX_VALUE))
+                .addContainerGap(475, Short.MAX_VALUE))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(85, 85, 85)

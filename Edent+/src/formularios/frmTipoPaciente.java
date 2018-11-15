@@ -140,6 +140,17 @@ TipopJpaController te = new TipopJpaController(entityTipop.getInstance());
             cod=jtpacientes.getValueAt(fila, 0).toString(); 
             nombre=jtpacientes.getValueAt(fila, 1).toString();
             frmExpedienteGeneral.txttip.setText(cod);
+            
+            
+            frmExpedienteGeneral.fecha.setEnabled(true);
+            frmExpedienteGeneral.txtedad.setEnabled(true);
+            frmExpedienteGeneral.txttelefono.setEnabled(true);
+            frmExpedienteGeneral.txtnombre.setEnabled(true);
+            frmExpedienteGeneral.txtapellido.setEnabled(true);
+            frmExpedienteGeneral.txtdireccion.setEnabled(true);
+//            ExpedienteGeneral.btneditar.setEnabled(true);
+            frmExpedienteGeneral.btnbuscaredicion.setEnabled(false);
+            frmExpedienteGeneral.btnGuardar.setEnabled(true);
            
             this.dispose();
          }
