@@ -1,13 +1,17 @@
 
 package formularios;
 
+import ClaseFondos.*;
 import Clases.cSesion;
 import conexionSQL.Login;
 import javax.swing.JOptionPane;
 import formularios.*;
+import java.awt.Image;
+import org.apache.commons.codec.digest.DigestUtils;
 
 public class login extends javax.swing.JFrame {
 
+    Image imagen;
     public login() {
         initComponents();
     }
@@ -39,14 +43,18 @@ public class login extends javax.swing.JFrame {
 
         jLabel2.setText("Contraseña:");
 
-        btnEntrar.setText("Entrar");
+        btnEntrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/btn_entrar1.png"))); // NOI18N
+        btnEntrar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnEntrar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         btnEntrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnEntrarActionPerformed(evt);
             }
         });
 
-        btnSalir.setText("Salir");
+        btnSalir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/btn_salir1.png"))); // NOI18N
+        btnSalir.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnSalir.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         btnSalir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSalirActionPerformed(evt);
@@ -72,13 +80,13 @@ public class login extends javax.swing.JFrame {
                             .addComponent(jLabel1)
                             .addGap(40, 40, 40)
                             .addComponent(txtUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 213, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(75, Short.MAX_VALUE))
+                .addContainerGap(65, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(64, 64, 64)
+                .addGap(21, 21, 21)
                 .addComponent(btnEntrar)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(btnSalir)
-                .addGap(65, 65, 65))
+                .addGap(47, 47, 47))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -93,12 +101,14 @@ public class login extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtContra, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 33, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnEntrar)
                     .addComponent(btnSalir))
-                .addGap(54, 54, 54))
+                .addGap(35, 35, 35))
         );
+
+        getAccessibleContext().setAccessibleParent(this);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -107,17 +117,21 @@ public class login extends javax.swing.JFrame {
 
     }//GEN-LAST:event_txtUsuarioActionPerformed
 
+    private void btnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirActionPerformed
+        this.dispose();
+    }//GEN-LAST:event_btnSalirActionPerformed
+
     private void btnEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEntrarActionPerformed
-       try
-       {
-           if ((!(this.txtUsuario.getText().isEmpty()) && this.txtUsuario.getText()!=null) 
+        try
+        {
+            if ((!(this.txtUsuario.getText().isEmpty()) && this.txtUsuario.getText()!=null)
                 && (!(this.txtContra.getText().isEmpty()) && this.txtContra.getText()!=null))
-            {            
+            {
                 cSesion indicaciones = new cSesion();
                 String usser= this.txtUsuario.getText().trim();
-                String contra=this.txtContra.getText().trim();
-                Integer resul =indicaciones.procedureLogin(usser,contra); 
-                if (resul==1) 
+                String contra=this.txtContra.getText();
+                Integer resul =indicaciones.procedureLogin(usser,contra);
+                if (resul.equals(1))
                 {
                     JOptionPane.showMessageDialog(null, "Credenciales Correctas");
                     frmPrincipal frmPrim = new frmPrincipal();
@@ -125,22 +139,18 @@ public class login extends javax.swing.JFrame {
                 }else
                 {
                     JOptionPane.showMessageDialog(null, "Credenciales Incorrectas");
-                }            
+                }
             }
             else
             {
                 JOptionPane.showMessageDialog(null, "Dejó Campos Vacíos");
-            }        
+            }
         }
         catch(Exception e)
-        {  
-           JOptionPane.showMessageDialog(null, "Credenciales Incorrectas");
+        {
+            JOptionPane.showMessageDialog(null, "Credenciales Incorrectas");
         }
     }//GEN-LAST:event_btnEntrarActionPerformed
-
-    private void btnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirActionPerformed
-        this.dispose();        
-    }//GEN-LAST:event_btnSalirActionPerformed
 
     /**
      * @param args the command line arguments
