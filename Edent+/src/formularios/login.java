@@ -1,17 +1,11 @@
 
 package formularios;
 
-import ClaseFondos.*;
 import Clases.cSesion;
-import conexionSQL.Login;
 import javax.swing.JOptionPane;
-import formularios.*;
-import java.awt.Image;
-import org.apache.commons.codec.digest.DigestUtils;
 
 public class login extends javax.swing.JFrame {
 
-    Image imagen;
     public login() {
         initComponents();
     }
