@@ -154,6 +154,18 @@ public class vistaPClinica extends javax.swing.JInternalFrame {
             frmTratamientoGeneral.lblapellido.setText(apellido);
             
             this.dispose();
+            
+        frmTratamientoGeneral.btnGuardar.setEnabled(true);
+        frmTratamientoGeneral.btneditar.setEnabled(true);
+        frmTratamientoGeneral.txtDX.setEnabled(true);
+        frmTratamientoGeneral.txtExamenC.setEnabled(true);
+        frmTratamientoGeneral.txtHistoriaM.setEnabled(true);
+        frmTratamientoGeneral.txtHistoriaO.setEnabled(true);
+        frmTratamientoGeneral.txtMotivoC.setEnabled(true);
+        frmTratamientoGeneral.txtpresupuesto.setEnabled(true);
+        frmTratamientoGeneral.btneditar.setEnabled(false);
+        frmTratamientoGeneral.btnselecionaredicion.setEnabled(false);
+        
         }
     }//GEN-LAST:event_jtPacientesMousePressed
 

@@ -162,6 +162,17 @@ public class vistaTrataGenral extends javax.swing.JInternalFrame {
             
 
             this.dispose();
+            
+        frmTratamientoGeneral.btneditar.setEnabled(true);
+        frmTratamientoGeneral.btnGuardar.setEnabled(false);
+        frmTratamientoGeneral.txtDX.setEnabled(true);
+        frmTratamientoGeneral.txtExamenC.setEnabled(true);
+        frmTratamientoGeneral.txtHistoriaM.setEnabled(true);
+        frmTratamientoGeneral.txtHistoriaO.setEnabled(true);
+        frmTratamientoGeneral.txtMotivoC.setEnabled(true);
+        frmTratamientoGeneral.txtpresupuesto.setEnabled(true);
+        frmTratamientoGeneral.btnagregarpc.setEnabled(false);
+        frmTratamientoGeneral.btnselecionaredicion.setEnabled(false);
         }
     }//GEN-LAST:event_jtPacientesMousePressed
 
