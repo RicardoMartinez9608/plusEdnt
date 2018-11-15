@@ -169,6 +169,20 @@ public class vistaTrataOrtod extends javax.swing.JInternalFrame {
 
             this.dispose();
         }
+        frmExpedienteOrtodoncia.jfecha.setEnabled(false);
+        frmExpedienteOrtodoncia.txtedad.setEnabled(false);
+        frmExpedienteOrtodoncia.txttelefono.setEnabled(false);
+        frmExpedienteOrtodoncia.txtnombre.setEnabled(false);
+        frmExpedienteOrtodoncia.txtapellido.setEnabled(false);
+        frmExpedienteOrtodoncia.txtdireccion.setEnabled(false);
+        frmExpedienteOrtodoncia.btneditar.setEnabled(true);
+        frmExpedienteOrtodoncia.btnbuscaredicion.setEnabled(false);
+        frmExpedienteOrtodoncia.btnGuardar.setEnabled(false);
+        frmExpedienteOrtodoncia.txtMotivoC.setEnabled(true);
+        frmExpedienteOrtodoncia.txtHistoriaO.setEnabled(true);
+        frmExpedienteOrtodoncia.txtHistoriaM.setEnabled(true);
+        frmExpedienteOrtodoncia.txtExamenC.setEnabled(true);
+        frmExpedienteOrtodoncia.txtDX.setEnabled(true);
     }//GEN-LAST:event_jtPacientesMousePressed
 
     private void btnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarActionPerformed
