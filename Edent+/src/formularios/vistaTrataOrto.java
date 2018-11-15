@@ -159,6 +159,40 @@ public class vistaTrataOrto extends javax.swing.JInternalFrame {
 
             this.dispose();
         }
+        
+            frmTratamientoOrtodoncia.txtanguloA1.setEnabled(true);
+            frmTratamientoOrtodoncia.txtanguloG1.setEnabled(true);
+            frmTratamientoOrtodoncia.txtIMPA1.setEnabled(true);
+            frmTratamientoOrtodoncia.txtJa1.setEnabled(true);
+            frmTratamientoOrtodoncia.txtEJE.setEnabled(true);
+            frmTratamientoOrtodoncia.txtIS.setEnabled(true);
+            frmTratamientoOrtodoncia.txtII.setEnabled(true);
+            frmTratamientoOrtodoncia.txtFHIS.setEnabled(true);
+            frmTratamientoOrtodoncia.txtANB82.setEnabled(true);
+            frmTratamientoOrtodoncia.txtANB80.setEnabled(true);
+            frmTratamientoOrtodoncia.txtANB2.setEnabled(true);
+            frmTratamientoOrtodoncia.txtPALS.setEnabled(true);
+            frmTratamientoOrtodoncia.txtPALI.setEnabled(true);
+            frmTratamientoOrtodoncia.txtPTB.setEnabled(true);
+            frmTratamientoOrtodoncia.txtDSD.setEnabled(true);
+            frmTratamientoOrtodoncia.txtmaxilares.setEnabled(true);
+            frmTratamientoOrtodoncia.txtEntornoD.setEnabled(true);
+            frmTratamientoOrtodoncia.txtbandas.setEnabled(true);
+            frmTratamientoOrtodoncia.txttubos.setEnabled(true);
+            frmTratamientoOrtodoncia.txtotros.setEnabled(true);
+            frmTratamientoOrtodoncia.txtAparato.setEnabled(true);
+            frmTratamientoOrtodoncia.txtexodoncia.setEnabled(true);
+            frmTratamientoOrtodoncia.txtBrakets.setEnabled(true);
+            frmTratamientoOrtodoncia.txtRetenciones.setEnabled(true);
+            frmTratamientoOrtodoncia.txtsecuencia.setEnabled(true);
+            frmTratamientoOrtodoncia.txtMD.setEnabled(true);
+            frmTratamientoOrtodoncia.txtrocabado.setEnabled(true);
+            frmTratamientoOrtodoncia.btnBuscarEditar1.setEnabled(false);
+            frmTratamientoOrtodoncia.btnBuscarEditar2.setEnabled(false);
+            frmTratamientoOrtodoncia.btnGuardar.setEnabled(true);
+            frmTratamientoOrtodoncia.btnGuardar1.setEnabled(true);
+            frmTratamientoOrtodoncia.btnEditar.setEnabled(false);
+             frmTratamientoOrtodoncia.btnEditar1.setEnabled(false);
     }//GEN-LAST:event_jtPacientesMousePressed
 
     private void btnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarActionPerformed

@@ -51,6 +51,7 @@ public class frmTratamientoOrtodoncia extends javax.swing.JInternalFrame {
             frmTratamientoOrtodoncia.btnEditar.setEnabled(false);
             frmTratamientoOrtodoncia.btnGuardar1.setEnabled(false);
             frmTratamientoOrtodoncia.btnEditar1.setEnabled(false);
+            
     }
 
     /**
@@ -1286,8 +1287,8 @@ public class frmTratamientoOrtodoncia extends javax.swing.JInternalFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnBuscarEditar1;
-    private javax.swing.JButton btnBuscarEditar2;
+    public static javax.swing.JButton btnBuscarEditar1;
+    public static javax.swing.JButton btnBuscarEditar2;
     private javax.swing.JButton btnCancelar1;
     private javax.swing.JButton btnCancelar2;
     public static javax.swing.JButton btnEditar;
