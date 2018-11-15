@@ -152,6 +152,23 @@ public class vistaTratOr extends javax.swing.JInternalFrame {
             frmTratamientoOrtodoncia.txtMD.setText(md);
           
             this.dispose();
+            
+            
+            frmTratamientoOrtodoncia.txtbandas.setEnabled(true);
+            frmTratamientoOrtodoncia.txttubos.setEnabled(true);
+            frmTratamientoOrtodoncia.txtotros.setEnabled(true);
+            frmTratamientoOrtodoncia.txtAparato.setEnabled(true);
+            frmTratamientoOrtodoncia.txtexodoncia.setEnabled(true);
+            frmTratamientoOrtodoncia.txtBrakets.setEnabled(true);
+            frmTratamientoOrtodoncia.txtRetenciones.setEnabled(true);
+            frmTratamientoOrtodoncia.txtsecuencia.setEnabled(true);
+            frmTratamientoOrtodoncia.txtMD.setEnabled(true);
+            frmTratamientoOrtodoncia.txtrocabado.setEnabled(true);
+            frmTratamientoOrtodoncia.btnBuscarEditar1.setEnabled(false);
+            frmTratamientoOrtodoncia.btnBuscarEditar2.setEnabled(false);
+            frmTratamientoOrtodoncia.btnGuardar1.setEnabled(false);
+            frmTratamientoOrtodoncia.btnEditar.setEnabled(true);
+            frmTratamientoOrtodoncia.btnElegirTP.setEnabled(false);
         }
     }//GEN-LAST:event_jtPacientesMousePressed
 
