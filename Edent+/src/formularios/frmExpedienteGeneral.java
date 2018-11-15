@@ -2,16 +2,18 @@
 package formularios;
 
 
+import Clases.internalFrameImagen;
 import Clases.Clases;
 import Clases.validaciones;
 import static formularios.frmPrincipal.Dpanel;
 import java.util.Calendar;
 import javax.swing.JOptionPane;
 
-public class frmExpedienteGeneral extends javax.swing.JInternalFrame {
+public class frmExpedienteGeneral extends internalFrameImagen {
 
     public frmExpedienteGeneral() {
         initComponents();
+        setImagenw("imag1.jpg");
          btcon.setVisible(false);
         frmExpedienteGeneral.fecha.setEnabled(false);
         frmExpedienteGeneral.txtedad.setEnabled(false);
@@ -305,7 +307,7 @@ public class frmExpedienteGeneral extends javax.swing.JInternalFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
                     .addComponent(txttip, javax.swing.GroupLayout.PREFERRED_SIZE, 0, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(475, Short.MAX_VALUE))
+                .addContainerGap(497, Short.MAX_VALUE))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(85, 85, 85)
@@ -487,7 +489,7 @@ public class frmExpedienteGeneral extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_btnGuardarActionPerformed
 
     private void btnsalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnsalirActionPerformed
-        
+        this.dispose();
     }//GEN-LAST:event_btnsalirActionPerformed
 
     private void txttipActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txttipActionPerformed
