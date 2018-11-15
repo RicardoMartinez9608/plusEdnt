@@ -1,19 +1,26 @@
 
 package formularios;
 
+import Clases.internalFrameImagen;
 import Entidad.Consulta;
 import Entidad.ConsultaJpaController;
 import Entidad.entityConsulta;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 import java.util.List;
 import javax.swing.JOptionPane;
+import javax.swing.RowFilter;
 import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableRowSorter;
 
-public class vistaTrataGenral extends javax.swing.JInternalFrame {
+public class vistaTrataGenral extends internalFrameImagen {
 
+     private TableRowSorter trsFiltro;
     ConsultaJpaController te = new ConsultaJpaController(entityConsulta.getInstance());
      public Integer totalRegistros; // Obtener los registros
     public vistaTrataGenral() {
         initComponents();
+        setImagenw("imag1.jpg");
          llenarTabla();
     }
 
@@ -31,8 +38,8 @@ public class vistaTrataGenral extends javax.swing.JInternalFrame {
         setClosable(true);
         setIconifiable(true);
 
-        jLabel5.setFont(new java.awt.Font("Baskerville Old Face", 1, 24)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel5.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         jLabel5.setText("Vista Tratamiento General");
 
         txtBuscar.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -41,8 +48,7 @@ public class vistaTrataGenral extends javax.swing.JInternalFrame {
             }
         });
 
-        jLabel6.setFont(new java.awt.Font("Baskerville Old Face", 1, 14)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel6.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jLabel6.setText("Buscar");
 
         jtPacientes = new javax.swing.JTable(){
@@ -68,6 +74,7 @@ public class vistaTrataGenral extends javax.swing.JInternalFrame {
 
         btnCancelar.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         btnCancelar.setForeground(new java.awt.Color(0, 102, 204));
+        btnCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/cancelar.png"))); // NOI18N
         btnCancelar.setText("Salir");
         btnCancelar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnCancelar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
@@ -81,59 +88,58 @@ public class vistaTrataGenral extends javax.swing.JInternalFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(19, 19, 19)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel6)
                         .addGap(12, 12, 12)
                         .addComponent(txtBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGap(0, 518, Short.MAX_VALUE)
-                        .addComponent(jLabel5)
-                        .addGap(255, 255, 255))))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btnCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                        .addGap(145, 145, 145)
+                        .addComponent(jLabel5))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(btnCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1027, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(0, 20, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(26, 26, 26)
-                .addComponent(jLabel5)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txtBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(1, 1, 1)
-                        .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(61, 61, 61)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(1, 1, 1)
+                                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(36, 36, 36)
+                        .addComponent(jLabel5)))
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 302, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btnCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(23, 23, 23))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 23, Short.MAX_VALUE)
+                .addComponent(btnCancelar)
+                .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void txtBuscarKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtBuscarKeyTyped
-        //        //  se utiliza para filtrar los datos mostrados en el jtable
-        //        this.txtBuscar.addKeyListener(new KeyAdapter(){
-            //            public void keyReleased(final KeyEvent e){
-                //                String cadena = (txtBuscar.getText());
-                //                txtBuscar.setText(cadena);
-                //                repaint();
-                //                trsFiltro.setRowFilter(RowFilter.regexFilter(txtBuscar.getText().toUpperCase(), 1));
-                //                jtPacientes.getSelectionModel().setSelectionInterval(0, 0);
-                //            }
-            //        });
-    //        trsFiltro = new TableRowSorter(jtPacientes.getModel());
-    //        jtPacientes.setRowSorter(trsFiltro);
-    //
+                //  se utiliza para filtrar los datos mostrados en el jtable
+                this.txtBuscar.addKeyListener(new KeyAdapter(){
+                        public void keyReleased(final KeyEvent e){
+                                String cadena = (txtBuscar.getText());
+                                txtBuscar.setText(cadena);
+                                repaint();
+                                trsFiltro.setRowFilter(RowFilter.regexFilter(txtBuscar.getText().toUpperCase(), 1));
+                                jtPacientes.getSelectionModel().setSelectionInterval(0, 0);
+                            }
+                    });
+            trsFiltro = new TableRowSorter(jtPacientes.getModel());
+            jtPacientes.setRowSorter(trsFiltro);
+    
     }//GEN-LAST:event_txtBuscarKeyTyped
 
     private void jtPacientesMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jtPacientesMousePressed
